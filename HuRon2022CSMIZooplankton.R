@@ -1,6 +1,8 @@
 #R code for Lake Huron 2022 CSMI survey report EPA ORD
 #Courtney Larson and Noah Grode
 
+install.packages("reshape2")
+
 #libraries
 library(reshape2)
 #programs
@@ -11,5 +13,5 @@ library(reshape2)
 Zoopreshap <- read.csv("ZoopforR6.21.24.csv", header=T)
 
 #melt to long format
-Zooplong<-melt(Zoopreshap, value.name="Count", 
+Zoopcount153<-melt(Zoopreshap, value.name="Count", 
                variable.name = "Species")
