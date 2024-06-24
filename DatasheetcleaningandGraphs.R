@@ -5,6 +5,8 @@ install.packages("viridis")
 install.packages("reshape2")
 install.packages("xlsx")
 install.packages("writexl")
+install.packages("vegan")
+install.packages("ggpubr")
 library(readr)
 library(dplyr)
 library(tidyverse)
@@ -13,8 +15,8 @@ library(psych)
 library(viridis)
 library(readxl)
 library(reshape2)
-library(xlsx)
-library(writexl)
+library(vegan)
+library(ggpubr)
 
 #Change to long form zooplankton
 
@@ -22,7 +24,7 @@ library(writexl)
 CM <- read_csv("~/CSMI/CalibrationMeta.csv")
 View(CM)
 
-Zoop153count <- read_csv("~/CSMI/ZoopforR6.18.24.csv", header=T)
+Zoop153count <- read_csv("~/CSMI/ZoopforR6.18.24.csv")
 View(ZoopforR6_18_24)
 
 Zoopcount153<-melt(Zoop153count, value.name="Count", 
@@ -37,25 +39,48 @@ Zoopcount153Mer$Density<-Zoopcount153Mer$Count/Zoopcount153Mer$Volume
 Zoop64count <- read_csv("~/CSMI/Zoop64countforR.csv")
 View(Zoop64count)
 
-library(readxl)
-Flow64 <- read_excel("~/CSMI/FlowMeterCalibrationNumbers64.xlsx")
-View(Flow64)
-
-zoopcount64<-melt(Zoop64count, value.name = "Count", variable.names="STIS")
-zoopcount64M<-merge(zoopcount64,Flow64, by = "STIS")
+Zoopcount64<-melt(Zoop64count, value.name = "Count", variable.name = "Species")
+Zoopcount64Mer<-merge(Zoopcount64, CM, by="SiteID")
+Zoopcount64Mer$Density<-Zoopcount64Mer$Count/Zoopcount64Mer$Volume
 
 Zoop153biomass <- read_csv("~/CSMI/Zoop153biomassforR.csv", col_types = cols(Epischuralacustris = col_double()))
-View(Zoop153biomassforR)
+View(Zoop153biomass)
 
 Zoopbiomass153<-melt(Zoop153biomass, value.name = "Count", variable.name = "Species")
+Zoopbiomass153Mer<-merge(Zoopbiomass153, CM, by="SiteID")
+Zoopbiomass153Mer$Biomass<-Zoopbiomass153Mer$Count/Zoopbiomass153Mer$Volume
 
 Zoop64biomass <- read_csv("~/CSMI/Zoop64biomassforR.csv")
 View(Zoop64biomass)
 
 Zoopbiomass64<-melt(Zoop64biomass, value.name = "Count", variable.name = "Species")
+Zoopbiomass64Mer<-merge(Zoopbiomass64, CM, by="SiteID")
+Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
+
+#aggregate
+Biomass153<-aggregate(Biomass ~ Area + Species, data = Zoopbiomass153Mer, FUN = mean)
+
+Biomass153[,3][Biomass153[,3]==0]<-NA
+
+ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_viridis()
+
+Biomass153<-ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_viridis(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))+
+  guides(color=guide_legend(), size=guide_legend())
+
+Biomass153+scale_size_continuous(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))
+
+#Diversity
+richness_zoo153C<-estimateR(Zoopcount153Mer$Density)
+Shann_zoo153C<-diversity(Zoopcount153Mer, index = "shannon")
 
 #read data
-CSMIHuron2 <- read_csv("CSMI/CSMIHuron2.csv")
+CSMIHuron2 <- read_csv("~/CSMI/CSMIHuron2.csv")
 View(CSMIHuron2)
 
 CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
@@ -70,16 +95,31 @@ CSMI4$Month<-factor(CSMI4$Month, c("June", "August"))
 CSMI4$Depth<-factor(CSMI4$Depth, c("Epi", "Mid", "Bottom"))
 CSMI4$DFS<-factor(CSMI4$DFS, c("Nearshore", "Midshore", "Offshore"))
 
+NH4AD<-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("NH4 (μg N/L)")
+
 ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("NH4 (μg N/L)")
 
 ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
+  ylab("NH4 (μg N/L)")
+
+nh4ave<-aggregate(`NH4 ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
+nh4aveM<-aggregate(`NH4 ug N/L` ~ Area + Month, data = CSMI4, FUN = mean)
+
+NH4AM<-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
   ylab("NH4 (μg N/L)")
   
 NH4<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`NH4 ug N/L`))+
@@ -131,6 +171,8 @@ ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=DFS, y=`NH4 ug N/L`, fill=DFS))+
 
 #NOx ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
+noxad<-aggregate(`NOx ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
+
 ggplot(CSMI4%>%filter(!is.na(Month)), aes(x=Month, y=`NOx ug N/L`, fill=DFS))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -160,14 +202,17 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`NOx ug N/L`, fill=Depth))+
 ggplot(CSMI4, aes(x=Area, y=`NOx ug N/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("NOx (μg N/L)")
 
 ggplot(CSMI4, aes(x=Area, y=`NOx ug N/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("NOx (μg N/L)")
+
+ggarrange(NH4AD, NH4AM, NOxAD, NOxAM)
+ggarrange(NH4AD, NH4AM)
 
 #SRP ug P/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
@@ -201,13 +246,13 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`SRP ug P/L`, fill=Depth))+
 ggplot(CSMI4, aes(x=Area, y=`SRP ug P/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("SRP (μg P/L)")
 
 ggplot(CSMI4, aes(x=Area, y=`SRP ug P/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("SRP (μg P/L)")
 
 
@@ -242,13 +287,13 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`K mg/L`, fill=Depth))+
 ggplot(CSMI4, aes(x=Area, y=`K mg/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("K+ (mg/L)")
 
 ggplot(CSMI4, aes(x=Area, y=`K mg/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("K+ (mg/L)")
 
 #Na mg/L bw- June,  nearshore 18, mid 46 and offshore 66 82 91
@@ -282,13 +327,13 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Na mg/L`, fill=Depth))+
 ggplot(CSMI4, aes(x=Area, y=`Na mg/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("Na+ (mg/L)")
 
 ggplot(CSMI4, aes(x=Area, y=`Na mg/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("Na+ (mg/L)")
 
 #Ca mg/L bw june,nearshore 18, mid 46 and offshore 66 82 91
@@ -322,13 +367,13 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Ca mg/L`, fill=Depth))+
 ggplot(CSMI4, aes(x=Area, y=`Ca mg/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("Ca++ (mg/L)")
 
 ggplot(CSMI4, aes(x=Area, y=`Ca mg/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
-  theme_bw()+
+  theme_classic()+
   ylab("Ca++ (mg/L)")
 
 #Mg mg/L bw  june,nearshore 18, mid 46 and offshore 66 82 91
