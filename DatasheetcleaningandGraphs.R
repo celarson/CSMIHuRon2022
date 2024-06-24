@@ -3,6 +3,8 @@ install.packages("tidyverse")
 install.packages("psych")
 install.packages("viridis")
 install.packages("reshape2")
+install.packages("xlsx")
+install.packages("writexl")
 library(readr)
 library(dplyr)
 library(tidyverse)
@@ -11,8 +13,14 @@ library(psych)
 library(viridis)
 library(readxl)
 library(reshape2)
+library(xlsx)
+library(writexl)
 
 #Change to long form zooplankton
+
+#CM is our meta data with STIS numbers
+CM <- read_csv("~/CSMI/CalibrationMeta.csv")
+View(CM)
 
 Zoop153count <- read_csv("~/CSMI/ZoopforR6.18.24.csv", header=T)
 View(ZoopforR6_18_24)
@@ -20,8 +28,21 @@ View(ZoopforR6_18_24)
 Zoopcount153<-melt(Zoop153count, value.name="Count", 
                    variable.name = "Species")
 
+#Merging our metadata with longform species data
+Zoopcount153Mer<-merge(Zoopcount153,CM, by="SiteID")
+#creating column density by taking count/volume columns
+Zoopcount153Mer$Density<-Zoopcount153Mer$Count/Zoopcount153Mer$Volume
+
+
 Zoop64count <- read_csv("~/CSMI/Zoop64countforR.csv")
 View(Zoop64count)
+
+library(readxl)
+Flow64 <- read_excel("~/CSMI/FlowMeterCalibrationNumbers64.xlsx")
+View(Flow64)
+
+zoopcount64<-melt(Zoop64count, value.name = "Count", variable.names="STIS")
+zoopcount64M<-merge(zoopcount64,Flow64, by = "STIS")
 
 Zoop153biomass <- read_csv("~/CSMI/Zoop153biomassforR.csv", col_types = cols(Epischuralacustris = col_double()))
 View(Zoop153biomassforR)
