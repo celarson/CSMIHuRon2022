@@ -1,6 +1,10 @@
 #Visualizations for Lake Huron 2022 CSMI Report
 #Noah Grode and Courtney Larson
 
+#Set working directory to project directory
+#all files are updated in github repository CSMIHuRon2022
+
+################################################
 #Packages and Library loading
 library(ggtext)
 library(readr)
@@ -14,44 +18,38 @@ library(reshape2)
 library(vegan)
 library(ggpubr)
 
+########################################################
 #Upload datasets
-#Change to long form zooplankton
 
 #CM is our meta data with STIS numbers
-CM <- read_csv("~/CSMI/CalibrationMeta.csv")
-View(CM)
+CM <- read.csv("CalibrationMeta.csv", header=T)
 
-Zoop153count <- read_csv("~/CSMI/ZoopforR6.18.24.csv")
-View(ZoopforR6_18_24)
-
-Zoopcount153<-melt(Zoop153count, value.name="Count", 
+#Zoop153count are the zooplankton counts for the 153 net
+Zoop153countwide<- read.csv("ZoopforR6.18.24.csv", header=T)
+#melt from matrix to long form
+Zoopcount153long<-melt(Zoop153countwide, value.name="Count", 
                    variable.name = "Species")
-
 #Merging our metadata with longform species data
-Zoopcount153Mer<-merge(Zoopcount153,CM, by="SiteID")
+Zoopcount153Mer<-merge(Zoopcount153long,CM, by="SiteID")
 #creating column density by taking count/volume columns
 Zoopcount153Mer$Density<-Zoopcount153Mer$Count/Zoopcount153Mer$Volume
 
-
-Zoop64count <- read_csv("~/CSMI/Zoop64countforR.csv")
-View(Zoop64count)
-
-Zoopcount64<-melt(Zoop64count, value.name = "Count", variable.name = "Species")
-Zoopcount64Mer<-merge(Zoopcount64, CM, by="SiteID")
+#zooplankton counts for the 64 net
+Zoop64countwide<- read.csv("Zoop64countforR.csv", header=T)
+Zoopcount64long<-melt(Zoop64countwide, value.name = "Count", variable.name = "Species")
+Zoopcount64Mer<-merge(Zoopcount64long, CM, by="SiteID")
 Zoopcount64Mer$Density<-Zoopcount64Mer$Count/Zoopcount64Mer$Volume
 
-Zoop153biomass <- read_csv("~/CSMI/Zoop153biomassforR.csv", col_types = cols(Epischuralacustris = col_double()))
-View(Zoop153biomass)
-
-Zoopbiomass153<-melt(Zoop153biomass, value.name = "Count", variable.name = "Species")
-Zoopbiomass153Mer<-merge(Zoopbiomass153, CM, by="SiteID")
+#zooplankton biomass for the 153 net
+Zoop153biomasswide<- read.csv("Zoop153biomassforR.csv", header=T)
+Zoopbiomass153long<-melt(Zoop153biomasswide, value.name = "Count", variable.name = "Species", id.vars = "SiteID")
+Zoopbiomass153Mer<-merge(Zoopbiomass153long, CM, by="SiteID")
 Zoopbiomass153Mer$Biomass<-Zoopbiomass153Mer$Count/Zoopbiomass153Mer$Volume
 
-Zoop64biomass <- read_csv("~/CSMI/Zoop64biomassforR.csv")
-View(Zoop64biomass)
-
-Zoopbiomass64<-melt(Zoop64biomass, value.name = "Count", variable.name = "Species")
-Zoopbiomass64Mer<-merge(Zoopbiomass64, CM, by="SiteID")
+#zooplankton biobass for the 64 net
+Zoop64biomasswide<- read.csv("Zoop64biomassforR.csv", header=T)
+Zoopbiomass64long<-melt(Zoop64biomasswide, value.name = "Count", variable.name = "Species")
+Zoopbiomass64Mer<-merge(Zoopbiomass64long, CM, by="SiteID")
 Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
 
 #aggregate
