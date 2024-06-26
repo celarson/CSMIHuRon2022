@@ -178,6 +178,7 @@ ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=DFS, y=`NH4 ug N/L`, fill=DFS))+
 #NOx ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
 noxad<-aggregate(`NOx ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
+noxam<-aggregate(`NOx ug N/L` ~ Area + Month, data = CSMI4, FUN = mean)
 
 ggplot(CSMI4%>%filter(!is.na(Month)), aes(x=Month, y=`NOx ug N/L`, fill=DFS))+
   geom_boxplot()+
@@ -221,6 +222,8 @@ ggplot(CSMI4, aes(x=Area, y=`NOx ug N/L`, fill = Month))+
   ylab("NOx (μg N/L)")+
   xlab("Region")
 
+
+
 #SRP ug P/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
 SRP<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`SRP ug P/L`, fill = DFS))+
@@ -249,6 +252,10 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`SRP ug P/L`, fill=Depth))+
   theme_bw()+
   ylab("SRP (μg P/L)")+
   guides(fill=guide_legend(title=NULL))
+
+SRPdepthsd<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = sd)
+SRPdepthave<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = mean)
+SRPmonthave<-aggregate(`SRP ug P/L`~Area + Month, data = CSMI4, FUN = mean)
 
 #used in final version
 
