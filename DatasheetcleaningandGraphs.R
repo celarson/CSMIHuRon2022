@@ -7,6 +7,8 @@ install.packages("xlsx")
 install.packages("writexl")
 install.packages("vegan")
 install.packages("ggpubr")
+install.packages("ggtext")
+library(ggtext)
 library(readr)
 library(dplyr)
 library(tidyverse)
@@ -100,6 +102,8 @@ ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Depth))+
   scale_fill_brewer()+
   theme_classic()+
   ylab("NH4 (μg N/L)")
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Depth))+
   geom_boxplot()+
@@ -201,6 +205,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`NOx ug N/L`, fill=Depth))+
   ylab("NOx (μg N/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`NOx ug N/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -214,9 +220,6 @@ ggplot(CSMI4, aes(x=Area, y=`NOx ug N/L`, fill = Month))+
   theme_classic()+
   ylab("NOx (μg N/L)")+
   xlab("Region")
-
-ggarrange(NH4AD, NH4AM, NOxAD, NOxAM)
-ggarrange(NH4AD, NH4AM)
 
 #SRP ug P/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
@@ -246,6 +249,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`SRP ug P/L`, fill=Depth))+
   theme_bw()+
   ylab("SRP (μg P/L)")+
   guides(fill=guide_legend(title=NULL))
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`SRP ug P/L`, fill = Depth))+
   geom_boxplot()+
@@ -290,6 +295,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`K mg/L`, fill=Depth))+
   ylab("K+ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`K mg/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -331,6 +338,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Na mg/L`, fill=Depth))+
   theme_bw()+
   ylab("Na+ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`Na mg/L`, fill = Depth))+
   geom_boxplot()+
@@ -374,6 +383,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Ca mg/L`, fill=Depth))+
   ylab("Ca++ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`Ca mg/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -415,6 +426,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Mg mg/L`, fill=Depth))+
   theme_bw()+
   ylab("Mg++ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`Mg mg/L`, fill = Depth))+
   geom_boxplot()+
@@ -458,6 +471,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Cl mg/L`, fill=Depth))+
   ylab("Cl- (mg/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`Cl mg/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -499,6 +514,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`SO4 mg/L`, fill=Depth))+
   theme_bw()+
   ylab("SO4 (mg/L)")+
   guides(fill=guide_legend(title=NULL))
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`SO4 mg/L`, fill = Depth))+
   geom_boxplot()+
@@ -542,6 +559,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`DOC mg C/L`, fill=Depth))+
   ylab("DOC (mg C/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`DOC mg C/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -583,6 +602,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Si mg SiO2/L`, fill=Depth)
   theme_bw()+
   ylab("Si (mg SiO2/L)")+
   guides(fill=guide_legend(title=NULL))
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`Si mg SiO2/L`, fill = Depth))+
   geom_boxplot()+
@@ -636,6 +657,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`chla    ug/L`, fill=Depth)
   ylab("chl-a (μg/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`chla    ug/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -686,6 +709,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`TN ug N/L`, fill=Depth))+
   ylab("TN (μg N/L)")+
   guides(fill=guide_legend(title=NULL))
 
+#used in final version
+
 ggplot(CSMI4, aes(x=Area, y=`TN ug N/L`, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -729,6 +754,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`TP ug P/L`, fill=Depth))+
   theme_bw()+
   ylab("TP (μg P/L)")+
   guides(fill=guide_legend(title=NULL))
+
+#used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`TP ug P/L`, fill = Depth))+
   geom_boxplot()+
@@ -1035,7 +1062,7 @@ ggplot(Zoo153DenM2, aes(x=Month, y=Group, size = `Average Density (Count/m^3)`, 
   scale_y_discrete(limits=rev)
 
 #153 count area
-Zoo153countarea <- read_csv("CSMI/Zoo153countarea.csv")
+Zoo153countarea <- read_csv("~/CSMI/Zoo153countarea.csv")
 View(Zoo153countarea)
 
 zoo153countarea2<-Zoo153countarea
@@ -1044,21 +1071,13 @@ zoo153countarea2$Area<-factor(zoo153countarea2$Area, c("NC", "SB", "GB", "SMB", 
 ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_viridis()+
-  scale_y_discrete(limits=rev)
-
-Biomass153<-ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
-  geom_point()+
-  theme_bw()+
-  scale_color_viridis(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))+
-  guides(color=guide_legend(), size=guide_legend())
-
-Biomass153+scale_size_continuous(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))
-
+  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
 
 #153 biomass area
 
-Zoo153biomassArea <- read_csv("CSMI/Zoo153biomassArea.csv")
+Zoo153biomassArea <- read_csv("~/CSMI/Zoo153biomassArea.csv")
 View(Zoo153biomassArea)
 
 z153bioarea2<-Zoo153biomassArea
@@ -1067,9 +1086,9 @@ z153bioarea2$Area<-factor(z153bioarea2$Area,c("NC", "SB", "GB", "SMB", "NMB"))
 ggplot(Zoo153biomassArea, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`, color = `Biomass (ug/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_viridis(limits=c(.1,12000), breaks=seq(.1,12000, by=3000))+
-  guides(color=guide_legend(), size=guide_legend())+
-  scale_y_discrete(limits=rev)
+  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
 
 ggplot(z153bioarea2, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`)) +
   geom_point(shape = `Biomass (ug/m^3)`, colour = `Biomass (ug/m^3)`)+
@@ -1079,7 +1098,7 @@ ggplot(z153bioarea2, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`)) +
 
 #64 biomass area
 
-Zoo64bioarea <- read_csv("CSMI/Zoo64bioarea.csv")
+Zoo64bioarea <- read_csv("~/CSMI/Zoo64bioarea.csv")
 View(Zoo64bioarea)
 
 zoo64bioarea2<-Zoo64bioarea
@@ -1088,12 +1107,13 @@ zoo64bioarea2$Area<-factor(zoo64bioarea2$Area, c("NC", "SB", "GB", "SMB", "NMB")
 ggplot(zoo64bioarea2, aes(x=Area, y=Group, size = `Average Biomass (ug/m^3)`, color = `Average Biomass (ug/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_viridis()+
-  scale_y_discrete(limits=rev)
+  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
 
 #64 count area
 
-Zoo64countarea <- read_csv("CSMI/Zoo64countarea.csv")
+Zoo64countarea <- read_csv("~/CSMI/Zoo64countarea.csv")
 View(Zoo64countarea)
 
 zoo64counarea2<-Zoo64countarea
@@ -1102,8 +1122,9 @@ zoo64counarea2$Month<-factor(zoo64counarea2$Month, c("NC", "SB", "GB", "SMB", "N
 ggplot(zoo64counarea2, aes(x=Month, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_viridis()+
-  scale_y_discrete(limits=rev)
+  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
 
 #64countmonth
 
