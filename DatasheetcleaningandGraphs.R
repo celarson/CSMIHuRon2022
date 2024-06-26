@@ -1,13 +1,11 @@
+#Visualizations for Lake Huron 2022 CSMI Report
+#Noah Grode and Courtney Larson
+
+#Set working directory to project directory
+#all files are updated in github repository CSMIHuRon2022
+
+################################################
 #Packages and Library loading
-install.packages("tidyverse")
-install.packages("psych")
-install.packages("viridis")
-install.packages("reshape2")
-install.packages("xlsx")
-install.packages("writexl")
-install.packages("vegan")
-install.packages("ggpubr")
-install.packages("ggtext")
 library(ggtext)
 library(readr)
 library(dplyr)
@@ -20,48 +18,50 @@ library(reshape2)
 library(vegan)
 library(ggpubr)
 
-#Change to long form zooplankton
+########################################################
+#Upload datasets
 
+#Water chemistry
+CSMIHuron2 <- read.csv("CSMIHuron2.csv", header=T)
+View(CSMIHuron2)
+
+CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
+View(CCTD_H_2022)
 #CM is our meta data with STIS numbers
-CM <- read_csv("~/CSMI/CalibrationMeta.csv")
-View(CM)
+CM <- read.csv("CalibrationMeta.csv", header=T)
 
-Zoop153count <- read_csv("~/CSMI/ZoopforR6.18.24.csv")
-View(ZoopforR6_18_24)
-
-Zoopcount153<-melt(Zoop153count, value.name="Count", 
+#Zoop153count are the zooplankton counts for the 153 net
+Zoop153countwide<- read.csv("ZoopforR6.18.24.csv", header=T)
+#melt from matrix to long form
+Zoopcount153long<-melt(Zoop153countwide, value.name="Count", 
                    variable.name = "Species")
-
 #Merging our metadata with longform species data
-Zoopcount153Mer<-merge(Zoopcount153,CM, by="SiteID")
+Zoopcount153Mer<-merge(Zoopcount153long,CM, by="SiteID")
 #creating column density by taking count/volume columns
 Zoopcount153Mer$Density<-Zoopcount153Mer$Count/Zoopcount153Mer$Volume
 
-
-Zoop64count <- read_csv("~/CSMI/Zoop64countforR.csv")
-View(Zoop64count)
-
-Zoopcount64<-melt(Zoop64count, value.name = "Count", variable.name = "Species")
-Zoopcount64Mer<-merge(Zoopcount64, CM, by="SiteID")
+#zooplankton counts for the 64 net
+Zoop64countwide<- read.csv("Zoop64countforR.csv", header=T)
+Zoopcount64long<-melt(Zoop64countwide, value.name = "Count", variable.name = "Species")
+Zoopcount64Mer<-merge(Zoopcount64long, CM, by="SiteID")
 Zoopcount64Mer$Density<-Zoopcount64Mer$Count/Zoopcount64Mer$Volume
 
-Zoop153biomass <- read_csv("~/CSMI/Zoop153biomassforR.csv", col_types = cols(Epischuralacustris = col_double()))
-View(Zoop153biomass)
-
-Zoopbiomass153<-melt(Zoop153biomass, value.name = "Count", variable.name = "Species")
-Zoopbiomass153Mer<-merge(Zoopbiomass153, CM, by="SiteID")
+#zooplankton biomass for the 153 net
+Zoop153biomasswide<- read.csv("Zoop153biomassforR.csv", header=T)
+Zoopbiomass153long<-melt(Zoop153biomasswide, value.name = "Count", variable.name = "Species", id.vars = "SiteID")
+Zoopbiomass153Mer<-merge(Zoopbiomass153long, CM, by="SiteID")
 Zoopbiomass153Mer$Biomass<-Zoopbiomass153Mer$Count/Zoopbiomass153Mer$Volume
 
-Zoop64biomass <- read_csv("~/CSMI/Zoop64biomassforR.csv")
-View(Zoop64biomass)
-
-Zoopbiomass64<-melt(Zoop64biomass, value.name = "Count", variable.name = "Species")
-Zoopbiomass64Mer<-merge(Zoopbiomass64, CM, by="SiteID")
+#zooplankton biobass for the 64 net
+Zoop64biomasswide<- read.csv("Zoop64biomassforR.csv", header=T)
+Zoopbiomass64long<-melt(Zoop64biomasswide, value.name = "Count", variable.name = "Species")
+Zoopbiomass64Mer<-merge(Zoopbiomass64long, CM, by="SiteID")
 Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
 
 #aggregate
 Biomass153<-aggregate(Biomass ~ Area + Species, data = Zoopbiomass153Mer, FUN = mean)
 
+###############work on this later, start with water chem first###############
 Biomass153[,3][Biomass153[,3]==0]<-NA
 
 ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
@@ -81,12 +81,6 @@ Biomass153+scale_size_continuous(limits=c(.1,8000), breaks=seq(.1,8000, by=2500)
 richness_zoo153C<-estimateR(Zoopcount153Mer$Density)
 Shann_zoo153C<-diversity(Zoopcount153Mer, index = "shannon")
 
-#read data
-CSMIHuron2 <- read_csv("~/CSMI/CSMIHuron2.csv")
-View(CSMIHuron2)
-
-CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
-View(CCTD_H_2022)
 
 
 #NH4 ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
