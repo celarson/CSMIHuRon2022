@@ -21,6 +21,12 @@ library(ggpubr)
 ########################################################
 #Upload datasets
 
+#Water chemistry
+CSMIHuron2 <- read.csv("CSMIHuron2.csv", header=T)
+View(CSMIHuron2)
+
+CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
+View(CCTD_H_2022)
 #CM is our meta data with STIS numbers
 CM <- read.csv("CalibrationMeta.csv", header=T)
 
@@ -55,6 +61,7 @@ Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
 #aggregate
 Biomass153<-aggregate(Biomass ~ Area + Species, data = Zoopbiomass153Mer, FUN = mean)
 
+###############work on this later, start with water chem first###############
 Biomass153[,3][Biomass153[,3]==0]<-NA
 
 ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
@@ -74,12 +81,6 @@ Biomass153+scale_size_continuous(limits=c(.1,8000), breaks=seq(.1,8000, by=2500)
 richness_zoo153C<-estimateR(Zoopcount153Mer$Density)
 Shann_zoo153C<-diversity(Zoopcount153Mer, index = "shannon")
 
-#read data
-CSMIHuron2 <- read_csv("~/CSMI/CSMIHuron2.csv")
-View(CSMIHuron2)
-
-CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
-View(CCTD_H_2022)
 
 
 #NH4 ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
