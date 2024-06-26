@@ -25,6 +25,7 @@ library(ggpubr)
 CSMIHuron2 <- read.csv("CSMIHuron2.csv", header=T)
 View(CSMIHuron2)
 
+CTE
 CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
 View(CCTD_H_2022)
 #CM is our meta data with STIS numbers
