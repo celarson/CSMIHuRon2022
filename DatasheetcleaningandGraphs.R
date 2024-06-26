@@ -297,6 +297,9 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`K mg/L`, fill=Depth))+
   ylab("K+ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
 
+KADepthave<- aggregate(`K mg/L`~ Area + Depth, data = CSMI4, FUN = mean)
+KAMave<-aggregate(`K mg/L`~ Area + Month, data = CSMI4, FUN=mean)
+
 #used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`K mg/L`, fill = Depth))+
@@ -341,6 +344,9 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Na mg/L`, fill=Depth))+
   ylab("Na+ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
 
+naADave<- aggregate(`Na mg/L`~ Area + Depth, data = CSMI4, FUN = mean)
+naAMave<- aggregate(`Na mg/L`~ Area + Month, data = CSMI4, FUN = mean)
+
 #used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`Na mg/L`, fill = Depth))+
@@ -384,6 +390,8 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Ca mg/L`, fill=Depth))+
   theme_bw()+
   ylab("Ca++ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
+
+CaADave<-aggregate(`Ca mg/L` ~ Area + Depth, data = CSMI4, FUN = mean)
 
 #used in final version
 
