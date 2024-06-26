@@ -1,13 +1,7 @@
+#Visualizations for Lake Huron 2022 CSMI Report
+#Noah Grode and Courtney Larson
+
 #Packages and Library loading
-install.packages("tidyverse")
-install.packages("psych")
-install.packages("viridis")
-install.packages("reshape2")
-install.packages("xlsx")
-install.packages("writexl")
-install.packages("vegan")
-install.packages("ggpubr")
-install.packages("ggtext")
 library(ggtext)
 library(readr)
 library(dplyr)
@@ -20,6 +14,7 @@ library(reshape2)
 library(vegan)
 library(ggpubr)
 
+#Upload datasets
 #Change to long form zooplankton
 
 #CM is our meta data with STIS numbers
