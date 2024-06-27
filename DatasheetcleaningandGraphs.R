@@ -81,7 +81,7 @@ CSMI5<-CSMIHuron2_2
 #order basin factor
 CSMI5$Area<-factor(CSMI5$Area, c("NC", "SB", "GB", "SMB", "NMB"))
 #order month factor
-CSMI5$Month<-factor(CSMI5$Month, c("Early June","Mid June", "Late June", "Early July", "Late July", "August"))
+CSMI5$Month<-factor(CSMI5$Month, c("E June", "L June", "E July", "L July", "Aug"))
 #order depth factor
 CSMI5$Depth<-factor(CSMI5$Depth, c("Epi", "Mid", "Bottom"))
 #order distance from shore factor
@@ -256,7 +256,19 @@ ggplot(CSMI4, aes(x=Area, y=`NOx ug N/L`, fill = Month))+
   ylab("NOx (μg N/L)")+
   xlab("Region")
 
+ggplot(CSMI4nomonthNA, aes(x=Month, y=NOxugNL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("NOx (ug N/L)")+
+  facet_wrap(.~Area)
 
+ggplot(CSMI4, aes(x=Area, y=NOxugNL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("NOx (ug N/L)")+
+  xlab("Region")
 
 #SRP ug P/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
@@ -290,6 +302,20 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`SRP ug P/L`, fill=Depth))+
 SRPdepthsd<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = sd)
 SRPdepthave<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = mean)
 SRPmonthave<-aggregate(`SRP ug P/L`~Area + Month, data = CSMI4, FUN = mean)
+
+ggplot(CSMI4nomonthNA, aes(x=Month, y=SRPugPL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("SRP (μg P/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=SRPugPL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("SRP (μg P/L)")+
+  xlab("Region")
 
 #used in final version
 
@@ -355,6 +381,20 @@ ggplot(CSMI4, aes(x=Area, y=`K mg/L`, fill = Month))+
   ylab("K+ (mg/L)")+
   xlab("Region")
 
+ggplot(CSMI4nomonthNA, aes(x=Month, y=KmgL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("K+ (mg/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=KmgL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("K+ mg/L)")+
+  xlab("Region")
+
 #Na mg/L bw- June,  nearshore 18, mid 46 and offshore 66 82 91
 
 na<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`Na mg/L`, fill = DFS))+
@@ -400,6 +440,20 @@ ggplot(CSMI4, aes(x=Area, y=`Na mg/L`, fill = Month))+
   scale_fill_brewer(palette = "Reds 3")+
   theme_classic()+
   ylab("Na+ (mg/L)")+
+  xlab("Region")
+
+ggplot(CSMI4nomonthNA, aes(x=Month, y=NamgL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("Na+ (mg/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=NamgL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("Na+ mg/L)")+
   xlab("Region")
 
 #Ca mg/L bw june,nearshore 18, mid 46 and offshore 66 82 91
@@ -448,6 +502,20 @@ ggplot(CSMI4, aes(x=Area, y=`Ca mg/L`, fill = Month))+
   ylab("Ca++ (mg/L)")+
   xlab("Region")
 
+ggplot(CSMI4nomonthNA, aes(x=Month, y=CamgL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("Ca++ (mg/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=CamgL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("Ca++ mg/L)")+
+  xlab("Region")
+
 #Mg mg/L bw  june,nearshore 18, mid 46 and offshore 66 82 91
 
 Mg<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`Mg mg/L`, fill = DFS))+
@@ -490,6 +558,20 @@ ggplot(CSMI4, aes(x=Area, y=`Mg mg/L`, fill = Month))+
   scale_fill_brewer(palette = "Reds 3")+
   theme_classic()+
   ylab("Mg++ (mg/L)")+
+  xlab("Region")
+
+ggplot(CSMI4nomonthNA, aes(x=Month, y=MgmgL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("Mg++ (mg/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=MgmgL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("Mg++ mg/L)")+
   xlab("Region")
 
 #Cl mg/L bw june, ,nearshore 18, mid 46 and offshore 66 82 91
@@ -536,6 +618,20 @@ ggplot(CSMI4, aes(x=Area, y=`Cl mg/L`, fill = Month))+
   ylab("Cl- (mg/L)")+
   xlab("Region")
 
+ggplot(CSMI4nomonthNA, aes(x=Month, y=ClmgL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("Cl- (mg/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=ClmgL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("Cl- mg/L)")+
+  xlab("Region")
+
 #SO4 mg/L bw June, ,nearshore 18, mid 46 and offshore 66 82 91
 
 SO4<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`SO4 mg/L`, fill = DFS))+
@@ -578,6 +674,20 @@ ggplot(CSMI4, aes(x=Area, y=`SO4 mg/L`, fill = Month))+
   scale_fill_brewer(palette = "Reds 3")+
   theme_classic()+
   ylab("SO4 (mg/L)")+
+  xlab("Region")
+
+ggplot(CSMI4nomonthNA, aes(x=Month, y=SO4mgL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("SO4 (mg/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=SO4mgL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("SO4 mg/L)")+
   xlab("Region")
 
 #DOC mg/Cl bw june ,nearshore 18, mid 46 and offshore 66 82 91
@@ -624,6 +734,20 @@ ggplot(CSMI4, aes(x=Area, y=`DOC mg C/L`, fill = Month))+
   ylab("DOC (mg C/L)")+
   xlab("Region")
 
+ggplot(CSMI4nomonthNA, aes(x=Month, y=DOCmgCL, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("DOC (mg C/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=DOCmgCL, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme_classic()+
+  ylab("DOC mgCL)")+
+  xlab("Region")
+
 #Si bw june,nearshore 18, mid 46 and offshore 66 82 91
 
 Si<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`Si mg SiO2/L`, fill = DFS))+
@@ -664,6 +788,20 @@ ggplot(CSMI4, aes(x=Area, y=`Si mg SiO2/L`, fill = Depth))+
 ggplot(CSMI4, aes(x=Area, y=`Si mg SiO2/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer(palette = "Reds 3")+
+  theme_classic()+
+  ylab("Si (mg SiO2/L)")+
+  xlab("Region")
+
+ggplot(CSMI4nomonthNA, aes(x=Month, y=SimgSiO2L, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme_classic()+
+  ylab("Si (mg SiO2/L)")+
+  facet_wrap(.~Area)
+
+ggplot(CSMI4, aes(x=Area, y=SimgSiO2L, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
   theme_classic()+
   ylab("Si (mg SiO2/L)")+
   xlab("Region")
@@ -731,14 +869,43 @@ ggplot(CSMI4, aes(x=Area, y=`chla    ug/L`, fill = Month))+
 
 #subset month is NA
 CSMI5nomonthNA<-subset(CSMI5, Month!="NA")
+CSMI5nomid<-subset(CSMIlon)
 
-ggplot(CSMI5nomonthNA, aes(x=Area, y=chlaugL, fill = Month))+
+CSMI5long<-melt(CSMI5)
+
+CSMI5nomid<-subset(CSMI5long, Depth!="Mid")
+
+CSMI5nomid2<-subset(CSMI5, Depth!="Mid")
+
+ggplot(subset(CSMI5nomid,variable==c("chlaugL","TNugNL","TPugPL")),
+       aes(x=Month, y=value, fill = Depth))+
+  geom_boxplot()+
+  scale_color_brewer()+
+  xlab("Region")+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=16),axis.title.y=element_blank(),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=16),legend.text = element_text(size=14))+
+  facet_grid(variable~Area, scales = "free")
+
+ggplot(subset(CSMI5nomid,variable=="chlaugL")+
+       aes(x=Month, y=value, fill = Depth))+
+  geom_boxplot()+
+  scale_color_brewer()+
+  xlab("Region")+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=16),axis.title.y=element_blank(),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=16),legend.text = element_text(size=14))+
+  facet_grid(.~Area, scales = "free")
+
+ggplot(CSMI5nomid2, aes(x=Month, y=chlaugL, fill = Depth))+
   geom_boxplot()+
   scale_color_brewer()+
   theme_classic()+
   ylab("Chl-a (μg/L)")+
   xlab("Region")+
-  facet_wrap(.~Area)
+  facet_wrap(.~Area, scales = "free_y")
 
 #tn june august  nearshore 18, mid 46 and offshore 66 82 91
 
@@ -785,6 +952,13 @@ ggplot(CSMI4%>%filter(!is.na(Month)), aes(x=Area, y=`TN ug N/L`, fill = Month))+
   theme_bw()+
   ylab("TN (μg N/L)")
 
+ggplot(CSMI5nomid2, aes(x=Month, y=TNugNL, fill = Depth))+
+  geom_boxplot()+
+  scale_color_brewer()+
+  theme_classic()+
+  ylab("TN (μg N/L)")+
+  xlab("Region")+
+  facet_wrap(.~Area, scales = "free_y")
 
 #TP june august nearshore 18, mid 46 and offshore 66 82 91
 
@@ -830,6 +1004,14 @@ ggplot(CSMI4%>%filter(!is.na(Month)), aes(x=Area, y=`TP ug P/L`, fill = Month))+
   scale_fill_brewer()+
   theme_bw()+
   ylab("TP (μg P/L)")
+
+ggplot(CSMI5nomid2, aes(x=Month, y=TPugPL, fill = Depth))+
+  geom_boxplot()+
+  scale_color_brewer()+
+  theme_classic()+
+  ylab("TP (μg P/L)")+
+  xlab("Region")+
+  facet_wrap(.~Area, scales = "free_y")
 
 #summary stats
 #NH4 summary stats and CI
