@@ -24,6 +24,9 @@ library(ggpubr)
 #Water chemistry
 CSMIHuron2 <- read.csv("CSMIHuron2.csv", header=T)
 
+#Water chemistry binned biweekly months
+CSMIHuron2_2 <- read_csv("CSMIHuron2_2.csv")
+
 #CTE
 CCTD_H_2022 <- read.csv("2022CSMILHcombinedctddatabinned1mdepths2.csv", header=T)
 
@@ -73,6 +76,16 @@ CSMI4$Month<-factor(CSMI4$Month, c("June", "August"))
 CSMI4$Depth<-factor(CSMI4$Depth, c("Epi", "Mid", "Bottom"))
 #order distance from shore factor
 CSMI4$DFS<-factor(CSMI4$DFS, c("Nearshore", "Midshore", "Offshore"))
+
+CSMI5<-CSMIHuron2_2
+#order basin factor
+CSMI5$Area<-factor(CSMI5$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+#order month factor
+CSMI5$Month<-factor(CSMI5$Month, c("Early June","Mid June", "Late June", "Early July", "Late July", "August"))
+#order depth factor
+CSMI5$Depth<-factor(CSMI5$Depth, c("Epi", "Mid", "Bottom"))
+#order distance from shore factor
+CSMI5$DFS<-factor(CSMI5$DFS, c("Nearshore", "Midshore", "Offshore"))
 
 #subset month is NA
 CSMI4nomonthNA<-subset(CSMI4, Month!="NA")
@@ -715,6 +728,18 @@ ggplot(CSMI4, aes(x=Area, y=`chla    ug/L`, fill = Month))+
   theme_classic()+
   ylab("chl-a (μg/L)")+
   xlab("Region")
+
+#subset month is NA
+CSMI5nomonthNA<-subset(CSMI5, Month!="NA")
+
+ggplot(CSMI5nomonthNA, aes(x=Area, y=chlaugL, fill = Month))+
+  geom_boxplot()+
+  scale_color_brewer()+
+  theme_classic()+
+  ylab("Chl-a (μg/L)")+
+  xlab("Region")+
+  facet_wrap(.~Area)
+
 #tn june august  nearshore 18, mid 46 and offshore 66 82 91
 
 tn<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`TN ug N/L`, fill = DFS))+
