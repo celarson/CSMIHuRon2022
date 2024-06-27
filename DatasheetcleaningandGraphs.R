@@ -23,12 +23,11 @@ library(ggpubr)
 
 #Water chemistry
 CSMIHuron2 <- read.csv("CSMIHuron2.csv", header=T)
-View(CSMIHuron2)
 
-CTE
-CCTD_H_2022 <- read_csv("CSMI/2022 CSMI LH combined ctd data binned 1m depths 2.csv")
-View(CCTD_H_2022)
-#CM is our meta data with STIS numbers
+#CTE
+CCTD_H_2022 <- read.csv("2022CSMILHcombinedctddatabinned1mdepths2.csv", header=T)
+
+#CM is our net tow meta data with STIS numbers
 CM <- read.csv("CalibrationMeta.csv", header=T)
 
 #Zoop153count are the zooplankton counts for the 153 net
@@ -59,60 +58,53 @@ Zoopbiomass64long<-melt(Zoop64biomasswide, value.name = "Count", variable.name =
 Zoopbiomass64Mer<-merge(Zoopbiomass64long, CM, by="SiteID")
 Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
 
-#aggregate
-Biomass153<-aggregate(Biomass ~ Area + Species, data = Zoopbiomass153Mer, FUN = mean)
+#############################################################
+#Analysis
 
-###############work on this later, start with water chem first###############
-Biomass153[,3][Biomass153[,3]==0]<-NA
-
-ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
-  geom_point()+
-  theme_bw()+
-  scale_color_viridis()
-
-Biomass153<-ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
-  geom_point()+
-  theme_bw()+
-  scale_color_viridis(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))+
-  guides(color=guide_legend(), size=guide_legend())
-
-Biomass153+scale_size_continuous(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))
-
-#Diversity
-richness_zoo153C<-estimateR(Zoopcount153Mer$Density)
-Shann_zoo153C<-diversity(Zoopcount153Mer, index = "shannon")
-
-
-
+#Water chemistry
 #NH4 ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
 CSMI4<-CSMIHuron2
+#order basin factor
 CSMI4$Area<-factor(CSMI4$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+#order month factor
 CSMI4$Month<-factor(CSMI4$Month, c("June", "August"))
+#order depth factor
 CSMI4$Depth<-factor(CSMI4$Depth, c("Epi", "Mid", "Bottom"))
+#order distance from shore factor
 CSMI4$DFS<-factor(CSMI4$DFS, c("Nearshore", "Midshore", "Offshore"))
 
-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Depth))+
+#subset month is NA
+CSMI4nomonthNA<-subset(CSMI4, Month!="NA")
+#168 observations
+  
+
+#NH4 - no clear difference in 2017
+ggplot(CSMI4nomonthNA, aes(x=Month, y=NH4ugNL, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
   theme_classic()+
-  ylab("NH4 (μg N/L)")
+  ylab("NH4 (μg N/L)")+
+  facet_wrap(.~Area)
 
 #used in final version
 
-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Depth))+
+ggplot(CSMI4, aes(x=Area, y=NH4ugNL, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
   theme_classic()+
   ylab("NH4 (μg N/L)")+
   xlab("Region")
 
-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
+ggplot(CSMI4, aes(x=Area, y=NH4ugNL, fill = Month))+
   geom_boxplot()+
-  scale_fill_brewer(palette = "Reds 3")+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
   theme_classic()+
   ylab("NH4 (μg N/L)")+
   xlab("Region")
+
+####################stopped here
+####################################
 
 nh4ave<-aggregate(`NH4 ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
 nh4aveM<-aggregate(`NH4 ug N/L` ~ Area + Month, data = CSMI4, FUN = mean)
@@ -122,7 +114,7 @@ NH4AM<-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
   scale_fill_brewer()+
   theme_classic()+
   ylab("NH4 (μg N/L)")
-  
+
 NH4<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`NH4 ug N/L`))+
   geom_boxplot() +
   scale_fill_brewer()+
@@ -169,6 +161,40 @@ ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=DFS, y=`NH4 ug N/L`, fill=DFS))+
   ylab("NH4 (μg N/L)") +
   xlab("Distance from Shore")+
   guides(fill=guide_legend(title = NULL))
+
+
+
+
+
+
+
+
+#aggregate
+Biomass153<-aggregate(Biomass ~ Area + Species, data = Zoopbiomass153Mer, FUN = mean)
+
+###############work on this later, start with water chem first###############
+Biomass153[,3][Biomass153[,3]==0]<-NA
+
+ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_viridis()
+
+Biomass153<-ggplot(Biomass153, aes(x=Area, y=Species, size = `Biomass`, color = `Biomass`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_viridis(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))+
+  guides(color=guide_legend(), size=guide_legend())
+
+Biomass153+scale_size_continuous(limits=c(.1,8000), breaks=seq(.1,8000, by=2500))
+
+#Diversity
+richness_zoo153C<-estimateR(Zoopcount153Mer$Density)
+Shann_zoo153C<-diversity(Zoopcount153Mer, index = "shannon")
+
+
+
+
 
 #NOx ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
