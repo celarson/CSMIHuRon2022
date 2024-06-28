@@ -61,6 +61,46 @@ Zoopbiomass64long<-melt(Zoop64biomasswide, value.name = "Count", variable.name =
 Zoopbiomass64Mer<-merge(Zoopbiomass64long, CM, by="SiteID")
 Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
 
+#Subset 153 for only bythrophes
+Bytho153count<-subset(Zoopcount153Mer, Species == "Bythotrepheslongimanus")
+Dresinnid64count<-subset(Zoopcount64Mer, Species == "DreissenidVeligers")
+
+#order factors bytho
+Bytho153count$Month<-factor(Bytho153count$Month, c("June", "July", "Aug") )
+Bytho153count$Area<-factor(Bytho153count$Area, c("NC", "SB", "GB", "NMB", "SMB"))
+
+#order factors dressinid
+Dresinnid64count$Month<-factor(Dresinnid64count$Month, c("June", "July", "Aug"))
+Dresinnid64count$Area<-factor(Dresinnid64count$Area, c("NC", "SB", "GB", "NMB", "SMB"))
+
+BythoDresinnidcount<-rbind(Bytho153count, Dresinnid64count)
+
+
+#Boxplot of invasives (Bythotrephes and Dreissenid)
+
+ggplot(Bytho153count, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Density (count/m^3)")
+
+ggplot(Dresinnid64count, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  scale_y_log10()+
+  ylab("Density (count/m^3)")
+  
+
+options(scipen = 999)
 #############################################################
 #Analysis
 
@@ -129,9 +169,27 @@ ggplot(CSMI4, aes(x=Area, y=NH4ugNL, fill = Month))+
 ####################stopped here
 ####################################
 
+#Aggregate
 nh4ave<-aggregate(`NH4 ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
 nh4aveM<-aggregate(`NH4 ug N/L` ~ Area + Month, data = CSMI4, FUN = mean)
+noxad<-aggregate(`NOx ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
+noxam<-aggregate(`NOx ug N/L` ~ Area + Month, data = CSMI4, FUN = mean)
+SRPdepthsd<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = sd)
+SRPdepthave<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = mean)
+SRPmonthave<-aggregate(`SRP ug P/L`~Area + Month, data = CSMI4, FUN = mean)
+KADepthave<- aggregate(`K mg/L`~ Area + Depth, data = CSMI4, FUN = mean)
+KAMave<-aggregate(`K mg/L`~ Area + Month, data = CSMI4, FUN=mean)
+naADave<- aggregate(`Na mg/L`~ Area + Depth, data = CSMI4, FUN = mean)
+naAMave<- aggregate(`Na mg/L`~ Area + Month, data = CSMI4, FUN = mean)
+CaADave<-aggregate(`Ca mg/L` ~ Area + Depth, data = CSMI4, FUN = mean)
+CaAMave<-aggregate(`CamgL` ~ Area + Month, data = CSMI4, FUN = mean)
+clADave<-aggregate(`ClmgL` ~ Area + Depth, data = CSMI4, FUN = mean)
+clAMave<-aggregate(`ClmgL` ~ Area + Month, data = CSMI4, FUN = mean)
+soAMave<-aggregate(`SO4mgL` ~ Area + Month, data = CSMI4, FUN = mean)
 
+zoo153ave<-aggregate(`Density` ~ Area, data = )
+
+#plots for water chem
 NH4AM<-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -185,13 +243,6 @@ ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=DFS, y=`NH4 ug N/L`, fill=DFS))+
   xlab("Distance from Shore")+
   guides(fill=guide_legend(title = NULL))
 
-
-
-
-
-
-
-
 #aggregate
 Biomass153<-aggregate(Biomass ~ Area + Species, data = Zoopbiomass153Mer, FUN = mean)
 
@@ -220,9 +271,6 @@ Shann_zoo153C<-diversity(Zoopcount153Mer, index = "shannon")
 
 
 #NOx ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
-
-noxad<-aggregate(`NOx ug N/L` ~ Area + Depth, data = CSMI4, FUN = mean)
-noxam<-aggregate(`NOx ug N/L` ~ Area + Month, data = CSMI4, FUN = mean)
 
 ggplot(CSMI4%>%filter(!is.na(Month)), aes(x=Month, y=`NOx ug N/L`, fill=DFS))+
   geom_boxplot()+
@@ -319,10 +367,6 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`SRP ug P/L`, fill=Depth))+
   ylab("SRP (μg P/L)")+
   guides(fill=guide_legend(title=NULL))
 
-SRPdepthsd<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = sd)
-SRPdepthave<-aggregate(`SRP ug P/L`~Area + Depth, data = CSMI4, FUN = mean)
-SRPmonthave<-aggregate(`SRP ug P/L`~Area + Month, data = CSMI4, FUN = mean)
-
 ggplot(CSMI4nomonthNA, aes(x=Month, y=SRPugPL, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
@@ -392,9 +436,6 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`K mg/L`, fill=Depth))+
   ylab("K+ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
 
-KADepthave<- aggregate(`K mg/L`~ Area + Depth, data = CSMI4, FUN = mean)
-KAMave<-aggregate(`K mg/L`~ Area + Month, data = CSMI4, FUN=mean)
-
 #used in final version
 
 ggplot(CSMI4, aes(x=Area, y=`K mg/L`, fill = Depth))+
@@ -462,9 +503,6 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Na mg/L`, fill=Depth))+
   theme_bw()+
   ylab("Na+ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
-
-naADave<- aggregate(`Na mg/L`~ Area + Depth, data = CSMI4, FUN = mean)
-naAMave<- aggregate(`Na mg/L`~ Area + Month, data = CSMI4, FUN = mean)
 
 #used in final version
 
@@ -534,8 +572,6 @@ ggplot(CSMI4%>%filter(!is.na(Depth)), aes(x=Depth, y=`Ca mg/L`, fill=Depth))+
   theme_bw()+
   ylab("Ca++ (mg/L)")+
   guides(fill=guide_legend(title=NULL))
-
-CaADave<-aggregate(`Ca mg/L` ~ Area + Depth, data = CSMI4, FUN = mean)
 
 #used in final version
 
