@@ -43,6 +43,11 @@ Zoopcount153Mer<-merge(Zoopcount153long,CM, by="SiteID")
 #creating column density by taking count/volume columns
 Zoopcount153Mer$Density<-Zoopcount153Mer$Count/Zoopcount153Mer$Volume
 
+#Read in zooplankton meta with groups
+Zoometa <- read_csv("Zoometa.csv")
+
+Zoopcount153MerG<-merge(Zoopcount153Mer, Zoometa, by="Species")
+
 #zooplankton counts for the 64 net
 Zoop64countwide<- read.csv("Zoop64countforR.csv", header=T)
 Zoopcount64long<-melt(Zoop64countwide, value.name = "Count", variable.name = "Species")
@@ -1545,3 +1550,56 @@ ggplot(zoo64countdfs, aes(x=DFS, y=Group, size = `Average Density (Count/m^3)`, 
   theme_bw()+
   scale_color_viridis()+
   scale_y_discrete(limits=rev)
+
+#Zooplankton 153 species by group
+#subset
+Zoop153AdultCalnoid<-subset(Zoopcount153MerG, Group == "AdultCalanoid")
+
+ggplot(Ag153DenAdultCalanoidNA, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")+
+  ylab("Adult Calanoid")
+
+Ag153DenAdultCalanoid<-aggregate(`Density` ~ Area + Species, data = Zoop153AdultCalnoid, FUN = mean)
+Ag153DenAdultCalanoidNA<-subset(Ag153DenAdultCalanoid, Density!= "0")
+
+#Zoo 153 species by group by month
+#June
+Ag153DenAdultCalanoidmonth<-aggregate(`Density` ~ Area + Species + Month, data = Zoop153AdultCalnoid, FUN = mean)
+Ag153DenAdultCalanoidJuneNA<-subset(Ag153DenAdultCalanoidmonth, Density!="0")
+Ag153DenAdultCalanoidJuneNA<-subset(Ag153DenAdultCalanoidJuneNA, Month=="June")
+
+ggplot(Ag153DenAdultCalanoidJuneNA, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")+
+  ylab("Adult Calanoid")
+
+#July
+Ag153DenAdultCalanoidJulyNA<-subset(Ag153DenAdultCalanoidmonth, Density!="0")
+Ag153DenAdultCalanoidJulyNA<-subset(Ag153DenAdultCalanoidJulyNA, Month=="July")
+
+ggplot(Ag153DenAdultCalanoidJulyNA, aes(x=Area, y=Species, size=`Density`,  color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")+
+  ylab("Adult Calanoid")
+
+#August
+Ag153DenAdultCalanoidAugNA<-subset(Ag153DenAdultCalanoidmonth, Density!="0")
+Ag153DenAdultCalanoidAugNA<-subset(Ag153DenAdultCalanoidAugNA, Month=="Aug")
+
+ggplot(Ag153DenAdultCalanoidAugNA, aes(x=Area, y=Species, size=`Density`,  color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")+
+  ylab("Adult Calanoid")
