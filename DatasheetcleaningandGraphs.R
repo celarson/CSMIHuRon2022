@@ -1554,6 +1554,8 @@ ggplot(zoo64countdfs, aes(x=DFS, y=Group, size = `Average Density (Count/m^3)`, 
 #Zooplankton 153 species by group
 #subset
 Zoop153AdultCalnoid<-subset(Zoopcount153MerG, Group == "AdultCalanoid")
+Zoop153AdImmCalanoid<-subset(Zoopcount153MerG, Group == c("AdultCalanoid", "ImmatureCalanoid"))
+
 
 ggplot(Ag153DenAdultCalanoidNA, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
   geom_point()+
@@ -1565,6 +1567,18 @@ ggplot(Ag153DenAdultCalanoidNA, aes(x=Area, y=Species, size = `Density`, color =
 
 Ag153DenAdultCalanoid<-aggregate(`Density` ~ Area + Species, data = Zoop153AdultCalnoid, FUN = mean)
 Ag153DenAdultCalanoidNA<-subset(Ag153DenAdultCalanoid, Density!= "0")
+
+#immature and adult calanoid
+Ag153AdImmCalanoid<-aggregate(`Density` ~ Area + Species, data = Zoop153AdImmCalanoid, FUN = mean)
+Ag153AdImmCalanoidNA<-subset(Ag153AdImmCalanoid, Density!="0")
+
+ggplot(Ag153AdImmCalanoidNA, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")+
+  ylab("Adult and Immature Calanoids")
 
 #Zoo 153 species by group by month
 #June
@@ -1603,3 +1617,6 @@ ggplot(Ag153DenAdultCalanoidAugNA, aes(x=Area, y=Species, size=`Density`,  color
   scale_y_discrete(limits=rev)+
   xlab("Region")+
   ylab("Adult Calanoid")
+
+
+

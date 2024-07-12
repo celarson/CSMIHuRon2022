@@ -1,40 +1,84 @@
-﻿Group,Species
-AdultCalanoid,Epischuralacustris
-AdultCalanoid,Eurytemoracarolleea
-AdultCalanoid,Leptodiaptomusashlandi
-AdultCalanoid,Leptodiaptomusminutus
-AdultCalanoid,Leptodiaptomussicilis
-AdultCalanoid,Limnocalanusmacrurus
-AdultCalanoid,Senecellacalanoides
-AdultCalanoid,Skistodiaptomusoregonensis
-AdultCyclopoid,Diacyclopsnanus
-AdultCyclopoid,Diacyclopsthomasi
-AdultCyclopoid,Mesocyclopsedax
-AdultCyclopoid,Microcyclopsvaricans
-AdultCyclopoid,Tropocyclopsprasinusmexicanus
-Cladoceran,Alonaspp
-Cladoceran,Alonella 
-Cladoceran,Bosminalongirostris
-Cladoceran,Bosminaspp
-Cladoceran,Bythotrepheslongimanus
-Cladoceran,Cercopagispengoi
-Cladoceran,Ceriodaphniaspp
-Cladoceran,Chydorussp
-Cladoceran,Daphniagaleatamendotae
-Cladoceran,Daphnialongiremis
-Cladoceran,Daphniaparvula
-Cladoceran,Daphniaretrocurva
-Cladoceran,Daphniaspp
-Cladoceran,Diaphanosomaspp
-Cladoceran,Eubosminacoregoni
-Cladoceran,Eurycercuslamellatus
-Cladoceran,Holopediumgibberum
-Cladoceran,Leptodorakindti
-Cladoceran,Polyphemuspediculus
-Harpacticoid,Harpacticoidcopepodites
-ImmatureCalanoid,Calanoidcopepodites
-ImmatureCalanoid,Epischuracopepodites
-ImmatureCalanoid,Limnocalanuscopepodites
-ImmatureCalanoid,Senecellacopepodites
-ImmatureCyclopoid,Cyclopscopepodites
-Mysid,Mysisdiluviana
+﻿Group,Species,FunctionalFeedingGroup
+AdultCalanoid,Epischuralacustris,FilterFeeders
+AdultCalanoid,Eurytemoracarolleea,
+AdultCalanoid,Leptodiaptomusashlandi,
+AdultCalanoid,Leptodiaptomusminutus,
+AdultCalanoid,Leptodiaptomussicilis,
+AdultCalanoid,Limnocalanusmacrurus,
+AdultCalanoid,Senecellacalanoides,
+AdultCalanoid,Skistodiaptomusoregonensis,
+AdultCyclopoid,Diacyclopsnanus,
+AdultCyclopoid,Diacyclopsthomasi,
+AdultCyclopoid,Mesocyclopsedax,
+AdultCyclopoid,Microcyclopsvaricans,
+AdultCyclopoid,Tropocyclopsprasinusmexicanus,
+Cladoceran,Alonaspp,
+Cladoceran,Alonella ,
+Cladoceran,Bosminalongirostris,Herbivorous Cladoceran
+Cladoceran,Bosminaspp,Herbivorous Cladoceran
+Cladoceran,Bythotrepheslongimanus,Predatory Cladoceran
+Cladoceran,Cercopagispengoi,
+Cladoceran,Ceriodaphniaspp,
+Cladoceran,Chydorussp,
+Cladoceran,Daphniagaleatamendotae,
+Cladoceran,Daphnialongiremis,
+Cladoceran,Daphniaparvula,
+Cladoceran,Daphniaretrocurva,
+Cladoceran,Daphniaspp,
+Cladoceran,Diaphanosomaspp,
+Cladoceran,Eubosminacoregoni,
+Cladoceran,Eurycercuslamellatus,
+Cladoceran,Holopediumgibberum,
+Cladoceran,Leptodorakindti,
+Cladoceran,Polyphemuspediculus,
+Harpacticoid,Harpacticoidcopepodites,
+ImmatureCalanoid,Calanoidcopepodites,
+ImmatureCalanoid,Epischuracopepodites,
+ImmatureCalanoid,Limnocalanuscopepodites,
+ImmatureCalanoid,Senecellacopepodites,
+ImmatureCyclopoid,Cyclopscopepodites,
+Mysid,Mysisdiluviana,
+Mollusks,Dreissenid Veligers,SmallZooplankton
+Nauplii,Copepod nauplii,SmallZooplankton
+Rotifera,Ascomorpha eucaudis,SmallZooplankton
+Rotifera,Ascomorpha ovalis,SmallZooplankton
+Rotifera,Asplanchna priodonta,SmallZooplankton
+Rotifera,Bdelloidea,SmallZooplankton
+Rotifera,Cephalodella spp.,SmallZooplankton
+Rotifera,Collotheca spp.,SmallZooplankton
+Rotifera,Conochilus unicornis,SmallZooplankton
+Rotifera,Euchlanis spp.,SmallZooplankton
+Rotifera,Gastropus stylifer,SmallZooplankton
+Rotifera,Kellicottia longispina,SmallZooplankton
+Rotifera,Keratella cochlearis,SmallZooplankton
+Rotifera,Keratella crassa,SmallZooplankton
+Rotifera,Keratella earlinae,SmallZooplankton
+Rotifera,Keratella hiemalis,SmallZooplankton
+Rotifera,Keratella quadrata,SmallZooplankton
+Rotifera,Lecane flexilis,SmallZooplankton
+Rotifera,Lecane ludwigi,SmallZooplankton
+Rotifera,Lecane spp.,SmallZooplankton
+Rotifera,Lepadella spp.,SmallZooplankton
+Rotifera,Monostyla copeis,SmallZooplankton
+Rotifera,Monostyla lunaris,SmallZooplankton
+Rotifera,Monostyla spp.,SmallZooplankton
+Rotifera,Notholca acuminata,SmallZooplankton
+Rotifera,Notholca foliacea,SmallZooplankton
+Rotifera,Notholca laurentiae,SmallZooplankton
+Rotifera,Notholca squamula,SmallZooplankton
+Rotifera,Ploesoma hudsoni,SmallZooplankton
+Rotifera,Ploesoma lenticulare,SmallZooplankton
+Rotifera,Ploesoma truncatum,SmallZooplankton
+Rotifera,Polyarthra spp.,SmallZooplankton
+Rotifera,Pompholyx sulcata,SmallZooplankton
+Rotifera,Ptygura,SmallZooplankton
+Rotifera,Rotifera,SmallZooplankton
+Rotifera,Stephanoceros,SmallZooplankton
+Rotifera,Synchaeta spp.,SmallZooplankton
+Rotifera,Trichocerca cylindrica,SmallZooplankton
+Rotifera,Trichocerca multicrinis,SmallZooplankton
+Rotifera,Trichocerca porcellus,SmallZooplankton
+Rotifera,Trichocerca rousseleti,SmallZooplankton
+Rotifera,Trichocerca spp.,SmallZooplankton
+Rotifera,Trichotria spp.,SmallZooplankton
+Rotifera,Tylotrocha monopus,SmallZooplankton
