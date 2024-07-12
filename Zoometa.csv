@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Group,Species,FunctionalFeedingGroup
 AdultCalanoid,Epischuralacustris,FilterFeeders
 AdultCalanoid,Eurytemoracarolleea,
@@ -82,3 +83,45 @@ Rotifera,Trichocerca rousseleti,SmallZooplankton
 Rotifera,Trichocerca spp.,SmallZooplankton
 Rotifera,Trichotria spp.,SmallZooplankton
 Rotifera,Tylotrocha monopus,SmallZooplankton
+=======
+﻿Group,Species
+AdultCalanoid,Epischuralacustris
+AdultCalanoid,Eurytemoracarolleea
+AdultCalanoid,Leptodiaptomusashlandi
+AdultCalanoid,Leptodiaptomusminutus
+AdultCalanoid,Leptodiaptomussicilis
+AdultCalanoid,Limnocalanusmacrurus
+AdultCalanoid,Senecellacalanoides
+AdultCalanoid,Skistodiaptomusoregonensis
+AdultCyclopoid,Diacyclopsnanus
+AdultCyclopoid,Diacyclopsthomasi
+AdultCyclopoid,Mesocyclopsedax
+AdultCyclopoid,Microcyclopsvaricans
+AdultCyclopoid,Tropocyclopsprasinusmexicanus
+Cladoceran,Alonaspp
+Cladoceran,Alonella 
+Cladoceran,Bosminalongirostris
+Cladoceran,Bosminaspp
+Cladoceran,Bythotrepheslongimanus
+Cladoceran,Cercopagispengoi
+Cladoceran,Ceriodaphniaspp
+Cladoceran,Chydorussp
+Cladoceran,Daphniagaleatamendotae
+Cladoceran,Daphnialongiremis
+Cladoceran,Daphniaparvula
+Cladoceran,Daphniaretrocurva
+Cladoceran,Daphniaspp
+Cladoceran,Diaphanosomaspp
+Cladoceran,Eubosminacoregoni
+Cladoceran,Eurycercuslamellatus
+Cladoceran,Holopediumgibberum
+Cladoceran,Leptodorakindti
+Cladoceran,Polyphemuspediculus
+Harpacticoid,Harpacticoidcopepodites
+ImmatureCalanoid,Calanoidcopepodites
+ImmatureCalanoid,Epischuracopepodites
+ImmatureCalanoid,Limnocalanuscopepodites
+ImmatureCalanoid,Senecellacopepodites
+ImmatureCyclopoid,Cyclopscopepodites
+Mysid,Mysisdiluviana
+>>>>>>> da3c257b46132bfe1b794a2a8b6f62027abc0335

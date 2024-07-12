@@ -33,6 +33,23 @@ CCTD_H_2022 <- read.csv("2022CSMILHcombinedctddatabinned1mdepths2.csv", header=T
 #CM is our net tow meta data with STIS numbers
 CM <- read.csv("CalibrationMeta.csv", header=T)
 
+#2017 Water chem load
+CSMI17WQ <- read_csv("CSMIHuron17WQ.csv")
+View(CSMIHuron17WQ)
+
+CSMI17meta <- read_csv("2017WQmeta.csv")
+View(CSMI17meta)
+
+#merge 2017 with meta
+CSMI17<- merge(CSMI17WQ, CSMI17meta, by = "STIS")
+
+#2017 and 2022 Meta and datasheet load
+yearmeta <- read_csv("yearmeta.csv", col_types = cols(Year = col_character()))
+C2217 <- read_csv("C2217.csv")
+
+CSMIYALL <- merge(C2217, yearmeta, by = "STIS")
+CSMIY <-merge(C2217, yearmeta, by = "STIS")
+
 #Zoop153count are the zooplankton counts for the 153 net
 Zoop153countwide<- read.csv("ZoopforR6.18.24.csv", header=T)
 #melt from matrix to long form
@@ -80,7 +97,6 @@ Dresinnid64count$Area<-factor(Dresinnid64count$Area, c("NC", "SB", "GB", "NMB", 
 
 BythoDresinnidcount<-rbind(Bytho153count, Dresinnid64count)
 
-
 #Boxplot of invasives (Bythotrephes and Dreissenid)
 
 ggplot(Bytho153count, aes(x=Month, y=Density, fill = Month))+
@@ -91,7 +107,7 @@ ggplot(Bytho153count, aes(x=Month, y=Density, fill = Month))+
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)+
-  ylab("Density (count/m^3)")
+  labs(y=expression(paste(italic("Bythotrephes longimanus"), "Density (count/m^3)")))
 
 ggplot(Dresinnid64count, aes(x=Month, y=Density, fill = Month))+
   geom_boxplot()+
@@ -102,7 +118,7 @@ ggplot(Dresinnid64count, aes(x=Month, y=Density, fill = Month))+
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)+
   scale_y_log10()+
-  ylab("Density (count/m^3)")
+  labs(y=expression(paste(italic("Dreissenid"), "veliger Density (count/m^3)")))
   
 
 options(scipen = 999)
@@ -111,6 +127,9 @@ options(scipen = 999)
 
 #Water chemistry
 #NH4 ug N/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
+
+CSMIY$Area<-factor(CSMIY$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+CSMIY$Month<-factor(CSMIY$Month, c("June", "Aug"))
 
 CSMI4<-CSMIHuron2
 #order basin factor
@@ -135,7 +154,9 @@ CSMI5$DFS<-factor(CSMI5$DFS, c("Nearshore", "Midshore", "Offshore"))
 #subset month is NA
 CSMI4nomonthNA<-subset(CSMI4, Month!="NA")
 #168 observations
-  
+
+#subset 2017 month 
+CSMI17nomonthNA<-subset(CSMI17, Month!="NA")
 
 #NH4 - no clear difference in 2017
 ggplot(CSMI4nomonthNA, aes(x=Month, y=NH4ugNL, fill = Depth))+
@@ -155,7 +176,50 @@ ggplot(CSMI4nomonthNA, aes(x=Month, y=NH4ugNL, fill = Depth))+
   facet_grid(.~Area)+
   ylab("NH4 (μg N/L)")
 
-#used in final version
+ggplot(CSMI17nomonthNA, aes(x=Month, y=NH4, fill = Depth))+
+  geom_boxplot()+
+  scale_fill_brewer()+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("NH4 (μg N/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=NH4, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("NH4 (μg N/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=NH4, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("NH4 (μg N/L)")
+
+ggplot(CSMIYALL, aes(x= Year, y=NH4, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("NH4 (μg N/L)")
+
+CSMIYALL$Area<-factor(CSMIYALL$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+
+CSMIYnomonth<-subset(CSMIY, Month!="NA")
+CSMIYnomonth$Year<-factor(CSMIYnomonth$Year)
 
 ggplot(CSMI4, aes(x=Area, y=NH4ugNL, fill = Depth))+
   geom_boxplot()+
@@ -191,7 +255,8 @@ CaAMave<-aggregate(`CamgL` ~ Area + Month, data = CSMI4, FUN = mean)
 clADave<-aggregate(`ClmgL` ~ Area + Depth, data = CSMI4, FUN = mean)
 clAMave<-aggregate(`ClmgL` ~ Area + Month, data = CSMI4, FUN = mean)
 soAMave<-aggregate(`SO4mgL` ~ Area + Month, data = CSMI4, FUN = mean)
-
+siR<-aggregate(`SimgSiO2L` ~ Area, data = CSMI4, FUN = mean)
+tpnmonth<-aggregate(`TNugNL` ~ Area, data = CSMI5, FUN = mean)
 zoo153ave<-aggregate(`Density` ~ Area, data = )
 
 #plots for water chem
@@ -343,6 +408,26 @@ ggplot(CSMI4nomonthNA, aes(x=Month, y=NOxugNL, fill = Depth))+
   facet_grid(.~Area)+
   ylab("NOx (μg N/L)")
 
+ggplot(CSMIYnomonth, aes(x= Year, y=NOx, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("NOx (μg N/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=NOx, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("NOx (μg N/L)")
+
 #SRP ug P/L BW - June, nearshore 18, mid 46 and offshore 66 82 91
 
 SRP<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`SRP ug P/L`, fill = DFS))+
@@ -412,6 +497,25 @@ ggplot(CSMI4, aes(x=Area, y=`SRP ug P/L`, fill = Month))+
   ylab("SRP (μg P/L)")+
   xlab("Region")
 
+ggplot(CSMIYnomonth, aes(x= Year, y=SRP, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("SRP (μg P/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=SRP, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("SRP (μg P/L)")
 
 #K+ mg/l bw - June,  nearshore 18, mid 46 and offshore 66 82 91
 
@@ -474,6 +578,26 @@ ggplot(CSMI4, aes(x=Area, y=KmgL, fill = Month))+
 ggplot(CSMI4nomonthNA, aes(x=Month, y=KmgL, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("K+ (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=K, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("K+ (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=K, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
@@ -549,6 +673,25 @@ ggplot(CSMI4nomonthNA, aes(x=Month, y=NamgL, fill = Depth))+
   facet_grid(.~Area)+
   ylab("Na+ (mg/L)")
 
+ggplot(CSMIYnomonth, aes(x= Year, y=Na, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Na+ (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=Na, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Na+ (mg/L)")
 
 #Ca mg/L bw june,nearshore 18, mid 46 and offshore 66 82 91
 
@@ -618,6 +761,26 @@ ggplot(CSMI4nomonthNA, aes(x=Month, y=CamgL, fill = Depth))+
   facet_grid(.~Area)+
   ylab("Ca++ (mg/L)")
 
+ggplot(CSMIYnomonth, aes(x= Year, y=Ca, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Ca++ (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=Ca, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Ca++ (mg/L)")
+
 #Mg mg/L bw  june,nearshore 18, mid 46 and offshore 66 82 91
 
 Mg<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`Mg mg/L`, fill = DFS))+
@@ -679,6 +842,26 @@ ggplot(CSMI4, aes(x=Area, y=MgmgL, fill = Month))+
 ggplot(CSMI4nomonthNA, aes(x=Month, y=MgmgL, fill = Depth))+
   geom_boxplot()+
   scale_fill_brewer()+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Mg++ (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=Mg, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Mg++ (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=Mg, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
@@ -755,6 +938,26 @@ ggplot(CSMI4nomonthNA, aes(x=Month, y=ClmgL, fill = Depth))+
   facet_grid(.~Area)+
   ylab("Cl- (mg/L)")
 
+ggplot(CSMIYnomonth, aes(x= Year, y=Cl, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Cl- (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=Cl, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("Cl- (mg/L)")
+
 #SO4 mg/L bw June, ,nearshore 18, mid 46 and offshore 66 82 91
 
 SO4<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`SO4 mg/L`, fill = DFS))+
@@ -824,6 +1027,26 @@ ggplot(CSMI4, aes(x=Area, y=SO4mgL, fill = Month))+
   ylab("SO4 mg/L)")+
   xlab("Region")
 
+ggplot(CSMIYnomonth, aes(x= Year, y=SO4, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("SO4 (mg/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=SO4, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("SO4 (mg/L)")
+
 #DOC mg/Cl bw june ,nearshore 18, mid 46 and offshore 66 82 91
 
 DOC<-ggplot(CSMI4%>%filter(!is.na(DFS)), aes(x=Month, y=`DOC mg C/L`, fill = DFS))+
@@ -891,6 +1114,26 @@ ggplot(CSMI4, aes(x=Area, y=DOCmgCL, fill = Month))+
   theme_classic()+
   ylab("DOC mgCL)")+
   xlab("Region")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=DOC, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("DOC (mg C/L)")
+
+ggplot(CSMIYnomonth, aes(x= Year, y=DOC, fill = Year))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  ylab("DOC (mg C/L)")
 
 #Si bw june,nearshore 18, mid 46 and offshore 66 82 91
 
