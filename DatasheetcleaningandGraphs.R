@@ -1861,5 +1861,13 @@ ggplot(Ag153DenAdultCalanoidAugNA, aes(x=Area, y=Species, size=`Density`,  color
   xlab("Region")+
   ylab("Adult Calanoid")
 
+#Linear regression
+nh<-lm(NH4~NH4, data = CSMIYALL)
+plot(nh)
+residualsnh<-nh$residuals
+hist(residualsnh)
+qqline(residualsnh)
 
-
+nhr<-lm(NH4 ~ Area + Year + Month, data = CSMIYALL)
+residualsnhr<-nhr$residuals
+hist(residualsnhr)
