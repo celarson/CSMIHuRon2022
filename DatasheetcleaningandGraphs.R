@@ -1862,12 +1862,66 @@ ggplot(Ag153DenAdultCalanoidAugNA, aes(x=Area, y=Species, size=`Density`,  color
   ylab("Adult Calanoid")
 
 #Linear regression
-nh<-lm(NH4~NH4, data = CSMIYALL)
-plot(nh)
-residualsnh<-nh$residuals
-hist(residualsnh)
-qqline(residualsnh)
 
 nhr<-lm(NH4 ~ Area + Year + Month, data = CSMIYALL)
 residualsnhr<-nhr$residuals
 hist(residualsnhr)
+qqnorm(residualsnhr)
+qqline(residualsnhr)
+summary(nhr)
+
+nor<-lm(NOx ~ Area + Year + Month, data = CSMIYALL)
+rNOx<-nor$residuals
+hist(rNOx)
+qqnorm(rNOx)
+qqline(rNOx)
+summary(nor)
+
+srp<-lm(SRP ~ Area + Year + Month, data = CSMIYALL)
+rsrp<-srp$residuals
+hist(rsrp)
+qqnorm(rsrp)
+qqline(rsrp)
+summary(srp)
+
+tn<-lm(TN ~ Area + Year + Month, data = CSMIYALL)
+rtn<-tn$residuals
+hist(rtn)
+qqnorm(rtn)
+qqline(rtn)
+summary(tn)
+
+tp<-lm(TP ~ Area + Year + Month, data = CSMIYALL)
+rtp<-tp$residuals
+hist(rtp)
+qqnorm(rtp)
+qqline(rtp)
+summary(tp)
+
+k<-lm(K ~ Area + Year + Month, data = CSMIYALL)
+rk<-k$residuals
+hist(rk)
+qqnorm(rk)
+qqline(rk)
+summary(k)
+
+na<-lm(Na ~ Area + Year + Month, data = CSMIYALL)
+rna<-na$residuals
+hist(rna)
+qqnorm(rna)
+qqline(rna)
+summary(na)
+
+ca<-lm(Ca ~ Area + Year + Month, data = CSMIYALL)
+rca<-ca$residuals
+hist(rca)
+qqnorm(rca)
+qqline(rca)
+summary(ca)
+
+mg<-lm(Mg ~ Area + Year + Month, data = CSMIYALL)
+rmg<-mg$residuals
+hist(rmg)
+qqnorm(rmg)
+qqline(rmg)
+summary(mg)
