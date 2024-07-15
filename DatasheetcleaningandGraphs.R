@@ -1920,8 +1920,40 @@ qqline(rca)
 summary(ca)
 
 mg<-lm(Mg ~ Area + Year + Month, data = CSMIYALL)
+mg2<-lm(Mg ~ Area + Year + Month + DFS, data = CSMIYALL)
 rmg<-mg$residuals
 hist(rmg)
 qqnorm(rmg)
 qqline(rmg)
 summary(mg)
+rmg2<-mg2$residuals
+hist(rmg2)
+qqnorm(rmg2)
+
+cl<-lm(Cl ~ Area + Year + Month, data = CSMIYALL)
+rcl<-cl$residuals
+hist(rcl)
+qqnorm(rcl)
+qqline(rcl)
+summary(cl)
+
+so<-lm(SO4 ~ Area + Year + Month, data = CSMIYALL)
+rso<-so$residuals
+hist(rso)
+qqnorm(rso)
+qqline(rso)
+summary(so)
+
+chla<-lm(chla ~ Area + Year + Month, data = CSMIYALL)
+rchla<-chla$residuals
+hist(rchla)
+qqnorm(rchla)
+qqline(rchla)
+summary(chla)
+
+doc<-lm(DOC ~ Area + Year + Month, data = CSMIYALL)
+rdoc<-doc$residuals
+hist(rdoc)
+qqnorm(rdoc)
+qqline(rdoc)
+summary(doc)
