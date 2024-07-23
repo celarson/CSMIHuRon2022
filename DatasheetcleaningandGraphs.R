@@ -17,7 +17,7 @@ library(readxl)
 library(reshape2)
 library(vegan)
 library(ggpubr)
-
+library(AICcmodavg)
 ########################################################
 #Upload datasets
 
@@ -1861,8 +1861,9 @@ ggplot(Ag153DenAdultCalanoidAugNA, aes(x=Area, y=Species, size=`Density`,  color
   xlab("Region")+
   ylab("Adult Calanoid")
 
-#Linear regression
+#############################Linear regression
 
+#NH4
 nhr<-lm(NH4 ~ Area + Year + Month, data = CSMIYALL)
 residualsnhr<-nhr$residuals
 hist(residualsnhr)
@@ -1870,6 +1871,18 @@ qqnorm(residualsnhr)
 qqline(residualsnhr)
 summary(nhr)
 
+nhAY<-lm(NH4 ~ Area + Year, data = CSMIYALL)
+nhA<-lm(NH4 ~ Area, data = CSMIYALL)
+nhYM<-lm(NH4 ~ Year + Month, data = CSMIYALL)
+nhAM<-lm(NH4 ~ Area + Month, data = CSMIYALL)
+nhY<-lm(NH4 ~ Year, data = CSMIYALL)
+nhM<-lm(NH4 ~ Month, data = CSMIYALL)
+
+nhmod<-list(nhr, nhAY, nhA, nhYM, nhAM, nhY, nhM)
+nhnames<-c('nhr', 'nhAY', 'nhA', 'nhYM', 'nhAM', 'nhY','nhM')
+aictab(cand.set = nhmod, modnames = nhnames)
+
+#NOx
 nor<-lm(NOx ~ Area + Year + Month, data = CSMIYALL)
 rNOx<-nor$residuals
 hist(rNOx)
@@ -1877,6 +1890,18 @@ qqnorm(rNOx)
 qqline(rNOx)
 summary(nor)
 
+noAY<-lm(NOx ~ Area + Year, data = CSMIYALL)
+noA<-lm(NOx ~ Area, data = CSMIYALL)
+noYM<-lm(NOx ~ Year + Month, data = CSMIYALL)
+noAM<-lm(NOx ~ Area + Month, data = CSMIYALL)
+noY<-lm(NOx ~ Year, data = CSMIYALL)
+noM<-lm(NOx ~ Month, data = CSMIYALL)
+
+nomod<-list(nor,noAY,noA, noYM,noAM,noY,noM)
+nonames<-c('nor','noAY', 'noA', 'noYM','noAM','noY','noM')
+aictab(cand.set = nomod, modnames = nonames)
+
+#SRP
 srp<-lm(SRP ~ Area + Year + Month, data = CSMIYALL)
 rsrp<-srp$residuals
 hist(rsrp)
@@ -1884,6 +1909,18 @@ qqnorm(rsrp)
 qqline(rsrp)
 summary(srp)
 
+srpAY<-lm(SRP ~ Area + Year, data = CSMIYALL)
+srpA<-lm(SRP ~ Area, data = CSMIYALL)
+srpYM<-lm(SRP ~ Year + Month, data = CSMIYALL)
+srpAM<-lm(SRP ~ Area + Month, data = CSMIYALL)
+srpY<-lm(SRP ~ Year, data = CSMIYALL)
+srpM<-lm(SRP ~ Month, data = CSMIYALL)
+
+srpmod<-list(srp, srpAY, srpA,srpYM,srpAM,srpY,srpM)
+srpnam<-c('srp','srpAY', 'srpA', 'srpYM', 'srpAM', 'srpY','srpM')
+aictab(cand.set = srpmod, modnames = srpnam)
+
+#TN
 tn<-lm(TN ~ Area + Year + Month, data = CSMIYALL)
 rtn<-tn$residuals
 hist(rtn)
@@ -1891,6 +1928,18 @@ qqnorm(rtn)
 qqline(rtn)
 summary(tn)
 
+tnAY<-lm(TN ~ Area + Year, data = CSMIYALL)
+tnA<-lm(TN ~ Area, data = CSMIYALL)
+tnYM<-lm(TN ~ Year + Month, data = CSMIYALL)
+tnAM<-lm(TN ~ Area + Month, data = CSMIYALL)
+tnY<-lm(TN ~ Year, data = CSMIYALL)
+tnM<-lm(TN ~ Month, data = CSMIYALL)
+
+tnmod<-list(tn, tnAY, tnA, tnYM,tnAM,tnY,tnM)
+tnnam<-c('tn', 'tnAY', 'tnA','tnYM','tnAM','tnY','tnM')
+aictab(cand.set = tnmod, modnames = tnnam)
+
+#TP
 tp<-lm(TP ~ Area + Year + Month, data = CSMIYALL)
 rtp<-tp$residuals
 hist(rtp)
@@ -1898,6 +1947,18 @@ qqnorm(rtp)
 qqline(rtp)
 summary(tp)
 
+tpAY<-lm(TP ~ Area + Year, data = CSMIYALL)
+tpA<-lm(TP ~ Area, data = CSMIYALL)
+tpYM<-lm(TP ~ Year + Month, data = CSMIYALL)
+tpAM<-lm(TP ~ Area + Month, data = CSMIYALL)
+tpY<-lm(TP ~ Year, data = CSMIYALL)
+tpM<-lm(TP ~ Month, data = CSMIYALL)
+
+tpmod<-list(tp, tpAY, tpA, tpYM,tpAM,tpY,tpM)
+tpnam<-c('tp', 'tpAY','tpA','tpYM','tpAM','tpY','tpM')
+aictab(cand.set = tpmod, modnames = tpnam)
+
+#K
 k<-lm(K ~ Area + Year + Month, data = CSMIYALL)
 rk<-k$residuals
 hist(rk)
@@ -1905,6 +1966,18 @@ qqnorm(rk)
 qqline(rk)
 summary(k)
 
+kAY<-lm(K ~ Area + Year, data = CSMIYALL)
+kA<-lm(K ~ Area, data = CSMIYALL)
+kYM<-lm(K ~ Year + Month, data = CSMIYALL)
+kAM<-lm(K ~ Area + Month, data = CSMIYALL)
+kY<-lm(K ~ Year, data = CSMIYALL)
+kM<-lm(K ~ Month, data = CSMIYALL)
+
+kmod<-list(k,kAY,kA,kYM,kAM,kY,kM)
+knam<-c('k', 'kAY', 'kA','kYM','kAM','kY','kM')
+aictab(cand.set = kmod, modnames = knam)
+
+#na
 na<-lm(Na ~ Area + Year + Month, data = CSMIYALL)
 rna<-na$residuals
 hist(rna)
@@ -1912,6 +1985,18 @@ qqnorm(rna)
 qqline(rna)
 summary(na)
 
+naAY<-lm(Na ~ Area + Year, data = CSMIYALL)
+naA<-lm(Na ~ Area, data = CSMIYALL)
+naYM<-lm(Na ~ Year + Month, data = CSMIYALL)
+naAM<-lm(Na ~ Area + Month, data = CSMIYALL)
+naY<-lm(Na ~ Year, data = CSMIYALL)
+naM<-lm(Na ~ Month, data = CSMIYALL)
+
+namod<-list(na, naAY, naA,naYM,naAM,naY,naM)
+naname<-c('na', 'naAY', 'naA','naYM','naAM','naY','naM')
+aictab(cand.set = namod, modnames = naname)
+
+#ca
 ca<-lm(Ca ~ Area + Year + Month, data = CSMIYALL)
 rca<-ca$residuals
 hist(rca)
@@ -1919,6 +2004,18 @@ qqnorm(rca)
 qqline(rca)
 summary(ca)
 
+caAY<-lm(Ca ~ Area + Year, data = CSMIYALL)
+caA<-lm(Ca ~ Area, data = CSMIYALL)
+caYM<-lm(Ca ~ Year + Month, data = CSMIYALL)
+caAM<-lm(Ca ~ Area + Month, data = CSMIYALL)
+caY<-lm(Ca ~ Year, data = CSMIYALL)
+caM<-lm(Ca ~ Month, data = CSMIYALL)
+
+camod<-list(ca, caAY, caA,caYM,caAM,caY,caM)
+caname<-c('ca', 'caAY', 'caA','caYM','caAM','caY','caM')
+aictab(cand.set = camod, modnames = caname)
+
+#Mg
 mg<-lm(Mg ~ Area + Year + Month, data = CSMIYALL)
 mg2<-lm(Mg ~ Area + Year + Month + DFS, data = CSMIYALL)
 rmg<-mg$residuals
@@ -1930,6 +2027,18 @@ rmg2<-mg2$residuals
 hist(rmg2)
 qqnorm(rmg2)
 
+mgAY<-lm(Mg ~ Area + Year, data = CSMIYALL)
+mgA<-lm(Mg ~ Area, data = CSMIYALL)
+mgYM<-lm(Mg ~ Year + Month, data = CSMIYALL)
+mgAM<-lm(Mg ~ Area + Month, data = CSMIYALL)
+mgY<-lm(Mg ~ Year, data = CSMIYALL)
+mgM<-lm(Mg ~ Month, data = CSMIYALL)
+
+mgmod<-list(mg,mgAY,mgA,mgYM,mgAM,mgY,mgM)
+mgnam<-c('mg', 'mgAY', 'mgA','mgYM','mgAM','mgY','mgM')
+aictab(cand.set = mgmod, modnames = mgnam)
+
+#cl
 cl<-lm(Cl ~ Area + Year + Month, data = CSMIYALL)
 rcl<-cl$residuals
 hist(rcl)
@@ -1937,6 +2046,18 @@ qqnorm(rcl)
 qqline(rcl)
 summary(cl)
 
+clAY<-lm(Cl ~ Area + Year, data = CSMIYALL)
+clA<-lm(Cl ~ Area, data = CSMIYALL)
+clYM<-lm(Cl ~ Year + Month, data = CSMIYALL)
+clAM<-lm(Cl ~ Area + Month, data = CSMIYALL)
+clY<-lm(Cl ~ Year, data = CSMIYALL)
+clM<-lm(Cl ~ Month, data = CSMIYALL)
+
+clmod<-list(cl,clAY,clA,clYM,clAM,clY,clM)
+clnam<-c('cl', 'clAY', 'clA','clYM','clAM','clY','clM')
+aictab(cand.set = clmod, modnames = clnam)
+
+#so
 so<-lm(SO4 ~ Area + Year + Month, data = CSMIYALL)
 rso<-so$residuals
 hist(rso)
@@ -1944,6 +2065,18 @@ qqnorm(rso)
 qqline(rso)
 summary(so)
 
+soAY<-lm(SO4 ~ Area + Year, data = CSMIYALL)
+soA<-lm(SO4 ~ Area, data = CSMIYALL)
+soYM<-lm(SO4 ~ Year + Month, data = CSMIYALL)
+soAM<-lm(SO4 ~ Area + Month, data = CSMIYALL)
+soY<-lm(SO4 ~ Year, data = CSMIYALL)
+soM<-lm(SO4 ~ Month, data = CSMIYALL)
+
+somod<-list(so,soAY,soA,soYM,soAM,soY,soM)
+sonam<-c('so', 'soAY', 'soA','soYM','soAM','soY','soM')
+aictab(cand.set = somod, modnames = sonam)
+
+#chla
 chla<-lm(chla ~ Area + Year + Month, data = CSMIYALL)
 rchla<-chla$residuals
 hist(rchla)
@@ -1951,9 +2084,39 @@ qqnorm(rchla)
 qqline(rchla)
 summary(chla)
 
+chAY<-lm(chla ~ Area + Year, data = CSMIYALL)
+chA<-lm(chla ~ Area, data = CSMIYALL)
+chYM<-lm(chla ~ Year + Month, data = CSMIYALL)
+chAM<-lm(chla ~ Area + Month, data = CSMIYALL)
+chY<-lm(chla ~ Year, data = CSMIYALL)
+chM<-lm(chla ~ Month, data = CSMIYALL)
+
+chmod<-list(chla,chAY,chA,chYM,chAM,chY,chM)
+chnam<-c('chla', 'chAY', 'chA','chYM','chAM','chY','chM')
+aictab(cand.set = chmod, modnames = chnam)
+
+
+
 doc<-lm(DOC ~ Area + Year + Month, data = CSMIYALL)
 rdoc<-doc$residuals
 hist(rdoc)
 qqnorm(rdoc)
 qqline(rdoc)
 summary(doc)
+
+docAY<-lm(DOC ~ Area + Year, data = CSMIYALL)
+docA<-lm(DOC ~ Area, data = CSMIYALL)
+docYM<-lm(DOC ~ Year + Month, data = CSMIYALL)
+docAM<-lm(DOC ~ Area + Month, data = CSMIYALL)
+docY<-lm(DOC ~ Year, data = CSMIYALL)
+docM<-lm(DOC ~ Month, data = CSMIYALL)
+
+docmod<-list(doc,docAY,docA,docYM,docAM,docY,docM)
+docnam<-c('doc', 'docAY', 'docA','docYM','docAM','docY','docM')
+aictab(cand.set = docmod, modnames = docnam)
+
+summary(doc)
+summary(docAY)
+summary(docA)
+summary(docYM)
+summary(AM)
