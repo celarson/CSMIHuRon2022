@@ -18,6 +18,7 @@ library(reshape2)
 library(vegan)
 library(ggpubr)
 library(AICcmodavg)
+library(rstatix)
 ########################################################
 #Upload datasets
 
@@ -49,6 +50,8 @@ C2217 <- read_csv("C2217.csv")
 
 CSMIYALL <- merge(C2217, yearmeta, by = "STIS")
 CSMIY <-merge(C2217, yearmeta, by = "STIS")
+
+CSMIYALL$Month<-factor(CSMIYALL$Month, c("April", "May", "Early June", "June", "Late June", "Early July", "July", "Late July", "Aug"))
 
 #Zoop153count are the zooplankton counts for the 153 net
 Zoop153countwide<- read.csv("ZoopforR6.18.24.csv", header=T)
@@ -1882,6 +1885,13 @@ nhmod<-list(nhr, nhAY, nhA, nhYM, nhAM, nhY, nhM)
 nhnames<-c('nhr', 'nhAY', 'nhA', 'nhYM', 'nhAM', 'nhY','nhM')
 aictab(cand.set = nhmod, modnames = nhnames)
 
+summary(nhYM)
+nhIYM<-lm(NH4 ~ Year*Month, data = CSMIYALL)
+nhIYMmod<-list(nhIYM)
+nhIYMnam<-c('nhIYMmod')
+aictab(cand.set = nhIYMmod, modnames = nhIYMnam)
+summary(nhIYM)
+
 #NOx
 nor<-lm(NOx ~ Area + Year + Month, data = CSMIYALL)
 rNOx<-nor$residuals
@@ -1900,6 +1910,15 @@ noM<-lm(NOx ~ Month, data = CSMIYALL)
 nomod<-list(nor,noAY,noA, noYM,noAM,noY,noM)
 nonames<-c('nor','noAY', 'noA', 'noYM','noAM','noY','noM')
 aictab(cand.set = nomod, modnames = nonames)
+
+noIALL<-lm(NOx ~ (Year+Month+Area)^2, data = CSMIYALL)
+noIMA<-lm(NOx ~ Year+Month*Area, data = CSMIYALL)
+noIAY<-lm(NOx ~ Month + Area*Year, data = CSMIYALL)
+noIYM<-lm(NOx ~ Month*Year + Area, data = CSMIYALL)
+
+noImod<-list(noIALL, noIMA, noIAY, noIYM)
+noInames<-c('noIALL', 'noIMA', 'noIAY', 'noIYM')
+aictab(cand.set = noImod, modnames = noInames)
 
 #SRP
 srp<-lm(SRP ~ Area + Year + Month, data = CSMIYALL)
@@ -1920,6 +1939,15 @@ srpmod<-list(srp, srpAY, srpA,srpYM,srpAM,srpY,srpM)
 srpnam<-c('srp','srpAY', 'srpA', 'srpYM', 'srpAM', 'srpY','srpM')
 aictab(cand.set = srpmod, modnames = srpnam)
 
+srpIALL<-lm(SRP ~ (Year+Month+Area)^2, data = CSMIYALL)
+srpIMA<-lm(SRP ~ Year+Month*Area, data = CSMIYALL)
+srpIAY<-lm(SRP ~ Month + Area*Year, data = CSMIYALL)
+srpIYM<-lm(SRP ~ Month*Year + Area, data = CSMIYALL)
+
+srpImod<-list(srpIALL, srpIMA, srpIAY, srpIYM)
+srpInames<-c('srpIALL', 'srpIMA', 'srpIAY', 'srpIYM')
+aictab(cand.set = srpImod, modnames = srpInames)
+
 #TN
 tn<-lm(TN ~ Area + Year + Month, data = CSMIYALL)
 rtn<-tn$residuals
@@ -1938,6 +1966,13 @@ tnM<-lm(TN ~ Month, data = CSMIYALL)
 tnmod<-list(tn, tnAY, tnA, tnYM,tnAM,tnY,tnM)
 tnnam<-c('tn', 'tnAY', 'tnA','tnYM','tnAM','tnY','tnM')
 aictab(cand.set = tnmod, modnames = tnnam)
+
+summary(tnAM)
+
+tnIAM<-lm(TN ~ Area*Month, data = CSMIYALL)
+tnImod<-list(tnIAM)
+tnInam<-c('tnIAM')
+aictab(cand.set = tnImod, modnames = tnInam)
 
 #TP
 tp<-lm(TP ~ Area + Year + Month, data = CSMIYALL)
@@ -1958,6 +1993,15 @@ tpmod<-list(tp, tpAY, tpA, tpYM,tpAM,tpY,tpM)
 tpnam<-c('tp', 'tpAY','tpA','tpYM','tpAM','tpY','tpM')
 aictab(cand.set = tpmod, modnames = tpnam)
 
+tpIALL<-lm(TP ~ (Year+Month+Area)^2, data = CSMIYALL)
+tpIMA<-lm(TP ~ Year+Month*Area, data = CSMIYALL)
+tpIAY<-lm(TP ~ Month + Area*Year, data = CSMIYALL)
+tpIYM<-lm(TP ~ Month*Year + Area, data = CSMIYALL)
+
+tpImod<-list(tpIALL, tpIMA, tpIAY, tpIYM)
+tpInames<-c('tpIALL', 'tpIMA', 'tpIAY', 'tpIYM')
+aictab(cand.set = tpImod, modnames = tpInames)
+
 #K
 k<-lm(K ~ Area + Year + Month, data = CSMIYALL)
 rk<-k$residuals
@@ -1976,6 +2020,15 @@ kM<-lm(K ~ Month, data = CSMIYALL)
 kmod<-list(k,kAY,kA,kYM,kAM,kY,kM)
 knam<-c('k', 'kAY', 'kA','kYM','kAM','kY','kM')
 aictab(cand.set = kmod, modnames = knam)
+
+kIALL<-lm(K ~ (Year+Month+Area)^2, data = CSMIYALL)
+kIMA<-lm(K ~ Year+Month*Area, data = CSMIYALL)
+kIAY<-lm(K ~ Month + Area*Year, data = CSMIYALL)
+kIYM<-lm(K ~ Month*Year + Area, data = CSMIYALL)
+
+kImod<-list(kIALL, kIMA, kIAY, kIYM)
+kInames<-c('kIALL', 'kIMA', 'kIAY', 'kIYM')
+aictab(cand.set = kImod, modnames = kInames)
 
 #na
 na<-lm(Na ~ Area + Year + Month, data = CSMIYALL)
@@ -1996,6 +2049,15 @@ namod<-list(na, naAY, naA,naYM,naAM,naY,naM)
 naname<-c('na', 'naAY', 'naA','naYM','naAM','naY','naM')
 aictab(cand.set = namod, modnames = naname)
 
+naIALL<-lm(Na ~ (Year+Month+Area)^2, data = CSMIYALL)
+naIMA<-lm(Na ~ Year+Month*Area, data = CSMIYALL)
+naIAY<-lm(Na ~ Month + Area*Year, data = CSMIYALL)
+naIYM<-lm(Na ~ Month*Year + Area, data = CSMIYALL)
+
+naImod<-list(naIALL, naIMA, naIAY, naIYM)
+naInames<-c('naIALL', 'naIMA', 'naIAY', 'naIYM')
+aictab(cand.set = naImod, modnames = naInames)
+
 #ca
 ca<-lm(Ca ~ Area + Year + Month, data = CSMIYALL)
 rca<-ca$residuals
@@ -2014,6 +2076,15 @@ caM<-lm(Ca ~ Month, data = CSMIYALL)
 camod<-list(ca, caAY, caA,caYM,caAM,caY,caM)
 caname<-c('ca', 'caAY', 'caA','caYM','caAM','caY','caM')
 aictab(cand.set = camod, modnames = caname)
+
+caIALL<-lm(Ca ~ (Year+Month+Area)^2, data = CSMIYALL)
+caIMA<-lm(Ca ~ Year+Month*Area, data = CSMIYALL)
+caIAY<-lm(Ca ~ Month + Area*Year, data = CSMIYALL)
+caIYM<-lm(Ca ~ Month*Year + Area, data = CSMIYALL)
+
+caImod<-list(caIALL, caIMA, caIAY, caIYM)
+caInames<-c('caIALL', 'caIMA', 'caIAY', 'caIYM')
+aictab(cand.set = caImod, modnames = caInames)
 
 #Mg
 mg<-lm(Mg ~ Area + Year + Month, data = CSMIYALL)
@@ -2038,6 +2109,15 @@ mgmod<-list(mg,mgAY,mgA,mgYM,mgAM,mgY,mgM)
 mgnam<-c('mg', 'mgAY', 'mgA','mgYM','mgAM','mgY','mgM')
 aictab(cand.set = mgmod, modnames = mgnam)
 
+mgIALL<-lm(Mg ~ (Year+Month+Area)^2, data = CSMIYALL)
+mgIMA<-lm(Mg ~ Year+Month*Area, data = CSMIYALL)
+mgIAY<-lm(Mg ~ Month + Area*Year, data = CSMIYALL)
+mgIYM<-lm(Mg ~ Month*Year + Area, data = CSMIYALL)
+
+mgImod<-list(mgIALL, mgIMA, mgIAY, mgIYM)
+mgInames<-c('mgIALL', 'mgIMA', 'mgIAY', 'mgIYM')
+aictab(cand.set = mgImod, modnames = mgInames)
+
 #cl
 cl<-lm(Cl ~ Area + Year + Month, data = CSMIYALL)
 rcl<-cl$residuals
@@ -2056,6 +2136,13 @@ clM<-lm(Cl ~ Month, data = CSMIYALL)
 clmod<-list(cl,clAY,clA,clYM,clAM,clY,clM)
 clnam<-c('cl', 'clAY', 'clA','clYM','clAM','clY','clM')
 aictab(cand.set = clmod, modnames = clnam)
+
+summary(clAY)
+
+clIAY<-lm(Cl ~ Area*Year, data = CSMIYALL)
+clImod<-list(clIAY)
+clInam<-c('clIAY')
+aictab(cand.set = clImod, modnames = clInam)
 
 #so
 so<-lm(SO4 ~ Area + Year + Month, data = CSMIYALL)
@@ -2076,6 +2163,11 @@ somod<-list(so,soAY,soA,soYM,soAM,soY,soM)
 sonam<-c('so', 'soAY', 'soA','soYM','soAM','soY','soM')
 aictab(cand.set = somod, modnames = sonam)
 
+soIAY<-lm(SO4 ~ Area*Year, data = CSMIYALL)
+soImod<-list(soIAY)
+soInam<-c('soIAY')
+aictab(cand.set = soImod, modnames = soInam)
+
 #chla
 chla<-lm(chla ~ Area + Year + Month, data = CSMIYALL)
 rchla<-chla$residuals
@@ -2095,8 +2187,16 @@ chmod<-list(chla,chAY,chA,chYM,chAM,chY,chM)
 chnam<-c('chla', 'chAY', 'chA','chYM','chAM','chY','chM')
 aictab(cand.set = chmod, modnames = chnam)
 
+chIALL<-lm(chla ~ (Year+Month+Area)^2, data = CSMIYALL)
+chIMA<-lm(chla ~ Year+Month*Area, data = CSMIYALL)
+chIAY<-lm(chla ~ Month + Area*Year, data = CSMIYALL)
+chIYM<-lm(chla ~ Month*Year + Area, data = CSMIYALL)
 
+chImod<-list(chIALL, chIMA, chIAY, chIYM)
+chInames<-c('chIALL', 'chIMA', 'chIAY', 'chIYM')
+aictab(cand.set = chImod, modnames = chInames)
 
+#DOC
 doc<-lm(DOC ~ Area + Year + Month, data = CSMIYALL)
 rdoc<-doc$residuals
 hist(rdoc)
@@ -2115,8 +2215,26 @@ docmod<-list(doc,docAY,docA,docYM,docAM,docY,docM)
 docnam<-c('doc', 'docAY', 'docA','docYM','docAM','docY','docM')
 aictab(cand.set = docmod, modnames = docnam)
 
+docIALL<-lm(DOC ~ (Year+Month+Area)^2, data = CSMIYALL)
+docIMA<-lm(DOC ~ Year+Month*Area, data = CSMIYALL)
+docIAY<-lm(DOC ~ Month + Area*Year, data = CSMIYALL)
+docIYM<-lm(DOC ~ Month*Year + Area, data = CSMIYALL)
+
+docImod<-list(docIALL, docIMA, docIAY, docIYM)
+docInames<-c('docIALL', 'docIMA', 'docIAY', 'docIYM')
+aictab(cand.set = docImod, modnames = docInames)
+
+summary(docIALL)
+
 summary(doc)
 summary(docAY)
 summary(docA)
 summary(docYM)
 summary(AM)
+
+################################################################
+
+#ANOVA
+aov.NH4<-CSMIYALL%>%anova_test(NH4 ~ Area*Month)
+
+aov.NOx<-CSMIYALL%>%anova_test(NOx ~ (Year+Month+Area)^2)
