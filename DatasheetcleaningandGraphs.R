@@ -2241,6 +2241,9 @@ aov.NH4<-CSMIYALL%>%anova_test(NH4 ~ Area*Month)
 ###NOx
 
 #run anova
+CSMIYALL$Year<-as.factor(CSMIYALL$Year)
+CSMIYALL$Month<-as.factor(CSMIYALL$Month)
+
 aov.NOx<-CSMIYALL%>%anova_test(NOx ~ (Year+Month+Area)^2)
 #See interactions each has
 CSMIYALL %>% group_by(Year) %>%
@@ -2249,3 +2252,14 @@ CSMIYALL %>% group_by(Area) %>%
   anova_test(NOx ~ Month, error = noIALL)
 #pairwise analysis
 CSMIYALL %>% group_by(Year) %>% emmeans_test(NOx ~ Month, p.adjust.method = "bonferroni", model = noIALL)
+CSMIYALL %>% group_by(Month) %>% emmeans_test(NOx ~ Year, p.adjust.method = "bonferroni", model = noIALL)
+droplevels(CSMIYALL$Month)
+CSMIYALL$Year
+is.factor(CSMIYALL$Year)
+levels(CSMIYALL$Year)
+is.factor(CSMIYALL$Month)
+levels(CSMIYALL$Month)
+CSMIYALL$Month<-droplevels(CSMIYALL$Month)
+CSMIYALLNEW<-subset(CSMIYALL, Month!=c("April","May", "Early June", "Late June", "Early July", "Late July"))
+
+CSMIYnomonth<-subset(CSMIY, Month!="NA")
