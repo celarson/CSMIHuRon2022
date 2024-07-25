@@ -19,6 +19,7 @@ library(vegan)
 library(ggpubr)
 library(AICcmodavg)
 library(rstatix)
+library(emmeans)
 ########################################################
 #Upload datasets
 
@@ -2237,4 +2238,14 @@ summary(AM)
 #ANOVA
 aov.NH4<-CSMIYALL%>%anova_test(NH4 ~ Area*Month)
 
+###NOx
+
+#run anova
 aov.NOx<-CSMIYALL%>%anova_test(NOx ~ (Year+Month+Area)^2)
+#See interactions each has
+CSMIYALL %>% group_by(Year) %>%
+  anova_test(NOx ~ Month, error = noIALL)
+CSMIYALL %>% group_by(Area) %>%
+  anova_test(NOx ~ Month, error = noIALL)
+#pairwise analysis
+CSMIYALL %>% group_by(Year) %>% emmeans_test(NOx ~ Month, p.adjust.method = "bonferroni", model = noIALL)
