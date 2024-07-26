@@ -49,10 +49,17 @@ CSMI17<- merge(CSMI17WQ, CSMI17meta, by = "STIS")
 yearmeta <- read_csv("yearmeta.csv", col_types = cols(Year = col_character()))
 C2217 <- read_csv("C2217.csv")
 
+yearmeta2 <- read_csv("yearmeta2.csv")
+
 CSMIYALL <- merge(C2217, yearmeta, by = "STIS")
 CSMIY <-merge(C2217, yearmeta, by = "STIS")
 
 CSMIYALL$Month<-factor(CSMIYALL$Month, c("April", "May", "Early June", "June", "Late June", "Early July", "July", "Late July", "Aug"))
+
+#Just TP, TN and Chla
+TPTNCHLAY <- read_csv("TPTNCHLAY.csv")
+TPTNCHLAY<-merge(TPTNCHLAY, yearmeta2, by = "STIS")
+TPTNCHLAY<-subset(TPTNCHLAY, Month!=c("April", "May"))
 
 #Zoop153count are the zooplankton counts for the 153 net
 Zoop153countwide<- read.csv("ZoopforR6.18.24.csv", header=T)
@@ -1975,6 +1982,41 @@ tnImod<-list(tnIAM)
 tnInam<-c('tnIAM')
 aictab(cand.set = tnImod, modnames = tnInam)
 
+tnnew<-lm(TN ~ Area + Year + Month, data = TPTNCHLAY)
+rtn<-tn$residuals
+hist(rtn)
+qqnorm(rtn)
+qqline(rtn)
+summary(tn)
+
+tnAYnew<-lm(TN ~ Area + Year, data = TPTNCHLAY)
+tnAnew<-lm(TN ~ Area, data = TPTNCHLAY)
+tnYMnew<-lm(TN ~ Year + Month, data = TPTNCHLAY)
+tnAMnew<-lm(TN ~ Area + Month, data = TPTNCHLAY)
+tnYnew<-lm(TN ~ Year, data = TPTNCHLAY)
+tnMnew<-lm(TN ~ Month, data = TPTNCHLAY)
+
+tnmodnew<-list(tnnew, tnAYnew, tnAnew, tnYMnew,tnAMnew,tnYnew,tnMnew)
+tnnamnew<-c('tnnew', 'tnAYnew', 'tnAnew','tnYMnew','tnAMnew','tnYnew','tnMnew')
+aictab(cand.set = tnmodnew, modnames = tnnamnew)
+
+summary(tnAM)
+
+#interactions
+tnIALLnew<-lm(TN ~ (Year+Month+Area)^2, data = TPTNCHLAY)
+tnIMAnew<-lm(TN ~ Year+Month*Area, data = TPTNCHLAY)
+tnIAYnew<-lm(TN ~ Month + Area*Year, data = TPTNCHLAY)
+tnIYMnew<-lm(TN ~ Month*Year + Area, data = TPTNCHLAY)
+
+tnImodnew<-list(tnIALLnew, tnIMAnew, tnIAYnew, tnIYMnew)
+tnInamesnew<-c('tnIALLnew', 'tnIMAnew', 'tnIAYnew', 'tpIYMnew')
+aictab(cand.set = tnImodnew, modnames = tnInamesnew)
+
+tnIAM<-lm(TN ~ Area*Month, data = CSMIYALL)
+tnImod<-list(tnIAM)
+tnInam<-c('tnIAM')
+aictab(cand.set = tnImod, modnames = tnInam)
+
 #TP
 tp<-lm(TP ~ Area + Year + Month, data = CSMIYALL)
 rtp<-tp$residuals
@@ -2238,6 +2280,14 @@ summary(AM)
 #ANOVA
 aov.NH4<-CSMIYALL%>%anova_test(NH4 ~ Area*Month)
 
+###TN
+TPTNCHLAY$Year<-as.factor(TPTNCHLAY$Year)
+TPTNCHLAY$Month<-as.factor(TPTNCHLAY$Month)
+#run anova
+aov.tn<-TPTNCHLAY%>%anova_test(TN ~ (Year+Month+Area)^2)
+#see interactions each has
+TPTNCHLAY%>% group_by(Year) %>% anova_test(TN ~ Month, error = tnIALLnew)
+TPTNCHLAY%>% group_by(Month) %>% anova_test(TN ~ Area, error = tnIALLnew)
 ###NOx
 
 #run anova

@@ -1,0 +1,594 @@
+﻿STIS,StationCode,DFS,Month,Area,Year
+7000,Thes18,Midshore,April,NC,2017
+7001,Thes18,Midshore,April,NC,2017
+7002,Thes18,Midshore,April,NC,2017
+7004,Thes46,Midshore,April,NC,2017
+7005,Thes46,Midshore,April,NC,2017
+7006,Thes46,Midshore,April,NC,2017
+7008,Span18,Midshore,April,NC,2017
+7009,Span18,Midshore,April,NC,2017
+7010,Span18,Midshore,April,NC,2017
+7012,Span46,Midshore,April,NC,2017
+7013,Span46,Midshore,April,NC,2017
+7014,Span46,Midshore,April,NC,2017
+7016,Fren18,Midshore,April,GB,2017
+7017,Fren18,Midshore,April,GB,2017
+7018,Fren18,Midshore,April,GB,2017
+7020,Fren46,Midshore,April,GB,2017
+7021,Fren46,Midshore,April,GB,2017
+7022,Fren46,Midshore,April,GB,2017
+7024,Fren82,Offshore,April,GB,2017
+7025,Fren82,Offshore,April,GB,2017
+7026,Fren82,Offshore,April,GB,2017
+7028,Parr18,Midshore,April,GB,2017
+7029,Parr18,Midshore,April,GB,2017
+7030,Parr18,Midshore,April,GB,2017
+7032,Parr46,Midshore,April,GB,2017
+7033,Parr46,Midshore,April,GB,2017
+7034,Parr46,Midshore,April,GB,2017
+7036,Parr82,Offshore,April,GB,2017
+7037,Parr82,Offshore,April,GB,2017
+7038,Parr82,Offshore,April,GB,2017
+7040,Nott18,Midshore,April,GB,2017
+7041,Nott18,Midshore,April,GB,2017
+7042,Nott18,Midshore,April,GB,2017
+7044,Nott46,Midshore,April,GB,2017
+7045,Nott46,Midshore,April,GB,2017
+7046,Nott46,Midshore,April,GB,2017
+7048,Nott82,Offshore,April,GB,2017
+7049,Nott82,Offshore,April,GB,2017
+7050,Nott82,Offshore,April,GB,2017
+7060,Mait18,Midshore,May,SMB,2017
+7061,Mait18,Midshore,May,SMB,2017
+7062,Mait18,Midshore,May,SMB,2017
+7063,Mait18,Midshore,May,SMB,2017
+7064,Mait46,Midshore,May,SMB,2017
+7065,Mait46,Midshore,May,SMB,2017
+7066,Mait46,Midshore,May,SMB,2017
+7068,Mait73,Offshore,May,SMB,2017
+7069,Mait73,Offshore,May,SMB,2017
+7070,Mait73,Offshore,May,SMB,2017
+7071,Mait73,Offshore,May,SMB,2017
+7072,Saug18,Midshore,May,NMB,2017
+7073,Saug18,Midshore,May,NMB,2017
+7074,Saug18,Midshore,May,NMB,2017
+7076,Saug46,Midshore,May,NMB,2017
+7077,Saug46,Midshore,May,NMB,2017
+7078,Saug46,Midshore,May,NMB,2017
+7080,Harb18,Midshore,May,SMB,2017
+7081,Harb18,Midshore,May,SMB,2017
+7082,Harb18,Midshore,May,SMB,2017
+7083,Harb18,Midshore,May,SMB,2017
+7084,Harb46,Midshore,May,SMB,2017
+7085,Harb46,Midshore,May,SMB,2017
+7086,Harb46,Midshore,May,SMB,2017
+7088,Harb68,Offshore,May,SMB,2017
+7089,Harb68,Offshore,May,SMB,2017
+7090,Harb68,Offshore,May,SMB,2017
+7092,Ocqu18,Midshore,May,NMB,2017
+7093,Ocqu18,Midshore,May,NMB,2017
+7094,Ocqu18,Midshore,May,NMB,2017
+7095,Ocqu18,Midshore,May,NMB,2017
+7096,Ocqu46,Midshore,May,NMB,2017
+7097,Ocqu46,Midshore,May,NMB,2017
+7098,Ocqu46,Midshore,May,NMB,2017
+7100,Ocqu82,Offshore,May,NMB,2017
+7101,Ocqu82,Offshore,May,NMB,2017
+7102,Ocqu82,Offshore,May,NMB,2017
+7112,Saug82,Offshore,May,NMB,2017
+7113,Saug82,Offshore,May,NMB,2017
+7114,Saug82,Offshore,May,NMB,2017
+7116,Thes18,Midshore,June,NC,2017
+7117,Thes18,Midshore,June,NC,2017
+7118,Thes18,Midshore,June,NC,2017
+7120,Thes46,Midshore,June,NC,2017
+7121,Thes46,Midshore,June,NC,2017
+7122,Thes46,Midshore,June,NC,2017
+7124,Span18,Midshore,June,NC,2017
+7125,Span18,Midshore,June,NC,2017
+7126,Span18,Midshore,June,NC,2017
+7128,Span46,Midshore,June,NC,2017
+7130,Span46,Midshore,June,NC,2017
+7131,Span46,Midshore,June,NC,2017
+7132,Ocqu18,Midshore,June,NMB,2017
+7133,Ocqu18,Midshore,June,NMB,2017
+7134,Ocqu18,Midshore,June,NMB,2017
+7136,Ocqu46,Midshore,June,NMB,2017
+7137,Ocqu46,Midshore,June,NMB,2017
+7138,Ocqu46,Midshore,June,NMB,2017
+7140,Ocqu82,Offshore,June,NMB,2017
+7143,Ocqu82,Offshore,June,NMB,2017
+7142,Ocqu82,Offshore,June,NMB,2017
+7144,Fren18,Midshore,June,GB,2017
+7145,Fren18,Midshore,June,GB,2017
+7146,Fren18,Midshore,June,GB,2017
+7147,Fren18,Midshore,June,GB,2017
+7148,Fren46,Midshore,June,GB,2017
+7149,Fren46,Midshore,June,GB,2017
+7150,Fren46,Midshore,June,GB,2017
+7152,Fren82,Offshore,June,GB,2017
+7154,Fren82,Offshore,June,GB,2017
+7155,Fren82,Offshore,June,GB,2017
+7156,Parr18,Midshore,June,GB,2017
+7157,Parr18,Midshore,June,GB,2017
+7158,Parr18,Midshore,June,GB,2017
+7159,Parr18,Midshore,June,GB,2017
+7160,Parr46,Midshore,June,GB,2017
+7162,Parr46,Midshore,June,GB,2017
+7163,Parr46,Midshore,June,GB,2017
+7164,Parr82,Offshore,June,GB,2017
+7166,Parr82,Offshore,June,GB,2017
+7167,Parr82,Offshore,June,GB,2017
+7168,Nott18,Midshore,June,GB,2017
+7169,Nott18,Midshore,June,GB,2017
+7170,Nott18,Midshore,June,GB,2017
+7171,Nott18,Midshore,June,GB,2017
+7172,Nott46,Midshore,June,GB,2017
+7174,Nott46,Midshore,June,GB,2017
+7175,Nott46,Midshore,June,GB,2017
+7176,Nott82,Offshore,June,GB,2017
+7178,Nott82,Offshore,June,GB,2017
+7179,Nott82,Offshore,June,GB,2017
+7180,Saug18,Midshore,June,NMB,2017
+7181,Saug18,Midshore,June,NMB,2017
+7182,Saug18,Midshore,June,NMB,2017
+7183,Saug18,Midshore,June,NMB,2017
+7184,Saug46,Midshore,June,NMB,2017
+7185,Saug46,Midshore,June,NMB,2017
+7186,Saug46,Midshore,June,NMB,2017
+7188,Saug82,Offshore,June,NMB,2017
+7189,Saug82,Offshore,June,NMB,2017
+7190,Saug82,Offshore,June,NMB,2017
+7192,Mait18,Midshore,June,SMB,2017
+7193,Mait18,Midshore,June,SMB,2017
+7194,Mait18,Midshore,June,SMB,2017
+7195,Mait18,Midshore,June,SMB,2017
+7196,Mait46,Midshore,June,SMB,2017
+7198,Mait46,Midshore,June,SMB,2017
+7199,Mait46,Midshore,June,SMB,2017
+7200,Mait73,Offshore,June,SMB,2017
+7202,Mait73,Offshore,June,SMB,2017
+7203,Mait73,Offshore,June,SMB,2017
+7204,Harb18,Midshore,June,SMB,2017
+7205,Harb18,Midshore,June,SMB,2017
+7206,Harb18,Midshore,June,SMB,2017
+7207,Harb18,Midshore,June,SMB,2017
+7208,Harb46,Midshore,June,SMB,2017
+7210,Harb46,Midshore,June,SMB,2017
+7211,Harb46,Midshore,June,SMB,2017
+7212,Harb68,Offshore,June,SMB,2017
+7214,Harb68,Offshore,June,SMB,2017
+7215,Harb68,Offshore,June,SMB,2017
+7290,Thes18,Midshore,July,NC,2017
+7291,Thes18,Midshore,July,NC,2017
+7292,Thes18,Midshore,July,NC,2017
+7294,Thes46,Midshore,July,NC,2017
+7295,Thes46,Midshore,July,NC,2017
+7296,Thes46,Midshore,July,NC,2017
+7298,Span18,Midshore,July,NC,2017
+7299,Span18,Midshore,July,NC,2017
+7300,Span18,Midshore,July,NC,2017
+7302,Span46,Midshore,July,NC,2017
+7303,Span46,Midshore,July,NC,2017
+7304,Span46,Midshore,July,NC,2017
+7306,Fren18,Midshore,July,GB,2017
+7307,Fren18,Midshore,July,GB,2017
+7308,Fren18,Midshore,July,GB,2017
+7310,Fren46,Midshore,July,GB,2017
+7311,Fren46,Midshore,July,GB,2017
+7312,Fren46,Midshore,July,GB,2017
+7314,Fren82,Offshore,July,GB,2017
+7315,Fren82,Offshore,July,GB,2017
+7316,Fren82,Offshore,July,GB,2017
+7318,Parr18,Midshore,July,GB,2017
+7319,Parr18,Midshore,July,GB,2017
+7320,Parr18,Midshore,July,GB,2017
+7322,Parr46,Midshore,July,GB,2017
+7324,Parr46,Midshore,July,GB,2017
+7325,Parr46,Midshore,July,GB,2017
+7326,Parr82,Offshore,July,GB,2017
+7328,Parr82,Offshore,July,GB,2017
+7329,Parr82,Offshore,July,GB,2017
+7330,Nott18,Midshore,July,GB,2017
+7331,Nott18,Midshore,July,GB,2017
+7332,Nott18,Midshore,July,GB,2017
+7334,Nott46,Midshore,July,GB,2017
+7336,Nott46,Midshore,July,GB,2017
+7337,Nott46,Midshore,July,GB,2017
+7338,Nott82,Offshore,July,GB,2017
+7340,Nott82,Offshore,July,GB,2017
+7341,Nott82,Offshore,July,GB,2017
+7342,Saug18,Midshore,July,NMB,2017
+7343,Saug18,Midshore,July,NMB,2017
+7344,Saug18,Midshore,July,NMB,2017
+7346,Saug46,Midshore,July,NMB,2017
+7348,Saug46,Midshore,July,NMB,2017
+7349,Saug46,Midshore,July,NMB,2017
+7350,Saug82,Offshore,July,NMB,2017
+7352,Saug82,Offshore,July,NMB,2017
+7353,Saug82,Offshore,July,NMB,2017
+7354,Mait18,Midshore,July,SMB,2017
+7355,Mait18,Midshore,July,SMB,2017
+7356,Mait18,Midshore,July,SMB,2017
+7358,Mait46,Midshore,July,SMB,2017
+7359,Mait46,Midshore,July,SMB,2017
+7360,Mait46,Midshore,July,SMB,2017
+7362,Mait73,Offshore,July,SMB,2017
+7363,Mait73,Offshore,July,SMB,2017
+7364,Mait73,Offshore,July,SMB,2017
+7366,Harb18,Midshore,July,SMB,2017
+7368,Harb18,Midshore,July,SMB,2017
+7369,Harb18,Midshore,July,SMB,2017
+7370,Harb46,Midshore,July,SMB,2017
+7371,Harb46,Midshore,July,SMB,2017
+7372,Harb46,Midshore,July,SMB,2017
+7374,Harb68,Offshore,July,SMB,2017
+7375,Harb68,Offshore,July,SMB,2017
+7376,Harb68,Offshore,July,SMB,2017
+7377,Harb68,Offshore,July,SMB,2017
+7378,Ocqu18,Midshore,July,NMB,2017
+7379,Ocqu18,Midshore,July,NMB,2017
+7380,Ocqu18,Midshore,July,NMB,2017
+7382,Ocqu46,Midshore,July,NMB,2017
+7384,Ocqu46,Midshore,July,NMB,2017
+7385,Ocqu46,Midshore,July,NMB,2017
+7386,Ocqu82,Offshore,July,NMB,2017
+7388,Ocqu82,Offshore,July,NMB,2017
+7389,Ocqu82,Offshore,July,NMB,2017
+7600,Thes05,Nearshore,Aug,NC,2017
+7601,Thes18,Midshore,Aug,NC,2017
+7603,Thes18,Midshore,Aug,NC,2017
+7604,Thes18,Midshore,Aug,NC,2017
+7605,Thes46,Midshore,Aug,NC,2017
+7607,Thes46,Midshore,Aug,NC,2017
+7608,Thes46,Midshore,Aug,NC,2017
+7609,Span05,Nearshore,Aug,NC,2017
+7610,Span18,Midshore,Aug,NC,2017
+7611,Span18,Midshore,Aug,NC,2017
+7612,Span18,Midshore,Aug,NC,2017
+7613,Span18,Midshore,Aug,NC,2017
+7614,Span46,Midshore,Aug,NC,2017
+7616,Span46,Midshore,Aug,NC,2017
+7617,Span46,Midshore,Aug,NC,2017
+7618,Fren05,Nearshore,Aug,GB,2017
+7619,Fren18,Midshore,Aug,GB,2017
+7620,Fren18,Midshore,Aug,GB,2017
+7621,Fren18,Midshore,Aug,GB,2017
+7623,Fren46,Midshore,Aug,GB,2017
+7624,Fren46,Midshore,Aug,GB,2017
+7625,Fren46,Midshore,Aug,GB,2017
+7626,Fren46,Midshore,Aug,GB,2017
+7627,Fren82,Offshore,Aug,GB,2017
+7629,Fren82,Offshore,Aug,GB,2017
+7630,Fren82,Offshore,Aug,GB,2017
+7631,Parr05,Nearshore,Aug,GB,2017
+7632,Parr18,Midshore,Aug,GB,2017
+7633,Parr18,Midshore,Aug,GB,2017
+7634,Parr18,Midshore,Aug,GB,2017
+7636,Parr46,Midshore,Aug,GB,2017
+7638,Parr46,Midshore,Aug,GB,2017
+7639,Parr46,Midshore,Aug,GB,2017
+7640,Parr82,Offshore,Aug,GB,2017
+7642,Parr82,Offshore,Aug,GB,2017
+7643,Parr82,Offshore,Aug,GB,2017
+7644,Nott05,Nearshore,Aug,GB,2017
+7645,Nott18,Midshore,Aug,GB,2017
+7646,Nott18,Midshore,Aug,GB,2017
+7647,Nott18,Midshore,Aug,GB,2017
+7648,Nott18,Midshore,Aug,GB,2017
+7648,Nott18,Midshore,Aug,GB,2017
+7649,Nott46,Midshore,Aug,GB,2017
+7651,Nott46,Midshore,Aug,GB,2017
+7652,Nott46,Midshore,Aug,GB,2017
+7653,Nott82,Offshore,Aug,GB,2017
+7655,Nott82,Offshore,Aug,GB,2017
+7656,Nott82,Offshore,Aug,GB,2017
+7658,Saug18,Midshore,Aug,NMB,2017
+7659,Saug18,Midshore,Aug,NMB,2017
+7660,Saug18,Midshore,Aug,NMB,2017
+7662,Saug46,Midshore,Aug,NMB,2017
+7664,Saug46,Midshore,Aug,NMB,2017
+7665,Saug46,Midshore,Aug,NMB,2017
+7666,Saug82,Offshore,Aug,NMB,2017
+7668,Saug82,Offshore,Aug,NMB,2017
+7669,Saug82,Offshore,Aug,NMB,2017
+7670,Mait05,Nearshore,Aug,SMB,2017
+7671,Mait18,Midshore,Aug,SMB,2017
+7672,Mait18,Midshore,Aug,SMB,2017
+7673,Mait18,Midshore,Aug,SMB,2017
+7674,Mait05,Nearshore,Aug,SMB,2017
+7675,Mait46,Midshore,Aug,SMB,2017
+7677,Mait46,Midshore,Aug,SMB,2017
+7678,Mait46,Midshore,Aug,SMB,2017
+7679,Mait73,Offshore,Aug,SMB,2017
+7681,Mait73,Offshore,Aug,SMB,2017
+7682,Mait73,Offshore,Aug,SMB,2017
+7683,Harb05,Nearshore,Aug,SMB,2017
+7684,Harb18,Midshore,Aug,SMB,2017
+7685,Harb18,Midshore,Aug,SMB,2017
+7686,Harb18,Midshore,Aug,SMB,2017
+7687,Harb05,Nearshore,Aug,SMB,2017
+7687,Harb05,Nearshore,Aug,SMB,2017
+7688,Harb46,Midshore,Aug,SMB,2017
+7689,Harb46,Midshore,Aug,SMB,2017
+7690,Harb46,Midshore,Aug,SMB,2017
+7692,Harb68,Offshore,Aug,SMB,2017
+7693,Harb68,Offshore,Aug,SMB,2017
+7694,Harb68,Offshore,Aug,SMB,2017
+7696,Ocqu05,Nearshore,Aug,NMB,2017
+7697,Ocqu18,Midshore,Aug,NMB,2017
+7698,Ocqu18,Midshore,Aug,NMB,2017
+7699,Ocqu18,Midshore,Aug,NMB,2017
+7701,Ocqu46,Midshore,Aug,NMB,2017
+7702,Ocqu18,Midshore,Aug,NMB,2017
+7703,Ocqu46,Midshore,Aug,NMB,2017
+7704,Ocqu46,Midshore,Aug,NMB,2017
+7705,Ocqu82,Offshore,Aug,NMB,2017
+7706,Ocqu82,Offshore,Aug,NMB,2017
+7707,Ocqu82,Offshore,Aug,NMB,2017
+7708,Ocqu82,Offshore,Aug,NMB,2017
+22090,Spanish River 5,Nearshore,June,NC,2022
+22091,Spanish River 5,Nearshore,June,NC,2022
+22093,Spanish River 5,Nearshore,June,NC,2022
+22094,Spanish River 18,Midshore,June,NC,2022
+22095,Spanish River 18,Midshore,June,NC,2022
+22096,Spanish River 18,Midshore,June,NC,2022
+22098,Spanish River 46,Midshore,June,NC,2022
+22099,Spanish River 46,Midshore,June,NC,2022
+22100,Spanish River 46,Midshore,June,NC,2022
+22106,French River 18,Midshore,June,GB,2022
+22107,French River 18,Midshore,June,GB,2022
+22108,French River 18,Midshore,June,GB,2022
+22110,French River 46,Midshore,June,GB,2022
+22111,French River 46,Midshore,June,GB,2022
+22112,French River 46,Midshore,June,GB,2022
+22114,French River 82,Offshore,June,GB,2022
+22115,French River 82,Offshore,June,GB,2022
+22116,French River 82,Offshore,June,GB,2022
+22118,Parry Sound 5,Nearshore,June,GB,2022
+22122,Parry Sound 18,Midshore,June,GB,2022
+22123,Parry Sound 18,Midshore,June,GB,2022
+22124,Parry Sound 18,Midshore,June,GB,2022
+22126,Parry Sound 46,Midshore,June,GB,2022
+22127,Parry Sound 46,Midshore,June,GB,2022
+22128,Parry Sound 46,Midshore,June,GB,2022
+22130,Parry Sound 82,Offshore,June,GB,2022
+22131,Parry Sound 82,Offshore,June,GB,2022
+22132,Parry Sound 82,Offshore,June,GB,2022
+22134,Nottawasaga River 5,Nearshore,June,GB,2022
+22138,Nottawasaga River 18,Midshore,June,GB,2022
+22139,Nottawasaga River 18,Midshore,June,GB,2022
+22140,Nottawasaga River 18,Midshore,June,GB,2022
+22142,Nottawasaga River 46,Midshore,June,GB,2022
+22143,Nottawasaga River 46,Midshore,June,GB,2022
+22144,Nottawasaga River 46,Midshore,June,GB,2022
+22146,Nottawasaga River 82,Offshore,June,GB,2022
+22148,Nottawasaga River 82,Offshore,June,GB,2022
+22149,Nottawasaga River 82,Offshore,June,GB,2022
+22150,Saginaw Bay 9,Nearshore,June,SB,2022
+22154,Saginaw Bay 13,Nearshore,June,SB,2022
+22156,Saginaw Bay 13,Nearshore,June,SB,2022
+22158,Harbor Beach 5,Nearshore,June,SMB,2022
+22162,Harbor Beach 18,Midshore,June,SMB,2022
+22163,Harbor Beach 18,Midshore,June,SMB,2022
+22164,Harbor Beach 18,Midshore,June,SMB,2022
+22166,Harbor Beach 46,Midshore,June,SMB,2022
+22167,Harbor Beach 46,Midshore,June,SMB,2022
+22168,Harbor Beach 46,Midshore,June,SMB,2022
+22170,Harbor Beach 63,Offshore,June,SMB,2022
+22171,Harbor Beach 63,Offshore,June,SMB,2022
+22172,Harbor Beach 63,Offshore,June,SMB,2022
+22174,Maitland River 5,Nearshore,June,SMB,2022
+22178,Maitland River 18,Midshore,June,SMB,2022
+22179,Maitland River 18,Midshore,June,SMB,2022
+22180,Maitland River 18,Midshore,June,SMB,2022
+22182,Maitland River 46,Midshore,June,SMB,2022
+22183,Maitland River 46,Midshore,June,SMB,2022
+22184,Maitland River 46,Midshore,June,SMB,2022
+22186,Maitland River 73,Offshore,June,SMB,2022
+22188,Maitland River 73,Offshore,June,SMB,2022
+22189,Maitland River 73,Offshore,June,SMB,2022
+22190,Saugeen River 18,Midshore,June,NMB,2022
+22191,Saugeen River 18,Midshore,June,NMB,2022
+22192,Saugeen River 18,Midshore,June,NMB,2022
+22194,Saugeen River 46,Midshore,June,NMB,2022
+22195,Saugeen River 46,Midshore,June,NMB,2022
+22196,Saugeen River 46,Midshore,June,NMB,2022
+22198,Saugeen River 82,Offshore,June,NMB,2022
+22199,Saugeen River 82,Offshore,June,NMB,2022
+22200,Saugeen River 82,Offshore,June,NMB,2022
+22206,Boot Island 18,Midshore,June,NMB,2022
+22207,Boot Island 18,Midshore,June,NMB,2022
+22208,Boot Island 18,Midshore,June,NMB,2022
+22210,Boot Island 46,Midshore,June,NMB,2022
+22211,Boot Island 46,Midshore,June,NMB,2022
+22212,Boot Island 46,Midshore,June,NMB,2022
+22214,Boot Island 73,Offshore,June,NMB,2022
+22216,Boot Island 73,Offshore,June,NMB,2022
+22217,Boot Island 73,Offshore,June,NMB,2022
+22218,Thessalon River 18,Midshore,June,NC,2022
+22222,Thessalon River 18,Midshore,June,NC,2022
+22223,Thessalon River 18,Midshore,June,NC,2022
+22224,Thessalon River 18,Midshore,June,NC,2022
+22226,Thessalon River 46,Midshore,June,NC,2022
+22227,Thessalon River 46,Midshore,June,NC,2022
+22228,Thessalon River 46,Midshore,June,NC,2022
+22230,Thessallon River 46 Off,Offshore,June,NC,2022
+22231,Thessallon River 46 Off,Offshore,June,NC,2022
+22232,Thessallon River 46 Off,Offshore,June,NC,2022
+22252,Boot Island 18,Midshore,July,NMB,2022
+22253,Boot Island 18,Midshore,July,NMB,2022
+22254,Boot Island 18,Midshore,July,NMB,2022
+22256,Boot Island 46,Midshore,July,NMB,2022
+22257,Boot Island 46,Midshore,July,NMB,2022
+22258,Boot Island 46,Midshore,July,NMB,2022
+22260,Boot Island 73,Offshore,July,NMB,2022
+22262,Boot Island 73,Offshore,July,NMB,2022
+22263,Boot Island 73,Offshore,July,NMB,2022
+22264,Thessalon River 18,Midshore,July,NC,2022
+22265,Thessalon River 18,Midshore,July,NC,2022
+22266,Thessalon River 18,Midshore,July,NC,2022
+22268,Thessalon River 46,Midshore,July,NC,2022
+22269,Thessalon River 46,Midshore,July,NC,2022
+22270,Thessalon River 46,Midshore,July,NC,2022
+22272,Thessallon River 46 Off,Offshore,July,NC,2022
+22273,Thessallon River 46 Off,Offshore,July,NC,2022
+22274,Thessallon River 46 Off,Offshore,July,NC,2022
+22282,Boot Island 18,Midshore,June,NMB,2022
+22283,Boot Island 18,Midshore,June,NMB,2022
+22284,Boot Island 18,Midshore,June,NMB,2022
+22286,Boot Island 46,Midshore,June,NMB,2022
+22287,Boot Island 46,Midshore,June,NMB,2022
+22288,Boot Island 46,Midshore,June,NMB,2022
+22290,Boot Island 73,Offshore,June,NMB,2022
+22291,Boot Island 73,Offshore,June,NMB,2022
+22292,Boot Island 73,Offshore,June,NMB,2022
+22294,Thessallon River 18,Midshore,June,NC,2022
+22295,Thessallon River 18,Midshore,June,NC,2022
+22296,Thessallon River 18,Midshore,June,NC,2022
+22298,Thessallon River 46,Midshore,June,NC,2022
+22299,Thessallon River 46,Midshore,June,NC,2022
+22300,Thessallon River 46,Midshore,June,NC,2022
+22302,Thessallon River 46 Off,Offshore,June,NC,2022
+22304,Thessallon River 46 Off,Offshore,June,NC,2022
+22305,Thessallon River 46 Off,Offshore,June,NC,2022
+22306,Saginaw Bay 10,Nearshore,June,SB,2022
+22308,Saginaw Bay 10,Nearshore,June,SB,2022
+22309,Saginaw Bay 10,Nearshore,June,SB,2022
+22310,Saginaw Bay 9,Nearshore,June,SB,2022
+22313,Saginaw Bay 9,Nearshore,June,SB,2022
+22314,Saginaw Bay 13,Nearshore,June,SB,2022
+22315,Saginaw Bay 13,Nearshore,June,SB,2022
+22318,Harbor Beach 18,Midshore,June,SMB,2022
+22319,Harbor Beach 18,Midshore,June,SMB,2022
+22320,Harbor Beach 18,Midshore,June,SMB,2022
+22322,Harbor Beach 46,Midshore,June,SMB,2022
+22323,Harbor Beach 46,Midshore,June,SMB,2022
+22324,Harbor Beach 46,Midshore,June,SMB,2022
+22326,Harbor Beach 63,Offshore,June,SMB,2022
+22328,Harbor Beach 63,Offshore,June,SMB,2022
+22329,Harbor Beach 63,Offshore,June,SMB,2022
+22330,Saginaw Bay 10,Nearshore,July,SB,2022
+22331,Saginaw Bay 10,Nearshore,July,SB,2022
+22334,Harbor Beach 18,Midshore,July,SMB,2022
+22335,Harbor Beach 18,Midshore,July,SMB,2022
+22336,Harbor Beach 18,Midshore,July,SMB,2022
+22338,Harbor Beach 46,Midshore,July,SMB,2022
+22339,Harbor Beach 46,Midshore,July,SMB,2022
+22340,Harbor Beach 46,Midshore,July,SMB,2022
+22342,Harbor Beach 63,Offshore,July,SMB,2022
+22343,Harbor Beach 63,Offshore,July,SMB,2022
+22344,Harbor Beach 63,Offshore,July,SMB,2022
+22346,Saginaw Bay 10,Nearshore,July,SB,2022
+22348,Saginaw Bay 10,Nearshore,July,SB,2022
+22350,Saginaw Bay 9,Nearshore,July,SB,2022
+22352,Saginaw Bay 9,Nearshore,July,SB,2022
+22354,Saginaw Bay 13,Nearshore,July,SB,2022
+22355,Saginaw Bay 13,Nearshore,July,SB,2022
+22356,Saginaw Bay 13,Nearshore,July,SB,2022
+22358,Harbor Beach 18,Midshore,July,SMB,2022
+22359,Harbor Beach 18,Midshore,July,SMB,2022
+22360,Harbor Beach 18,Midshore,July,SMB,2022
+22362,Harbor Beach 46,Midshore,July,SMB,2022
+22363,Harbor Beach 46,Midshore,July,SMB,2022
+22364,Harbor Beach 46,Midshore,July,SMB,2022
+22366,Harbor Beach 63,Offshore,July,SMB,2022
+22367,Harbor Beach 63,Offshore,July,SMB,2022
+22368,Harbor Beach 63,Offshore,July,SMB,2022
+22370,Boot Island 18,Midshore,July,NMB,2022
+22371,Boot Island 18,Midshore,July,NMB,2022
+22372,Boot Island 18,Midshore,July,NMB,2022
+22374,Boot Island 46,Midshore,July,NMB,2022
+22376,Boot Island 46,Midshore,July,NMB,2022
+22377,Boot Island 46,Midshore,July,NMB,2022
+22378,Boot Island 73,Offshore,July,NMB,2022
+22379,Boot Island 73,Offshore,July,NMB,2022
+22380,Boot Island 73,Offshore,July,NMB,2022
+22382,Thessallon River 18,Midshore,July,NC,2022
+22383,Thessallon River 18,Midshore,July,NC,2022
+22384,Thessallon River 18,Midshore,July,NC,2022
+22386,Thessallon River 46,Midshore,July,NC,2022
+22388,Thessallon River 46,Midshore,July,NC,2022
+22389,Thessallon River 46,Midshore,July,NC,2022
+22390,Thessallon River 46 Off,Offshore,July,NC,2022
+22391,Thessallon River 46 Off,Offshore,July,NC,2022
+22392,Thessallon River 46 Off,Offshore,July,NC,2022
+22090A,Spanish River 5,Nearshore,Aug,NC,2022
+22094A,Spanish River 18,Midshore,Aug,NC,2022
+22096A,Spanish River 18,Midshore,Aug,NC,2022
+22098A,Spanish River 46,Midshore,Aug,NC,2022
+22099A,Spanish River 46,Midshore,Aug,NC,2022
+22100A,Spanish River 46,Midshore,Aug,NC,2022
+22102A,French River 5,Nearshore,Aug,GB,2022
+22106A,French River 18,Midshore,Aug,GB,2022
+22108A,French River 18,Midshore,Aug,GB,2022
+22110A,French River 46,Midshore,Aug,GB,2022
+22112A,French River 46,Midshore,Aug,GB,2022
+22113A,French River 46,Midshore,Aug,GB,2022
+22114A,French River 82,Offshore,Aug,GB,2022
+22116A,French River 82,Offshore,Aug,GB,2022
+22117A,French River 82,Offshore,Aug,GB,2022
+22126A,Parry Sound 46,Midshore,Aug,GB,2022
+22128A,Parry Sound 46,Midshore,Aug,GB,2022
+22129A,Parry Sound 46,Midshore,Aug,GB,2022
+22138A,Nottawasaga River 18,Midshore,Aug,GB,2022
+22139A,Nottawasaga River 18,Midshore,Aug,GB,2022
+22140A,Nottawasaga River 18,Midshore,Aug,GB,2022
+22142A,Nottawasaga River 46,Midshore,Aug,GB,2022
+22144A,Nottawasaga River 46,Midshore,Aug,GB,2022
+22145A,Nottawasaga River 46,Midshore,Aug,GB,2022
+22146A,Nottawasaga River 82,Offshore,Aug,GB,2022
+22148A,Nottawasaga River 82,Offshore,Aug,GB,2022
+22149A,Nottawasaga River 82,Offshore,Aug,GB,2022
+22150A,Saginaw Bay 9,Nearshore,Aug,SB,2022
+22152A,Saginaw Bay 9,Nearshore,Aug,SB,2022
+22154A,Saginaw Bay 13,Nearshore,Aug,SB,2022
+22155A,Saginaw Bay 13,Nearshore,Aug,SB,2022
+22156A,Saginaw Bay 13,Nearshore,Aug,SB,2022
+22158A,Harbor Beach 5,Nearshore,Aug,SMB,2022
+22162A,Harbor Beach 18,Midshore,Aug,SMB,2022
+22163A,Harbor Beach 18,Midshore,Aug,SMB,2022
+22164A,Harbor Beach 18,Midshore,Aug,SMB,2022
+22166A,Harbor Beach 46,Midshore,Aug,SMB,2022
+22167A,Harbor Beach 46,Midshore,Aug,SMB,2022
+22168A,Harbor Beach 46,Midshore,Aug,SMB,2022
+22170A,Harbor Beach 63,Offshore,Aug,SMB,2022
+22171A,Harbor Beach 63,Offshore,Aug,SMB,2022
+22172A,Harbor Beach 63,Offshore,Aug,SMB,2022
+22174A,Maitland River 5,Nearshore,Aug,SMB,2022
+22178A,Maitland River 18,Midshore,Aug,SMB,2022
+22179A,Maitland River 18,Midshore,Aug,SMB,2022
+22180A,Maitland River 18,Midshore,Aug,SMB,2022
+22182A,Maitland River 46,Midshore,Aug,SMB,2022
+22183A,Maitland River 46,Midshore,Aug,SMB,2022
+22184A,Maitland River 46,Midshore,Aug,SMB,2022
+22186A,Maitland River 73,Offshore,Aug,SMB,2022
+22188A,Maitland River 73,Offshore,Aug,SMB,2022
+22189A,Maitland River 73,Offshore,Aug,SMB,2022
+22190A,Saugeen River 18,Midshore,Aug,NMB,2022
+22191A,Saugeen River 18,Midshore,Aug,NMB,2022
+22192A,Saugeen River 18,Midshore,Aug,NMB,2022
+22194A,Saugeen River 46,Midshore,Aug,NMB,2022
+22195A,Saugeen River 46,Midshore,Aug,NMB,2022
+22196A,Saugeen River 46,Midshore,Aug,NMB,2022
+22198A,Saugeen River 82,Offshore,Aug,NMB,2022
+22200A,Saugeen River 82,Offshore,Aug,NMB,2022
+22201A,Saugeen River 82,Offshore,Aug,NMB,2022
+22206A,Boot Island 18,Midshore,Aug,NMB,2022
+22208A,Boot Island 18,Midshore,Aug,NMB,2022
+22210A,Boot Island 46,Midshore,Aug,NMB,2022
+22211A,Boot Island 46,Midshore,Aug,NMB,2022
+22212A,Boot Island 46,Midshore,Aug,NMB,2022
+22214A,Boot Island 73,Offshore,Aug,NMB,2022
+22216A,Boot Island 73,Offshore,Aug,NMB,2022
+22217A,Boot Island 73,Offshore,Aug,NMB,2022
+22218A,Thessalon River 5,Nearshore,Aug,NC,2022
+22222A,Thessalon River 18,Midshore,Aug,NC,2022
+22224A,Thessalon River 18,Midshore,Aug,NC,2022
+22226A,Thessalon River 46,Midshore,Aug,NC,2022
+22227A,Thessalon River 46,Midshore,Aug,NC,2022
+22228A,Thessalon River 46,Midshore,Aug,NC,2022
+22230A,Thessalon River 46 Offshore,Offshore,Aug,NC,2022
+22231A,Thessalon River 46 Offshore,Offshore,Aug,NC,2022
+22232A,Thessalon River 46 Offshore,Offshore,Aug,NC,2022
+22234A,Saugeen River 5,Nearshore,Aug,NMB,2022
