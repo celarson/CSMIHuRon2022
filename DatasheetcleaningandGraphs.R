@@ -20,6 +20,7 @@ library(ggpubr)
 library(AICcmodavg)
 library(rstatix)
 library(emmeans)
+library(lubridate)
 ########################################################
 #Upload datasets
 
@@ -56,10 +57,19 @@ CSMIY <-merge(C2217, yearmeta, by = "STIS")
 
 CSMIYALL$Month<-factor(CSMIYALL$Month, c("April", "May", "Early June", "June", "Late June", "Early July", "July", "Late July", "Aug"))
 
+Date <- read_csv("Date20222017.csv")
+
 #Just TP, TN and Chla
 TPTNCHLAY <- read_csv("TPTNCHLAY.csv")
 TPTNCHLAY<-merge(TPTNCHLAY, yearmeta2, by = "STIS")
 TPTNCHLAY<-subset(TPTNCHLAY, Month!=c("April", "May"))
+TPTNCHLAY<-merge(TPTNCHLAY, Date, by = "STIS")
+
+#Change date to julian date
+TPTNCHLAY$Date<-as.Date(TPTNCHLAY$Date, "%m/%d/%y")
+TPTNCHLAY$Julian <-yday(TPTNCHLAY$Date)
+head(TPTNCHLAY$Julian)
+tail(TPTNCHLAY$Julian)
 
 #Zoop153count are the zooplankton counts for the 153 net
 Zoop153countwide<- read.csv("ZoopforR6.18.24.csv", header=T)
