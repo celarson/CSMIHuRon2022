@@ -59,6 +59,13 @@ CSMIYALL$Month<-factor(CSMIYALL$Month, c("April", "May", "Early June", "June", "
 
 Date <- read_csv("Date20222017.csv")
 
+CSMIYALL<-merge(CSMIYALL, Date, by = "STIS")
+
+
+CSMIYALL$Date<-as.Date(CSMIYALL$Date, "%m/%d/%y")
+CSMIYALL$Julian<-yday(CSMIYALL$Date)
+head(CSMIYALL$Julian)
+
 #Just TP, TN and Chla
 TPTNCHLAY <- read_csv("TPTNCHLAY.csv")
 TPTNCHLAY<-merge(TPTNCHLAY, yearmeta2, by = "STIS")
@@ -2323,3 +2330,13 @@ CSMIYALL$Month<-droplevels(CSMIYALL$Month)
 CSMIYALLNEW<-subset(CSMIYALL, Month!=c("April","May", "Early June", "Late June", "Early July", "Late July"))
 
 CSMIYnomonth<-subset(CSMIY, Month!="NA")
+
+########################
+#Scatterplot with Julian date and other variables
+
+ggplot(CSMIYALL, aes(x = Julian, y = NH4, fill = Area)) +
+  geom_point()+
+  scale_fill_brewer()+
+  theme_classic()+
+  xlab("Day of Year")+
+  ylab("NH4 (μg N/L)")
