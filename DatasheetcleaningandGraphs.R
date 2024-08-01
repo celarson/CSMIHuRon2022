@@ -2334,9 +2334,13 @@ CSMIYnomonth<-subset(CSMIY, Month!="NA")
 ########################
 #Scatterplot with Julian date and other variables
 
-ggplot(CSMIYALL, aes(x = Julian, y = NH4, fill = Area)) +
+ggplot(CSMIYALL, aes(x = Julian, y = NH4, color = Area)) +
   geom_point()+
   scale_fill_brewer()+
-  theme_classic()+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
   xlab("Day of Year")+
   ylab("NH4 (μg N/L)")
