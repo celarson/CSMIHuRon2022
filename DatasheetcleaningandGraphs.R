@@ -61,6 +61,9 @@ Date <- read_csv("Date20222017.csv")
 
 CSMIYALL<-merge(CSMIYALL, Date, by = "STIS")
 
+CSMIYALL$Month<-as.factor(CSMIYALL$Month)
+CSMIYALL$Area<-as.factor(CSMIYALL$Area)
+CSMIYALL$Year<-as.factor(CSMIYALL$Year)
 
 CSMIYALL$Date<-as.Date(CSMIYALL$Date, "%m/%d/%y")
 CSMIYALL$Julian<-yday(CSMIYALL$Date)
@@ -286,6 +289,11 @@ soAMave<-aggregate(`SO4mgL` ~ Area + Month, data = CSMI4, FUN = mean)
 siR<-aggregate(`SimgSiO2L` ~ Area, data = CSMI4, FUN = mean)
 tpnmonth<-aggregate(`TNugNL` ~ Area, data = CSMI5, FUN = mean)
 zoo153ave<-aggregate(`Density` ~ Area, data = )
+
+#Aggregate 2017 and 2022
+CSMIYALLSUB<-subset(CSMIYALL, Month=="June" | Month=="Aug")
+CSMIYALLSUB$Month<-droplevels(CSMIYALLSUB$Month)
+nh4aveYM<-aggregate(`NH4` ~ Month + Year + Area, data = CSMIYALLSUB, FUN = mean)
 
 #plots for water chem
 NH4AM<-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
@@ -2117,6 +2125,8 @@ naIYM<-lm(Na ~ Month*Year + Area, data = CSMIYALL)
 naImod<-list(naIALL, naIMA, naIAY, naIYM)
 naInames<-c('naIALL', 'naIMA', 'naIAY', 'naIYM')
 aictab(cand.set = naImod, modnames = naInames)
+
+summary(naIALL)
 
 #ca
 ca<-lm(Ca ~ Area + Year + Month, data = CSMIYALL)
