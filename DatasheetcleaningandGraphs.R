@@ -118,10 +118,13 @@ Zoopbiomass64Mer$Biomass<-Zoopbiomass64Mer$Count/Zoopbiomass64Mer$Volume
 Bytho153count<-subset(Zoopcount153Mer, Species == "Bythotrepheslongimanus")
 Dresinnid64count<-subset(Zoopcount64Mer, Species == "DreissenidVeligers")
 
+#subset 153 for bytho predation
+preyzoo<-subset(Zoopcount153Mer, Species == c("Leptodiaptomusminutus", "Leptodiaptomussicilis", "Daphniaspp", "Daphniaparvula", "Daphniaretrocurva", "Leptodiaptomusashlandi", "Daphnialongiremis", "Leptodorakindti", "Daphniagaleatamendotae", "Diaphanosomaspp"))
+
 #order factors bytho
 Bytho153count$Month<-factor(Bytho153count$Month, c("June", "July", "Aug") )
 Bytho153count$Area<-factor(Bytho153count$Area, c("NC", "SB", "GB", "NMB", "SMB"))
-
+Bytho153count$DFS<-factor(Bytho153count$DFS, c("Nearshore", "Midshore", "Offshore"))
 #order factors dressinid
 Dresinnid64count$Month<-factor(Dresinnid64count$Month, c("June", "July", "Aug"))
 Dresinnid64count$Area<-factor(Dresinnid64count$Area, c("NC", "SB", "GB", "NMB", "SMB"))
@@ -150,7 +153,34 @@ ggplot(Dresinnid64count, aes(x=Month, y=Density, fill = Month))+
   facet_grid(.~Area)+
   scale_y_log10()+
   labs(y=expression(paste(italic("Dreissenid"), "veliger Density (count/m^3)")))
-  
+
+ggplot(BythoDresinnidcount, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_wrap(.~Area, scales ="free")+
+  labs(y=expression(paste(italic("Dreissenid"), "veliger Density (count/m^3)")))
+
+ggplot(Bytho153count, aes(x=DFS, y=Density, fill = DFS))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  labs(y=expression(paste(italic("Bythotrephes longimanus"), "Density (count/m^3)")))
+
+bythodfs<-aggregate(`Density` ~ DFS + Area, data = Bytho153count, FUN = mean)
+
+DresinnidLog<-Dresinnid64count%>%mutate(logdensity = log(Density))
+
+BythoMonth<-aggregate(`Density` ~ Month, data = Bytho153count, FUN = mean)
+DresinnidMonth<-aggregate(`logdensity` ~ Month, data = DresinnidLogno, FUN = mean)
+DresinnidLogno<-subset(DresinnidLog, logdensity!="-Inf")
 
 options(scipen = 999)
 #############################################################
@@ -294,6 +324,9 @@ zoo153ave<-aggregate(`Density` ~ Area, data = )
 CSMIYALLSUB<-subset(CSMIYALL, Month=="June" | Month=="Aug")
 CSMIYALLSUB$Month<-droplevels(CSMIYALLSUB$Month)
 nh4aveYM<-aggregate(`NH4` ~ Month + Year + Area, data = CSMIYALLSUB, FUN = mean)
+noxaveYA<-aggregate(`NOx` ~ Area + Year, data = CSMIYALL, FUN = mean)
+srpaveYA<-aggregate(`SRP` ~ Area + Year, data = CSMIYALL, FUN = mean)
+caaveya<-aggregate(`Ca` ~ Area + Year, data = CSMIYALL, FUN = mean)
 
 #plots for water chem
 NH4AM<-ggplot(CSMI4, aes(x=Area, y=`NH4 ug N/L`, fill = Month))+
@@ -1337,7 +1370,6 @@ ggplot(CSMI5nomid2, aes(x=Month, y=chlaugL, fill = Depth))+
   scale_color_brewer()+
   theme_classic()+
   ylab("Chl-a (μg/L)")+
-  xlab("Region")+
   facet_wrap(.~Area, scales = "free_y")
 
 #tn june august  nearshore 18, mid 46 and offshore 66 82 91
@@ -1390,7 +1422,6 @@ ggplot(CSMI5nomid2, aes(x=Month, y=TNugNL, fill = Depth))+
   scale_color_brewer()+
   theme_classic()+
   ylab("TN (μg N/L)")+
-  xlab("Region")+
   facet_wrap(.~Area, scales = "free_y")
 
 #TP june august nearshore 18, mid 46 and offshore 66 82 91
@@ -1443,7 +1474,6 @@ ggplot(CSMI5nomid2, aes(x=Month, y=TPugPL, fill = Depth))+
   scale_color_brewer()+
   theme_classic()+
   ylab("TP (μg P/L)")+
-  xlab("Region")+
   facet_wrap(.~Area, scales = "free_y")
 
 #summary stats
@@ -1751,6 +1781,54 @@ ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
+ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(500, 6500), breaks = seq(500, 65000, by=1500))+
+  scale_size_continuous(limits = c(500, 6500), breaks = seq(500,6500, by = 1500))+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+ggplot(preyzoo2, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_size_continuous()+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+preyzoo2<-aggregate(`Density` ~ Area + Species, data = preyzoo, FUN = mean)
+bythodresagg<-aggregate(`Density` ~ Area + Species, data = BythoDresinnidcount, FUN = mean)
+preyzoo2M<-aggregate(`Density` ~ Area + Species + Month, data = preyzoo, FUN = mean)
+preyzoo2J<-subset(preyzoo2M, Month == "June")
+bythoJ<-subset(Bytho153count, Month == "June")
+
+ggplot(preyzoo2J, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_size_continuous()+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+preyzoo2$Area<-factor(preyzoo2$Area, c("NC", "SB", "GB", "NMB", "SMB"))
+
+ggplot(bythodresagg, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_size_continuous()+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+ggplot(bythoagg, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis")+
+  scale_size_continuous()+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
 #153 biomass area
 
 Zoo153biomassArea <- read_csv("~/CSMI/Zoo153biomassArea.csv")
@@ -1762,7 +1840,16 @@ z153bioarea2$Area<-factor(z153bioarea2$Area,c("NC", "SB", "GB", "SMB", "NMB"))
 ggplot(Zoo153biomassArea, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`, color = `Biomass (ug/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(10, 12010), breaks = seq(10, 12010, by=3000))+
+  scale_size_continuous(limits = c(10, 12010), breaks = seq(10,12010, by = 3000))+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+ggplot(Zoo153biomassArea, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`, color = `Biomass (ug/m^3)`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(1, 11612), breaks = seq(1, 11612, by=2903))+
+  scale_size_continuous(limits = c(1, 11612), breaks = seq(1,11612, by = 2903))+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
@@ -1782,8 +1869,8 @@ zoo64bioarea2$Area<-factor(zoo64bioarea2$Area, c("NC", "SB", "GB", "SMB", "NMB")
 
 ggplot(zoo64bioarea2, aes(x=Area, y=Group, size = `Average Biomass (ug/m^3)`, color = `Average Biomass (ug/m^3)`))+
   geom_point()+
-  theme_bw()+
-  scale_color_continuous(guide="legend", type = "viridis")+
+  theme_bw()+scale_color_continuous(guide="legend", type="viridis", limits=c(500, 5000), breaks = seq(500, 5000, by=1000))+
+  scale_size_continuous(limits = c(500, 5000), breaks = seq(500,5000, by = 1000))+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
@@ -1798,7 +1885,8 @@ zoo64counarea2$Month<-factor(zoo64counarea2$Month, c("NC", "SB", "GB", "SMB", "N
 ggplot(zoo64counarea2, aes(x=Month, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_continuous(guide="legend", type = "viridis")+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(5000, 78000), breaks = seq(5000, 78000, by=18000))+
+  scale_size_continuous(limits = c(5000, 78000), breaks = seq(5000,78000, by = 18000))+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
