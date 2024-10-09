@@ -9,6 +9,7 @@ library(reshape2)
 library(lubridate)
 
 #Upload datasets
+
 #153 net zooplankton
 ZoopforR6_18_24 <- read_csv("ZoopforR6.18.24.csv")
 View(ZoopforR6_18_24)
@@ -23,9 +24,9 @@ CM <- (CalibrationMeta)
 View(CalibrationMeta)
 
 #water chemistry
-CSMI4<- read_csv("CSMI4.csv")
+WaterChemistry<- read_csv("CSMIHuron2_2.csv")
 
-
+#Cleaning datasets
 
 #melt datasets in order to calculate density
 Zoopcount153long<-melt(ZoopforR6_18_24, value.name="Count", 
@@ -50,6 +51,11 @@ Zoop153denswide<-reshape(Zoopcount153Mer,
                         idvar = c ("SiteID","Station","Collection Date","DFS","Month","Area"), 
                         timevar="Species",direction = "wide", 
                         drop=c("Count","MeterEnd","MeterMCoe","Volume"))
+
+#merge to make one large dataset with 64 net, 153 net, and water chemistry
+HuronCSMIWide<-cbind(Zoop64denswide, Zoop153denswide, by=c("SiteID","Station","Collection Date","DFS","Month","Area"))
+
+#Analysis
 
 #Cor
 zoop64cors<-cor(Zoop64denswide[,7:ncol(Zoop64denswide)])
