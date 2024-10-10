@@ -1,266 +1,266 @@
-﻿STIS,Month,Ship,Lake,Site,Area,DFS,Research Project,Date,TimeEST, SiteDepthm,Depth,Separatedepthsm,DCL,StratifiedUnstratified,NH4ugNL ,NOxugNL,SRPugPL,TNugNL,TPugPL,KmgL,NamgL,CamgL,MgmgL,ClmgL,SO4mgL,DOCmgCL,SimgSiO2L,chlaugL
-22206A,Aug,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,8/14/2022,15:10,17.8,Epi,5,No,Unstratified,15,281,2.95,365,6.84,0.75,3.72,20.79,6.28,5.93,12.21,2.06,4.49,0.56
-22208A,Aug,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,8/14/2022,15:10,17.8,Bottom,15.5,No,Unstratified,25.5,278,2.15,390,7.24,0.79,3.72,20.98,6.41,5.98,12.4,2.09,4.32,0.63
-22210A,Aug,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,8/14/2022,16:10,45,Epi,5,No,Stratified,19.1,276,2.09,386,7.17,0.82,3.75,20.95,6.42,5.84,12.03,2.02,4.41,0.84
-22211A,Aug,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,8/14/2022,16:10,45,Mid,18,No,Stratified,15.6,288,2.4,398,8.41,0.81,3.78,21.02,6.35,6.05,12.59,2.13,5.03,0.85
-22212A,Aug,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,8/14/2022,16:10,45,Bottom,42.5,No,Stratified,16.1,306,2.26,442,8.85,0.86,4.1,22.34,6.99,6.74,13.89,1.95,5.37,0.51
-22214A,Aug,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,8/14/2022,17:00,75.9,Epi,5,Yes,Stratified,9.09,279,2.51,371,7.99,1,3.42,19.7,5.85,5.27,11.13,2.09,4.47,0.94
-22216A,Aug,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,8/14/2022,17:00,75.9,Bottom,73,Yes,Stratified,19.5,329,2.43,411,7.75,0.9,4.18,23.1,7.24,7.07,14.54,1.81,5.8,0.29
-22217A,Aug,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,8/14/2022,17:00,75.9,Mid,41,Yes,Stratified,14.2,322,3.29,406,7.96,0.94,4.13,22.58,7.07,6.89,14.11,1.87,5.8,1.96
-22218A,Aug,LEII,Lake Huron,Thessalon River 5,NC,Nearshore,CSMI,8/14/2022,10:51,8.5,Epi,5,No,Unstratified,8.62,267,2.12,374,8.45,0.68,2.82,17.17,4.63,4.01,8.64,2.21,4.84,1.32
-22222A,Aug,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,8/14/2022,10:15,18.9,Epi,5,No,Unstratified,15.4,268,2.84,383,6.67,0.77,3.4,19.19,5.49,5.24,10.89,2.67,5.07,1.09
-22224A,Aug,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,8/14/2022,10:15,18.9,Bottom,16.9,No,Unstratified,14.3,277,2.63,405,8.01,0.84,3.66,20.09,5.9,5.4,11.4,2.07,5.59,0.74
-22226A,Aug,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,8/14/2022,9:03,43.8,Epi,5,No,Stratified,14.3,251,3.45,364,5.46,0.76,3.41,18.64,5.4,4.93,10.62,2.23,4.79,1.24
-22227A,Aug,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,8/14/2022,9:03,43.8,Mid,17,No,Stratified,18.3,311,3.97,389,7.75,0.9,4.04,22.35,6.74,6.33,13.14,1.89,5.76,0.52
-22228A,Aug,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,8/14/2022,9:03,43.8,Bottom,41,No,Stratified,18.4,288,2.71,383,9.45,0.87,3.79,21.14,6.24,5.85,12.26,2.14,5.22,0.74
-22230A,Aug,LEII,Lake Huron,Thessalon River 46 Offshore,NC,Offshore,CSMI,8/14/2022,8:10,47.6,Epi,5,No,Stratified,24.1,252,3.32,376,10.9,0.79,3.4,18.77,5.38,5.06,10.73,2.39,4.54,1.08
-22231A,Aug,LEII,Lake Huron,Thessalon River 46 Offshore,NC,Offshore,CSMI,8/14/2022,8:10,47.6,Mid,17,No,Stratified,35.9,264,4.02,383,10.6,0.81,3.49,19.13,5.57,5.69,11.37,2.35,4.75,1.24
-22232A,Aug,LEII,Lake Huron,Thessalon River 46 Offshore,NC,Offshore,CSMI,8/14/2022,8:10,47.6,Bottom,45,No,Stratified,39,310,3.38,395,9.26,1.09,4.16,22.54,6.84,6.69,13.75,2.08,5.26,0.5
-22090A,Aug,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,8/13/2022,15:00,26,Epi,5,No,Stratified,12.4,196,3.87,329,6.76,0.72,3.85,17.95,5.32,6.12,11.85,2.77,5.11,2.44
-22094A,Aug,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,8/13/2022,14:15,20.3,Epi,5,No,Stratified,14.8,214,3.11,331,5.6,0.7,3.76,18.37,5.46,5.76,11.55,2.64,5.2,2
-22096A,Aug,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,8/13/2022,14:15,20.3,Bottom,18.5,No,Stratified,21.1,232,3.22,330,6.5,0.76,3.81,18.72,5.64,5.88,11.78,2.64,5.29,
-22098A,Aug,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,8/13/2022,13:05,46.2,Epi,5,No,Stratified,12.8,202,2.93,340,6.27,0.84,3.68,18.37,5.46,5.79,11.57,2.71,4.62,2.12
-22099A,Aug,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,8/13/2022,13:05,46.2,Mid,19,No,Stratified,29,287,4.23,408,5.6,0.86,3.89,20.16,5.92,6.16,12.29,2.39,5.63,0.71
-22100A,Aug,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,8/13/2022,13:05,46.2,Bottom,44,No,Stratified,35.7,348,3.62,420,4.65,0.83,4.1,22.43,6.74,6.86,13.38,2.04,5.65,0.44
-22102A,Aug,LEII,Lake Huron,French River 5,GB,Nearshore,CSMI,8/12/2022,13:34,13,Epi,5,No,Stratified,16.3,164,2.54,301,5.06,0.93,4.04,19.23,5.67,6.75,11.33,2.93,2.74,1.44
-22106A,Aug,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,8/12/2022,12:40,11.7,Epi,5,No,Unstratified,19.5,219,2.58,338,5.26,0.82,4.24,21.42,6.33,7.27,12.49,2.45,3.68,0.82
-22108A,Aug,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,8/12/2022,12:40,11.7,Bottom,9,No,Unstratified,17.8,216,2.57,340,5.52,0.84,4.21,21.51,6.32,7.41,12.66,2.35,3.17,0.81
-22110A,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,11:30,42.7,Epi,5,Yes,Stratified,17.4,230,2.45,336,4.08,0.89,4.11,20.77,6.18,7.32,12.61,2.32,3.68,0.59
-22112A,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,11:30,42.7,Bottom,40,Yes,Stratified,27.3,338,2.87,359,3.54,0.86,4.3,21.75,6.52,7.53,12.98,2.27,4.47,0.53
-22113A,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,11:30,42.7,Mid,26,Yes,Stratified,24.5,334,3.68,371,5.04,0.85,4.26,21.46,6.41,7.55,12.89,2.34,4,1.09
-22114A,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,9:15,78.6,Epi,5,Yes,Stratified,65.9,359,2.5,371,6.1,0.86,4.32,22.72,6.88,7.71,13.62,2.37,3.62,0.52
-22116A,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,9:15,78.6,Bottom,76,Yes,Stratified,55,382,2.9,370,3.99,0.87,4.25,22.14,6.66,7.67,13.37,2.26,4.32,0.34
-22117A,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,9:15,78.6,Mid,36,Yes,Stratified,76.2,357,2.97,400,5.97,0.84,4.22,22.15,6.69,7.68,13.31,2.35,4.43,1
-22126A,Aug,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,8/9/2022,13:55,50,Epi,5,Yes,Stratified,16.6,292,3.1,369,4.61,0.83,4.23,21.24,6.4,7.55,12.73,,3.96,0.82
-22128A,Aug,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,8/9/2022,13:55,50,Bottom,48,Yes,Stratified,28.7,300,3.9,369,3.98,0.85,4.37,21.75,6.52,7.87,13.02,2.28,4.32,0.3
-22129A,Aug,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,8/9/2022,13:55,50,Mid,31,Yes,Stratified,23,295,2.82,383,5.84,0.86,4.49,22.05,6.58,7.96,13.01,2.17,4.15,0.61
-22138A,Aug,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,8/8/2022,16:45,19.7,Epi,5,No,Unstratified,19.3,268,2.71,375,4.34,0.93,4.84,22.53,6.7,8.8,13.42,2.34,3.15,0.84
-22139A,Aug,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,8/8/2022,16:45,19.7,Mid,11.4,No,Unstratified,17.3,238,2.45,399,4.21,0.84,4.77,22.27,6.64,8.36,13.04,2.35,3.49,1.03
-22140A,Aug,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,8/8/2022,16:45,19.7,Bottom,17.8,No,Unstratified,17.1,253,2.68,420,6.66,0.8,4.51,22.76,6.65,8,13.25,2.26,3.87,1.8
-22142A,Aug,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,8/8/2022,15:50,48,Epi,5,Yes,Stratified,20.4,312,2.89,382,6.13,0.8,4.53,22.14,6.55,8.3,13.26,2.36,3.15,0.74
-22144A,Aug,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,8/8/2022,15:50,48,Bottom,46,Yes,Stratified,34.2,335,3.13,435,4.98,0.8,4.46,22.56,6.76,7.92,13.27,2.01,4.64,0.51
-22145A,Aug,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,8/8/2022,15:50,48,Mid,23.5,Yes,Stratified,17.3,306,2.74,368,5,0.8,4.4,22.03,6.65,7.81,13.23,2.16,3.55,1.32
-22146A,Aug,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,8/8/2022,13:45,84,Epi,5,Yes,Stratified,23.1,266,2.88,373,6.89,0.84,4.4,21.68,6.42,7.64,12.92,2.3,4.09,0.62
-22148A,Aug,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,8/8/2022,13:45,84,Bottom,82,Yes,Stratified,25.5,380,2.83,392,6.54,0.87,4.54,22.76,6.67,7.95,13.35,2.04,4.58,0.21
-22149A,Aug,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,8/8/2022,13:45,84,Mid,39,Yes,Stratified,30.9,324,3.09,374,5.31,0.98,4.51,22.59,6.62,7.99,13.35,2.27,4.13,0.9
-22234A,Aug,LEII,Lake Huron,Saugeen River 5,NMB,Nearshore,CSMI,8/7/2022,7:15,10.4,Epi,5,No,Unstratified,29.6,295,3.41,399,3.44,0.97,4.61,24.68,7.71,7.8,15.73,2.33,4.71,0.43
-22174A,Aug,LEII,Lake Huron,Maitland River 5,SMB,Nearshore,CSMI,8/6/2022,8:08,9.8,Epi,5,No,Unstratified,40.5,310,2.88,477,6.02,0.94,5.14,25.91,8.19,9.05,17.48,2.2,4.17,0.94
-22190A,Aug,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,8/6/2022,17:18,17,Epi,5,No,Unstratified,19.3,337,2.45,424,7.17,0.92,4.57,24.35,7.78,7.62,15.67,1.98,4.04,0.57
-22191A,Aug,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,8/6/2022,17:18,17,Mid,10,No,Unstratified,26,371,2.06,450,6.3,0.94,4.56,24.68,7.76,7.63,15.77,2.3,4.15,0.48
-22192A,Aug,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,8/6/2022,17:18,17,Bottom,15,No,Unstratified,29.2,345,1.95,408,5.5,0.93,4.63,24.15,7.62,7.65,15.33,2.07,4.22,0.43
-22194A,Aug,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,8/6/2022,16:09,48,Epi,5,No,Stratified,18.4,364,2.11,403,8.14,0.92,4.53,23.91,7.58,7.44,14.85,2.1,4.24,0.49
-22195A,Aug,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,8/6/2022,16:09,48,Mid,24,No,Stratified,17.5,332,2.13,415,5.77,0.87,4.37,23.75,7.52,7.28,14.92,2.15,3.79,0.93
-22196A,Aug,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,8/6/2022,16:09,48,Bottom,46,No,Stratified,13.6,350,2.49,412,8.45,0.87,4.36,23.98,7.54,7.25,14.88,1.97,5.07,0.63
-22198A,Aug,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,8/6/2022,14:17,82.3,Epi,5,Yes,Stratified,24.9,319,1.5,423,7.66,0.92,4.6,24.24,7.7,7.74,15.45,2.11,4.26,0.49
-22200A,Aug,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,8/6/2022,14:17,82.3,Bottom,80.5,Yes,Stratified,33.7,329,2.5,413,7.69,0.94,4.41,23.83,7.48,7.33,14.99,2.13,5.35,0.16
-22201A,Aug,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,8/6/2022,14:17,82.3,Mid,46,Yes,Stratified,18.8,295,1.96,391,4.09,0.93,4.55,23.99,7.67,7.08,14.28,2.19,4.04,1.02
-22178A,Aug,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,8/5/2022,17:20,19.9,Epi,5,No,Unstratified,15.8,311,3.15,435,2.6,0.97,4.53,24.05,7.53,7.67,15.13,2.12,4.49,0.64
-22179A,Aug,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,8/5/2022,17:20,19.9,Mid,11.5,No,Unstratified,20.8,301,2.92,425,3.71,0.92,4.46,23.88,7.48,7.62,15.26,2.04,3.98,0.65
-22180A,Aug,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,8/5/2022,17:20,19.9,Bottom,17.9,No,Unstratified,29.2,265,3.33,414,4.54,0.88,4.35,24.05,7.49,7.62,15.21,1.94,3.98,0.59
-22182A,Aug,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,8/5/2022,16:30,46,Epi,5,No,Stratified,16.4,309,3.6,415,5.92,0.9,4.54,23.75,7.54,7.48,15.11,2.06,3.92,1.05
-22183A,Aug,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,8/5/2022,16:30,46,Mid,17,No,Stratified,13.7,303,2.96,411,5.03,1,4.53,23.6,7.55,7.41,14.95,2.06,4.19,0.96
-22184A,Aug,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,8/5/2022,16:30,46,Bottom,44,No,Stratified,26.3,313,4.09,428,5.29,0.89,4.42,23.54,7.47,7.32,15.01,2.03,5.14,0.42
-22186A,Aug,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,8/5/2022,14:40,72.9,Epi,5,Yes,Stratified,28.7,296,2.6,414,4.96,0.96,4.51,23.35,7.48,7.51,14.99,2.15,4.37,0.59
-22188A,Aug,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,8/5/2022,14:40,72.9,Bottom,71,Yes,Stratified,33.5,321,3.74,424,4.47,0.93,4.41,23.18,7.39,7.32,15,1.96,5.61,0.2
-22189A,Aug,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,8/5/2022,14:40,72.9,Mid,40,Yes,Stratified,45.6,324,2.06,423,2.98,0.87,4.34,23.47,7.39,7.36,15.1,1.93,5.22,0.53
-22158A,Aug,LEII,Lake Huron,Harbor Beach 5,SMB,Nearshore,CSMI,8/4/2022,17:30,5.2,Epi,1.6,No,Unstratified,25.4,245,3.1,418,4.2,0.94,4.78,24.64,7.5,8.46,15.29,2.26,4.17,2.24
-22162A,Aug,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,8/4/2022,12:05,19.1,Epi,5,No,Stratified,21.3,270,3.44,399,3.34,0.94,4.75,24.7,7.55,8.35,15.19,2.17,4.43,1.3
-22163A,Aug,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,8/4/2022,12:05,19.1,Mid,9.5,No,Stratified,34.3,284,3.48,415,5.3,0.9,4.56,23.35,7.36,8.05,15.25,2.28,4.58,0.94
-22164A,Aug,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,8/4/2022,12:05,19.1,Bottom,17.3,No,Stratified,32,294,3.47,417,4.63,0.94,4.51,23.97,7.51,8.08,15.3,2.1,4.69,0.6
-22166A,Aug,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,8/4/2022,14:25,47.5,Epi,5,No,Stratified,16.4,264,2.77,401,2.8,0.95,4.88,24.03,7.75,8.8,15.46,2.27,4.24,1.65
-22167A,Aug,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,8/4/2022,14:25,47.5,Mid,17,No,Stratified,14.3,307,3.1,414,5.41,0.89,4.45,23.58,7.51,8.08,15.3,2.12,4.58,0.98
-22168A,Aug,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,8/4/2022,14:25,47.5,Bottom,45.5,No,Stratified,19.6,329,3.42,413,3.35,0.92,4.59,24.04,7.61,8.36,15.51,2.03,5.31,0.56
-22170A,Aug,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,8/4/2022,15:00,63.2,Epi,5,No,Stratified,18.2,299,2.74,448,4.35,0.93,4.69,23.93,7.61,8.65,15.51,2.15,4.07,0.8
-22171A,Aug,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,8/4/2022,15:00,63.2,Mid,14,No,Stratified,11.9,306,2.92,417,6.54,0.88,4.4,23.34,7.33,8.05,15.21,2.16,5.03,0.91
-22172A,Aug,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,8/4/2022,15:00,63.2,Bottom,61.1,No,Stratified,16.1,311,3.56,431,4.53,0.93,4.43,24.42,7.48,8,15.28,2.05,5.01,0.52
-22150A,Aug,LEII,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,8/2/2022,15:50,11.2,Epi,5,No,Unstratified,42,317,2.72,531,17.1,1.55,10.85,27.65,10.45,19.63,17.54,4.7,5.89,14.72
-22152A,Aug,LEII,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,8/2/2022,15:50,11.2,Bottom,9,No,Unstratified,35.9,38.7,4.21,518,17.6,1.35,8.94,27.2,9.8,16.34,16.94,4.27,5.61,14.52
-22154A,Aug,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,8/2/2022,14:30,15.4,Epi,5,No,Unstratified,10.6,155,2.72,393,7.59,1.14,6.63,25.98,8.46,11.87,16.03,2.91,3.94,3.36
-22155A,Aug,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,8/2/2022,14:30,15.4,Mid,9,No,Unstratified,18.9,203,3.2,451,7.71,1.06,5.78,25.93,8.06,10.13,15.77,2.68,4.17,3.8
-22156A,Aug,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,8/2/2022,14:30,15.4,Bottom,13,No,Unstratified,38.8,239,3.2,523,8.95,0.94,5.18,25.44,7.78,9.04,15.48,2.41,4.45,6
-22252,E July,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,7/10/2022,8:55,19.7,Epi,5,No,Unstratified,,,,400,4.94,,,,,,,,,0.61
-22253,E July,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,7/10/2022,8:55,19.7,Mid,11.2,No,Unstratified,,,,400,4.98,,,,,,,,,0.61
-22254,E July,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,7/10/2022,8:55,19.7,Bottom,17.6,No,Unstratified,,,,376,5.39,,,,,,,,,0.72
-22256,E July,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,7/10/2022,10:00,46.8,Epi,4.9,No,Stratified,,,,391,4.53,,,,,,,,,0.64
-22257,E July,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,7/10/2022,10:00,46.8,Mid,24.7,No,Stratified,,,,380,4.04,,,,,,,,,0.62
-22258,E July,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,7/10/2022,10:00,46.8,Bottom,44.5,No,Stratified,,,,412,5.14,,,,,,,,,0.37
-22260,E July,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,7/10/2022,11:28,78,Epi,5,Yes,Stratified,,,,419,7.17,,,,,,,,,0.53
-22262,E July,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,7/10/2022,11:28,78,Bottom,74.4,Yes,Stratified,,,,434,3.31,,,,,,,,,0.18
-22263,E July,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,7/10/2022,11:28,78,Mid,31.2,Yes,Stratified,,,,424,3.78,,,,,,,,,1.25
-22334,E July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,,,Epi,5,,,,,,491,1.99,,,,,,,,,0.85
-22335,E July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,,,Mid,10,,,,,,567,5.18,,,,,,,,,0.78
-22336,E July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,,,Bottom,15,,,,,,592,3.43,,,,,,,,,0.83
-22338,E July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,,,Epi,5,,,,,,628,3.99,,,,,,,,,0.68
-22339,E July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,,,Mid,17,,,,,,559,5.36,,,,,,,,,0.63
-22340,E July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,,,Bottom,45,,,,,,471,4.86,,,,,,,,,0.81
-22342,E July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/10/2022,,,Epi,5,,,,,,438,3.36,,,,,,,,,0.38
-22343,E July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/10/2022,,,Mid,23,,,,,,458,1.92,,,,,,,,,0.7
-22344,E July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/10/2022,,,Bottom,61,,,,,,492,3.09,,,,,,,,,1.02
-22264,E July,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,7/9/2022,12:45,19,Epi,5,No,Unstratified,,,,360,4.06,,,,,,,,,1.06
-22265,E July,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,7/9/2022,12:45,19,Mid,8,No,Unstratified,,,,364,5.45,,,,,,,,,1.26
-22266,E July,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,7/9/2022,12:45,19,Bottom,16.7,No,Unstratified,,,,389,5.28,,,,,,,,,1.06
-22268,E July,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,7/9/2022,10:58,46,Epi,5,No,Stratified,,,,519,7.36,,,,,,,,,1.35
-22269,E July,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,7/9/2022,10:58,46,Mid,18,No,Stratified,,,,405,3.92,,,,,,,,,1.17
-22270,E July,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,7/9/2022,10:58,46,Bottom,41,No,Stratified,,,,452,4.36,,,,,,,,,0.38
-22272,E July,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,7/9/2022,9:10,49,Epi,5,No,Stratified,,,,407,3.54,,,,,,,,,1.07
-22273,E July,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,7/9/2022,9:10,49,Mid,19.6,No,Stratified,,,,394,6.12,,,,,,,,,0.87
-22274,E July,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,7/9/2022,9:10,49,Bottom,45,No,Stratified,,,,414,4.79,,,,,,,,,0.53
-22330,E July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/9/2022,,,Epi,5,,,,,,522,7.49,,,,,,,,,5.12
-22331,E July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/9/2022,,,Bottom,8,,,,,,506,6.35,,,,,,,,,4.64
-22130,E June,LEII,Lake Huron,Parry Sound 82,GB,Offshore,CSMI,6/12/2022,9:28,77.8,Epi,5,No,Unstratified,14,275.05,4.04,368,5.31,0.84,4.35,21.68,6.55,7.59,14,2.08,4.19,0.51
-22131,E June,LEII,Lake Huron,Parry Sound 82,GB,Offshore,CSMI,6/12/2022,9:28,77.8,Mid,40,No,Unstratified,12.9,271.7,2.93,364,5.15,0.79,4.41,21.68,6.54,7.76,14.08,1.86,4.58,0.71
-22132,E June,LEII,Lake Huron,Parry Sound 82,GB,Offshore,CSMI,6/12/2022,9:28,77.8,Bottom,74,No,Unstratified,18.1,297.79,3.22,370,4.55,0.83,4.41,21.66,6.54,7.8,14.09,2.11,4.37,0.36
-22118,E June,LEII,Lake Huron,Parry Sound 5,GB,Nearshore,CSMI,6/11/2022,16:23,11.4,Epi,5,No,Unstratified,11.6,202.01,2.42,387,6.65,0.79,4.45,19.7,6.01,6.87,14.07,2.3,3.6,0.44
-22122,E June,LEII,Lake Huron,Parry Sound 18,GB,Midshore,CSMI,6/11/2022,15:27,27.2,Epi,5,No,Stratified,13.4,230.33,2.28,455,6.94,0.84,4.34,20.65,6.25,5.64,11.85,2.27,3.96,0.47
-22123,E June,LEII,Lake Huron,Parry Sound 18,GB,Midshore,CSMI,6/11/2022,15:27,27.2,Mid,15,No,Stratified,15.2,235.92,2.79,397,6.26,0.84,4.39,20.84,6.35,5.65,11.86,2.01,3.85,0.56
-22124,E June,LEII,Lake Huron,Parry Sound 18,GB,Midshore,CSMI,6/11/2022,15:27,27.2,Bottom,25,No,Stratified,14.8,248.59,3.06,392,6.02,0.82,4.3,21.02,6.46,5.79,12.21,1.99,4.11,0.34
-22126,E June,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,6/11/2022,13:48,50.9,Epi,5,No,Unstratified,11.8,244.49,2.59,370,5.27,0.83,4.33,21.27,6.55,5.82,12.26,2.09,4.45,0.39
-22127,E June,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,6/11/2022,13:48,50.9,Mid,26,No,Unstratified,12.5,257.16,2.89,391,6.49,0.84,4.29,21.14,6.57,5.6,11.87,2.12,4.54,0.59
-22128,E June,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,6/11/2022,13:48,50.9,Bottom,48,No,Unstratified,11.9,262.38,2.85,354,5.61,0.84,4.29,21.32,6.56,7.59,14,2.21,4.39,0.38
-22134,E June,LEII,Lake Huron,Nottawasaga River 5,GB,Nearshore,CSMI,6/11/2022,8:12,5.5,Epi,3,No,Unstratified,13.6,279.53,2.67,395,7.07,0.85,4.65,22.81,6.84,8.27,14.09,2.21,3.49,0.76
-22138,E June,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,6/11/2022,0:00,19.6,Epi,5,No,Unstratified,9.42,251.2,2.42,455,4.93,0.79,4.46,22.17,6.72,7.87,13.77,2.05,3.83,0.75
-22139,E June,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,6/11/2022,0:00,19.6,Mid,12,No,Unstratified,14.6,257,1.76,391,7.01,0.85,4.41,22.25,6.64,7.71,13.72,1.92,3.81,0.6
-22140,E June,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,6/11/2022,0:00,19.6,Bottom,18,No,Unstratified,9.65,252,1.87,366,5.05,0.86,4.42,22.11,6.67,7.75,14.06,2.09,4.09,0.75
-22142,E June,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,6/10/2022,17:41,48.5,Epi,5,No,Stratified,10.9,258,1.69,381,7,0.81,4.47,22.38,6.67,7.77,13.46,2.07,4.11,0.58
-22143,E June,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,6/10/2022,17:41,48.5,Mid,25,No,Stratified,7.58,259,1.98,402,6.31,0.83,4.44,22.06,6.58,7.6,13.43,2.01,4,0.65
-22144,E June,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,6/10/2022,17:41,48.5,Bottom,45,No,Stratified,10.1,249,1.2,362,7.02,0.83,4.42,22.41,6.64,8.46,14.03,1.87,4.02,0.38
-22146,E June,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,6/10/2022,14:58,86.7,Epi,5,Yes,Stratified,16.7,274,2.17,418,7.68,0.82,4.45,21.95,6.51,8.31,14.02,2.04,4.32,0.47
-22148,E June,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,6/10/2022,14:58,86.7,Bottom,82,Yes,Stratified,11.8,270,2.26,391,5.89,0.84,4.48,22.2,6.61,7.85,13.97,2.1,4.52,0.38
-22149,E June,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,6/10/2022,14:58,86.7,Mid,42,Yes,Stratified,11,269,2.25,383,5.01,0.82,4.44,22.2,6.6,8.22,14.08,2.08,4.22,1.14
-22190,E June,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,6/9/2022,7:35,16,Epi,5,No,Unstratified,15.64,287,3.72,412,7.93,0.88,4.36,23.64,7.44,7.52,15.63,1.93,3.62,0.53
-22191,E June,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,6/9/2022,7:35,16,Mid,10,No,Unstratified,13.38,287,3.15,417,7.8,0.89,4.4,23.62,7.43,7.6,15.8,1.86,3.72,0.53
-22192,E June,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,6/9/2022,7:35,16,Bottom,15,No,Unstratified,14.3,292,3.6,437,9.29,0.89,4.32,23.8,7.47,7.56,15.81,1.85,3.77,0.42
-22174,E June,LEII,Lake Huron,Maitland River 5,SMB,Nearshore,CSMI,6/8/2022,7:26,8.9,Epi,5,No,Unstratified,21.28,401,2.9,567,7.32,1.05,4.94,25.91,8.21,8.74,17.81,2.06,2.4,0.79
-22182,E June,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,6/8/2022,9:20,47.6,Epi,5,No,Unstratified,7.53,324,3.51,500,7.41,0.94,4.4,23.94,7.22,7.47,15.68,1.67,4.47,0.64
-22183,E June,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,6/8/2022,9:20,47.6,Mid,25,No,Unstratified,14.09,298,3.21,417,6.84,0.89,4.1,23.62,7.11,7.69,15.72,1.72,4.96,0.5
-22184,E June,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,6/8/2022,9:20,47.6,Bottom,45,No,Unstratified,17.26,288,3.53,430,8.29,0.92,4.48,23.81,7.4,7.54,15.68,1.8,4.84,0.56
-22186,E June,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,6/8/2022,10:29,74,Epi,5,Yes,Unstratifield,9.01,297,3.43,430,7.93,0.9,4.47,23.71,7.38,7.55,15.74,2.24,4.82,0.71
-22188,E June,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,6/8/2022,10:29,74,Bottom,71,Yes,Unstratifield,14.23,302,3.6,395,8.03,0.88,4.38,23.65,7.38,7.6,15.82,1.71,4.88,0.29
-22189,E June,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,6/8/2022,10:29,74,Mid,38,Yes,Unstratifield,8.66,304,3.69,467,12.9,0.91,4.38,23.53,7.39,7.54,15.66,1.8,4.69,0.83
-22194,E June,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,6/8/2022,9:08,48.7,Epi,5,No,Unstratified,7.82,304,3.65,420,8.01,0.87,4.36,23.75,7.48,7.57,15.91,1.87,4.26,0.47
-22195,E June,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,6/8/2022,9:08,48.7,Mid,25,No,Unstratified,11.2,303,3.75,426,6.41,0.97,4.44,24.09,7.51,7.54,15.77,1.78,4.47,0.82
-22196,E June,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,6/8/2022,9:08,48.7,Bottom,45,No,Unstratified,10.28,334,3.87,405,6.98,0.91,4.3,23.92,7.43,7.59,15.78,1.66,4.73,0.53
-22198,E June,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,6/8/2022,10:47,84.1,Epi,5,No,Unstratified,9.72,332,3.78,433,6.49,0.92,4.25,23.83,7.43,7.53,15.75,1.72,4.73,0.44
-22199,E June,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,6/8/2022,10:47,84.1,Mid,42,No,Unstratified,7.46,322,3.62,405,6.94,0.9,4.35,23.75,7.46,7.47,15.74,1.62,4.73,0.67
-22200,E June,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,6/8/2022,10:47,84.1,Bottom,80,No,Unstratified,15.15,321,3.87,425,5.36,0.91,4.26,23.7,7.41,7.48,15.8,1.82,4.92,0.35
-22282,E June,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Epi,5,,,,,,410,5.26,,,,,,,,,0.63
-22283,E June,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Mid,8,,,,,,399,6.22,,,,,,,,,0.74
-22284,E June,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Bottom,14,,,,,,397,6.17,,,,,,,,,0.82
-22286,E June,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Epi,5,,,,,,421,4.21,,,,,,,,,1.15
-22287,E June,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Mid,18,,,,,,430,1.74,,,,,,,,,0.96
-22288,E June,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Bottom,44,,,,,,452,4.3,,,,,,,,,0.26
-22290,E June,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,6/8/2022,,,Epi,5,,,,,,410,3.44,,,,,,,,,0.63
-22291,E June,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,6/8/2022,,,Mid,10,,,,,,464,3.4,,,,,,,,,0.53
-22292,E June,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,6/8/2022,,,Bottom,74,,,,,,443,3.15,,,,,,,,,0.47
-22294,E June,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Epi,5,,,,,,409,5.74,,,,,,,,,1.46
-22295,E June,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Mid,12,,,,,,442,3.8,,,,,,,,,1.18
-22296,E June,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,6/8/2022,,,Bottom,16,,,,,,424,5.84,,,,,,,,,0.75
-22158,E June,LEII,Lake Huron,Harbor Beach 5,SMB,Nearshore,CSMI,6/7/2022,8:56,6.2,Epi,5,No,Unstratified,16.2,331,2.02,478,7.02,0.91,4.81,23.1,7.62,8.58,16.01,1.99,3.32,0.56
-22162,E June,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,6/7/2022,7:45,18.4,Epi,5,No,Unstratified,11.1,351,2.01,471,7.23,0.97,4.83,23.35,7.64,8.83,16.29,2.23,4.17,0.88
-22163,E June,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,6/7/2022,7:45,18.4,Mid,10,No,Unstratified,9.81,359,2.04,501,6.35,0.93,4.85,24.77,7.78,8.76,16.3,1.96,4.54,0.75
-22164,E June,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,6/7/2022,7:45,18.4,Bottom,16,No,Unstratified,16.6,356,2.92,460,6.86,0.91,4.82,23.73,7.62,8.65,16.29,2.23,4.17,0.69
-22166,E June,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,6/7/2022,10:34,47.9,Epi,5,No,Stratified,13.03,338,3.49,487,3.43,0.89,4.74,23.83,7.63,8.42,16.18,1.87,4.17,0.57
-22167,E June,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,6/7/2022,10:34,47.9,Mid,25,No,Stratified,12.47,309,3.44,410,5.81,0.9,4.46,23.1,7.43,7.94,16.04,1.81,5.01,0.54
-22168,E June,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,6/7/2022,10:34,47.9,Bottom,45,No,Stratified,14.37,303,3.45,414,3.42,1.05,4.41,24.22,7.62,7.75,15.86,1.94,5.01,0.51
-22170,E June,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,6/7/2022,13:28,63.8,Epi,5,No,Stratified,7.18,293,3.6,420,6.68,1.05,4.36,23.02,7.37,7.57,15.79,1.84,5.16,0.46
-22171,E June,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,6/7/2022,13:28,63.8,Mid,32,No,Stratified,10,327,3.3,418,6.05,1.01,4.33,23.94,7.51,7.56,15.72,1.77,5.05,0.77
-22172,E June,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,6/7/2022,13:28,63.8,Bottom,60,No,Stratified,9.72,291,3.79,400,6.71,0.97,4.2,23.13,7.36,7.49,15.57,1.75,4.79,0.75
-22178,E June,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,6/7/2022,16:53,19.4,Epi,5,No,Stratified,9.86,329,3.43,448,5.78,0.92,4.47,24.12,7.27,0.33,0.62,1.84,4.15,0.44
-22179,E June,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,6/7/2022,16:53,19.4,Mid,11,No,Stratified,11.41,318,3.53,479,5.52,0.92,4.37,22.78,7.09,7.54,15.6,1.75,4.13,0.45
-22180,E June,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,6/7/2022,16:53,19.4,Bottom,17,No,Stratified,10.92,283,4.02,429,7.37,0.9,4.32,23.48,7.15,7.57,15.66,1.68,4.26,0.37
-22298,E June,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,6/7/2022,,,Epi,5,,,,,,428,7.27,,,,,,,,,1.93
-22299,E June,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,6/7/2022,,,Mid,17,,,,,,432,4.24,,,,,,,,,1.32
-22300,E June,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,6/7/2022,,,Bottom,44,,,,,,406,6.27,,,,,,,,,0.59
-22302,E June,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,6/7/2022,,,Epi,5,,,,,,424,14.9,,,,,,,,,1.21
-22304,E June,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,6/7/2022,,,Bottom,44,,,,,,418,10.5,,,,,,,,,0.39
-22305,E June,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,6/7/2022,,,Mid,10,,,,,,417,5.89,,,,,,,,,1.33
-22150,E June,LE II,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,6/6/2022,9:58,10.8,Epi,5,No,Stratified,12.3,410,0.8,550,9.73,1.05,6.01,27.24,8.61,11.05,17.39,2.63,2.82,1.35
-22154,E June,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,6/6/2022,15:26,15.9,Epi,5,No,Stratified,9.53,323,1.81,460,8.33,0.92,4.75,24.56,7.83,8.69,16.27,1.96,4.04,0.92
-22156,E June,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,6/6/2022,16:26,15.9,Bottom,13,No,Stratified,9.64,317,2.11,413,7.27,0.89,4.74,24.32,7.7,8.31,16.38,2.29,4.77,0.5
-22370,L July,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,,,Epi,5,,,,,,457,3.3,,,,,,,,,0.54
-22371,L July,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,,,Mid,6,,,,,,399,2.85,,,,,,,,,0.48
-22372,L July,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,,,Bottom,16,,,,,,455,3.62,,,,,,,,,0.68
-22374,L July,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,,,Epi,5,,,,,,428,1.61,,,,,,,,,0.61
-22376,L July,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,,,Bottom,44,,,,,,469,3.64,,,,,,,,,0.33
-22377,L July,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,,,Mid,24,,,,,,429,0.56,,,,,,,,,1.34
-22378,L July,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,7/22/2022,,,Epi,5,,,,,,394,2.11,,,,,,,,,0.45
-22379,L July,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,7/22/2022,,,Mid,16,,,,,,432,3.45,,,,,,,,,1.14
-22380,L July,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,7/22/2022,,,Bottom,71,,,,,,449,2.07,,,,,,,,,0.39
-22382,L July,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,,,Epi,5,,,,,,445,2.86,,,,,,,,,0.83
-22383,L July,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,,,Mid,12,,,,,,405,3.92,,,,,,,,,1.27
-22384,L July,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,,,Bottom,16,,,,,,432,4.77,,,,,,,,,1.36
-22386,L July,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,,,Epi,5,,,,,,427,3.44,,,,,,,,,1.12
-22388,L July,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,,,Mid,44,,,,,,440,2.01,,,,,,,,,0.28
-22389,L July,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,,,Bottom,24,,,,,,421,3.31,,,,,,,,,1.94
-22390,L July,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,7/20/2022,,,Epi,5,,,,,,409,1.61,,,,,,,,,0.87
-22391,L July,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,7/20/2022,,,Mid,20,,,,,,426,2.28,,,,,,,,,1.41
-22392,L July,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,7/20/2022,,,Bottom,44,,,,,,443,3.59,,,,,,,,,0.34
-22358,L July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,,,Epi,5,,,,,,430,3.37,,,,,,,,,0.68
-22359,L July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,,,Mid,15,,,,,,504,2.72,,,,,,,,,0.92
-22360,L July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,,,Bottom,16,,,,,,508,4.11,,,,,,,,,0.92
-22362,L July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,,,Epi,5,,,,,,447,3.74,,,,,,,,,0.7
-22363,L July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,,,Mid,20,,,,,,476,3.19,,,,,,,,,0.86
-22364,L July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,,,Bottom,44,,,,,,465,1.62,,,,,,,,,0.76
-22366,L July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/17/2022,,,Epi,5,,,,,,485,3.08,,,,,,,,,0.55
-22367,L July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/17/2022,,,Mid,14,,,,,,468,2.22,,,,,,,,,0.9
-22368,L July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/17/2022,,,Bottom,61,,,,,,460,1.42,,,,,,,,,0.71
-22346,L July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/16/2022,,,Epi,5,,,,,,468,6.17,,,,,,,,,5.2
-22348,L July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/16/2022,,,Bottom,8,,,,,,450,5.57,,,,,,,,,1.37
-22350,L July,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,,,Epi,5,,,,,,498,4.68,,,,,,,,,2.24
-22352,L July,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,,,Bottom,7,,,,,,516,3.05,,,,,,,,,1.55
-22354,L July,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,,,Epi,5,,,,,,460,2.3,,,,,,,,,1.29
-22355,L July,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,,,Mid,8,,,,,,473,5.53,,,,,,,,,1.48
-22356,L July,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,,,Bottom,11,,,,,,487,4,,,,,,,,,1.53
-22322,L June,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,6/20/2022,,,Epi,5,,,,,,528,4.48,,,,,,,,,0.38
-22323,L June,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,6/20/2022,,,Mid,21,,,,,,540,3.54,,,,,,,,,0.42
-22324,L June,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,6/20/2022,,,Bottom,45,,,,,,532,3.59,,,,,,,,,0.26
-22326,L June,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,6/20/2022,,,Epi,5,,,,,,413,4.31,,,,,,,,,0.33
-22328,L June,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,6/20/2022,,,Bottom,61,,,,,,441,3.63,,,,,,,,,0.84
-22329,L June,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,6/20/2022,,,Mid,35,,,,,,454,2.31,,,,,,,,,0.95
-22206,L June,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,6/19/2022,12:20,19.6,Epi,5,No,Unstratified,14.16,283,3.28,403,6.2,0.81,3.85,21.84,6.72,6.87,14.04,1.85,4.47,0.54
-22207,L June,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,6/19/2022,12:20,19.6,Mid,11,No,Unstratified,14.23,301,3.61,413,5.32,0.85,4.06,22.2,6.82,6.72,14.38,1.92,4.82,0.48
-22208,L June,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,6/19/2022,12:20,19.6,Bottom,17,No,Unstratified,15.71,298,3.86,427,6.14,0.83,4.1,22.36,6.82,7.23,14.67,1.89,4.64,0.49
-22210,L June,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,6/19/2022,13:50,43,Epi,5,No,Unstratified,5.42,284,3.76,457,5.72,0.8,3.81,21.12,6.39,6.31,13.48,2.04,4.41,1.01
-22211,L June,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,6/19/2022,13:50,43,Mid,24,No,Unstratified,9.87,303,2.27,410,6,0.84,4.04,21.92,6.76,6.65,14.18,1.78,4.79,1.21
-22212,L June,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,6/19/2022,13:50,43,Bottom,44,No,Unstratified,11.3,310,2.32,443,6.41,0.84,4.17,22.5,6.92,6.91,14.62,1.69,5.03,0.68
-22214,L June,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,6/19/2022,14:56,76,Epi,5,Yes,Stratified,3.26,300,2.45,429,7.25,0.84,3.88,21.49,6.65,6.48,13.81,1.78,4.73,0.99
-22216,L June,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,6/19/2022,14:56,76,Bottom,72,Yes,Stratified,12.3,313,2.28,448,6.29,0.9,4.17,22.63,7.1,7,14.76,1.8,5.11,0.25
-22217,L June,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,6/19/2022,14:56,76,Mid,22,Yes,Stratified,8.64,303,2.26,459,7.1,0.85,4.06,22.08,6.89,6.6,13.62,1.69,4.67,1.21
-22218,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/19/2022,7:35,5.6,Epi,5,No,Unstratified,10.8,267,2.12,403,7.72,0.74,3.38,18.5,5.53,5.41,11.25,2.2,5.14,0.84
-22310,L June,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,,,Epi,5,,,,,,678,8.32,,,,,,,,,0.99
-22313,L June,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,,,Bottom,9,,,,,,617,6.28,,,,,,,,,3.44
-22314,L June,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,,,Epi,5,,,,,,502,3.5,,,,,,,,,0.86
-22315,L June,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,,,Bottom,10,,,,,,491,4,,,,,,,,,1.02
-22318,L June,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,6/19/2022,,,Epi,5,,,,,,487,4.29,,,,,,,,,0.77
-22319,L June,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,6/19/2022,,,Mid,10,,,,,,588,3.96,,,,,,,,,0.74
-22320,L June,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,6/19/2022,,,Bottom,15,,,,,,517,3.35,,,,,,,,,0.59
-22090,L June,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,6/18/2022,7:43,30,Epi,5,No,Unstratified,13.7,196.79,4.16,374,7.31,0.7,4.04,14.94,4.37,5.98,12.74,3.88,6.98,1.58
-22091,L June,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,6/18/2022,7:43,30,Mid,15,No,Unstratified,27.3,226.98,3.82,415,7.94,0.69,3.98,16.23,4.85,6.12,13.03,3.22,6.57,1.06
-22093,L June,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,6/18/2022,7:43,30,Bottom,26,No,Unstratified,21.7,253.06,4.39,383,6.12,0.72,4.17,16.49,4.97,6.5,12.74,3.18,6.42,1.04
-22098,L June,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,6/18/2022,10:00,46.5,Epi,5,No,Stratified,9.68,253.81,3.47,357,7.41,0.75,3.84,18.26,5.5,6.12,13.14,2.81,5.63,1.13
-22099,L June,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,6/18/2022,10:00,46.5,Mid,25,No,Stratified,14.3,251.95,3.77,443,8.04,0.73,3.92,18.32,5.54,6.06,13.09,2.57,5.54,0.98
-22100,L June,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,6/18/2022,10:00,46.5,Bottom,45,No,Stratified,15.2,266.85,4.09,382,7.91,0.8,3.84,18.97,5.84,6.21,13.43,2.2,5.59,0.48
-22222,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/18/2022,16:51,20,Epi,5,No,Unstratified,10.5,270,2.19,413,6.51,0.77,3.49,18.54,5.62,5.46,11.35,2.4,5.33,1.37
-22223,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/18/2022,16:51,20,Mid,11,No,Unstratified,11.6,272,2.09,456,6.4,0.78,3.53,18.96,5.73,5.59,11.72,2.21,5.41,0.98
-22224,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/18/2022,16:51,20,Bottom,18,No,Unstratified,10.3,273,1.85,381,6.29,0.75,3.46,19.1,5.79,5.6,11.72,2.08,5.26,0.96
-22226,L June,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,6/18/2022,15:30,45,Epi,5,No,Unstratified,12.9,263,2.34,396,6.1,0.74,3.27,17.37,5.07,5,10.43,2.38,5.16,1.38
-22227,L June,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,6/18/2022,15:30,45,Mid,25,No,Unstratified,12.2,272,1.91,405,6.05,0.73,3.39,18.11,5.33,5.28,10.93,2.19,5.26,0.87
-22228,L June,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,6/18/2022,15:30,45,Bottom,45,No,Unstratified,14.5,280,2.13,407,6.31,0.75,3.55,19.33,5.82,5.45,11.45,2.16,5.46,0.6
-22230,L June,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,6/18/2022,13:50,48,Epi,5,No,Stratified,10.9,268,2.65,454,6.41,0.73,3.51,18.63,5.59,5.88,12.54,2.31,5.37,1.59
-22231,L June,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,6/18/2022,13:50,48,Mid,25,No,Stratified,10.9,270,2.21,393,6.25,0.74,3.5,18.67,5.59,5.69,12.12,2.57,5.26,1.42
-22232,L June,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,6/18/2022,13:50,48,Bottom,46,No,Stratified,10.9,287,1.89,397,5.72,0.57,3.96,20.6,6.33,5.69,12.12,1.98,5.29,0.37
-22094,L June,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,6/16/2022,17:57,20.5,Epi,5,No,Unstratified,9.94,229.96,3.62,348,9.77,0.69,3.85,17.29,5.27,6.03,12.86,2.76,5.61,1.81
-22095,L June,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,6/16/2022,17:57,20.5,Mid,12,No,Unstratified,9.31,225.86,3.47,340,7,0.73,3.72,17.58,5.36,5.99,12.84,2.48,5.29,1.49
-22096,L June,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,6/16/2022,17:57,20.5,Bottom,18,No,Unstratified,13.3,239.28,3.88,394,8.4,0.7,3.9,17.4,5.27,6.07,12.81,2.74,6.03,0.93
-22306,L June,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,6/16/2022,,,Epi,5,,,,,,606,4.55,,,,,,,,,1.55
-22308,L June,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,6/16/2022,,,Mid,8,,,,,,598,3.98,,,,,,,,,1.73
-22309,L June,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,6/16/2022,,,Bottom,9.5,,,,,,624,6.77,,,,,,,,,2.2
-22106,L June,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,6/15/2022,11:21,11.3,Epi,5,No,Unstratified,13.7,221.76,2.94,366,5.67,0.74,4.06,18.72,5.79,6.7,13.98,2.84,4.86,1.03
-22107,L June,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,6/15/2022,11:21,11.3,Mid,7,No,Unstratified,16,227.72,2.96,358,6.27,0.73,4.04,18.6,5.79,6.86,12.09,2.79,4.86,0.89
-22108,L June,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,6/15/2022,11:21,11.3,Bottom,9,No,Unstratified,15.4,261.26,3.46,367,6.72,0.75,4.11,19.13,5.79,6.71,13.83,2.59,4.6,0.76
-22110,L June,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,6/15/2022,9:43,43,Epi,5,No,Unstratified,19.4,239.28,3.18,385,5.64,0.79,4.19,19.49,5.93,6.91,14.26,2.55,4.49,0.75
-22111,L June,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,6/15/2022,9:43,43,Mid,23,No,Unstratified,17,250.83,3.29,374,5,0.8,4.3,20.74,0.02,6.35,13.28,2.07,4.17,0.7
-22112,L June,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,6/15/2022,9:43,43,Bottom,42,No,Unstratified,14.7,258.66,2.92,392,7.01,0.84,4.34,21.45,6.55,6.65,13.75,2.13,4.37,0.33
-22114,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,14:07,80,Epi,5,No,Stratified,21.1,257.16,2.54,390,6.85,0.85,4.33,21.1,6.39,6.99,14.32,1.97,4.34,0.37
-22115,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,14:07,80,Mid,40,No,Stratified,17.2,261.64,2.76,430,4.92,0.83,4.34,21.19,6.53,6.62,13.49,2.12,4.47,0.99
-22116,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,14:07,80,Bottom,76,No,Stratified,11.6,219.52,2.49,390,4.83,0.81,4.3,21.17,6.53,7.1,14.52,2.13,4.37,0.65
+﻿STIS,Month,MonthPeriod,Ship,Lake,Site,Area,DFS,Research Project,Unified Date,Collection Date,TimeEST, SiteDepthm,Depth,Separatedepthsm,DCL,StratifiedUnstratified,NH4ugNL ,NOxugNL,SRPugPL,TNugNL,TPugPL,KmgL,NamgL,CamgL,MgmgL,ClmgL,SO4mgL,DOCmgCL,SimgSiO2L,chlaugL
+22154,June,E June,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,6/6/2022,6/6/2022,15:26,15.9,Epi,5,No,Stratified,9.53,323,1.81,460,8.33,0.92,4.75,24.56,7.83,8.69,16.27,1.96,4.04,0.92
+22156,June,E June,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,6/6/2022,6/6/2022,16:26,15.9,Bottom,13,No,Stratified,9.64,317,2.11,413,7.27,0.89,4.74,24.32,7.7,8.31,16.38,2.29,4.77,0.5
+22150,June,E June,LE II,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,6/6/2022,6/6/2022,9:58,10.8,Epi,5,No,Stratified,12.3,410,0.8,550,9.73,1.05,6.01,27.24,8.61,11.05,17.39,2.63,2.82,1.35
+22162,June,E June,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,6/7/2022,6/7/2022,7:45,18.4,Epi,5,No,Unstratified,11.1,351,2.01,471,7.23,0.97,4.83,23.35,7.64,8.83,16.29,2.23,4.17,0.88
+22163,June,E June,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,6/7/2022,6/7/2022,7:45,18.4,Mid,10,No,Unstratified,9.81,359,2.04,501,6.35,0.93,4.85,24.77,7.78,8.76,16.3,1.96,4.54,0.75
+22164,June,E June,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,6/7/2022,6/7/2022,7:45,18.4,Bottom,16,No,Unstratified,16.6,356,2.92,460,6.86,0.91,4.82,23.73,7.62,8.65,16.29,2.23,4.17,0.69
+22166,June,E June,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,6/7/2022,6/7/2022,10:34,47.9,Epi,5,No,Stratified,13.03,338,3.49,487,3.43,0.89,4.74,23.83,7.63,8.42,16.18,1.87,4.17,0.57
+22167,June,E June,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,6/7/2022,6/7/2022,10:34,47.9,Mid,25,No,Stratified,12.47,309,3.44,410,5.81,0.9,4.46,23.1,7.43,7.94,16.04,1.81,5.01,0.54
+22168,June,E June,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,6/7/2022,6/7/2022,10:34,47.9,Bottom,45,No,Stratified,14.37,303,3.45,414,3.42,1.05,4.41,24.22,7.62,7.75,15.86,1.94,5.01,0.51
+22158,June,E June,LEII,Lake Huron,Harbor Beach 5,SMB,Nearshore,CSMI,6/7/2022,6/7/2022,8:56,6.2,Epi,5,No,Unstratified,16.2,331,2.02,478,7.02,0.91,4.81,23.1,7.62,8.58,16.01,1.99,3.32,0.56
+22170,June,E June,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,6/7/2022,6/7/2022,13:28,63.8,Epi,5,No,Stratified,7.18,293,3.6,420,6.68,1.05,4.36,23.02,7.37,7.57,15.79,1.84,5.16,0.46
+22171,June,E June,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,6/7/2022,6/7/2022,13:28,63.8,Mid,32,No,Stratified,10,327,3.3,418,6.05,1.01,4.33,23.94,7.51,7.56,15.72,1.77,5.05,0.77
+22172,June,E June,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,6/7/2022,6/7/2022,13:28,63.8,Bottom,60,No,Stratified,9.72,291,3.79,400,6.71,0.97,4.2,23.13,7.36,7.49,15.57,1.75,4.79,0.75
+22178,June,E June,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,6/7/2022,6/7/2022,16:53,19.4,Epi,5,No,Stratified,9.86,329,3.43,448,5.78,0.92,4.47,24.12,7.27,0.33,0.62,1.84,4.15,0.44
+22179,June,E June,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,6/7/2022,6/7/2022,16:53,19.4,Mid,11,No,Stratified,11.41,318,3.53,479,5.52,0.92,4.37,22.78,7.09,7.54,15.6,1.75,4.13,0.45
+22180,June,E June,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,6/7/2022,6/7/2022,16:53,19.4,Bottom,17,No,Stratified,10.92,283,4.02,429,7.37,0.9,4.32,23.48,7.15,7.57,15.66,1.68,4.26,0.37
+22298,June,E June,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,6/7/2022,6/7/2022,,,Epi,5,,,,,,428,7.27,,,,,,,,,1.93
+22299,June,E June,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,6/7/2022,6/7/2022,,,Mid,17,,,,,,432,4.24,,,,,,,,,1.32
+22300,June,E June,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,6/7/2022,6/7/2022,,,Bottom,44,,,,,,406,6.27,,,,,,,,,0.59
+22302,June,E June,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,6/7/2022,6/7/2022,,,Epi,5,,,,,,424,14.9,,,,,,,,,1.21
+22304,June,E June,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,6/7/2022,6/7/2022,,,Bottom,44,,,,,,418,10.5,,,,,,,,,0.39
+22305,June,E June,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,6/7/2022,6/7/2022,,,Mid,10,,,,,,417,5.89,,,,,,,,,1.33
+22282,June,E June,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Epi,5,,,,,,410,5.26,,,,,,,,,0.63
+22283,June,E June,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Mid,8,,,,,,399,6.22,,,,,,,,,0.74
+22284,June,E June,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Bottom,14,,,,,,397,6.17,,,,,,,,,0.82
+22286,June,E June,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Epi,5,,,,,,421,4.21,,,,,,,,,1.15
+22287,June,E June,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Mid,18,,,,,,430,1.74,,,,,,,,,0.96
+22288,June,E June,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Bottom,44,,,,,,452,4.3,,,,,,,,,0.26
+22290,June,E June,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Epi,5,,,,,,410,3.44,,,,,,,,,0.63
+22291,June,E June,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Mid,10,,,,,,464,3.4,,,,,,,,,0.53
+22292,June,E June,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Bottom,74,,,,,,443,3.15,,,,,,,,,0.47
+22182,June,E June,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,6/8/2022,6/8/2022,9:20,47.6,Epi,5,No,Unstratified,7.53,324,3.51,500,7.41,0.94,4.4,23.94,7.22,7.47,15.68,1.67,4.47,0.64
+22183,June,E June,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,6/8/2022,6/8/2022,9:20,47.6,Mid,25,No,Unstratified,14.09,298,3.21,417,6.84,0.89,4.1,23.62,7.11,7.69,15.72,1.72,4.96,0.5
+22184,June,E June,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,6/8/2022,6/8/2022,9:20,47.6,Bottom,45,No,Unstratified,17.26,288,3.53,430,8.29,0.92,4.48,23.81,7.4,7.54,15.68,1.8,4.84,0.56
+22174,June,E June,LEII,Lake Huron,Maitland River 5,SMB,Nearshore,CSMI,6/8/2022,6/8/2022,7:26,8.9,Epi,5,No,Unstratified,21.28,401,2.9,567,7.32,1.05,4.94,25.91,8.21,8.74,17.81,2.06,2.4,0.79
+22186,June,E June,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,6/8/2022,6/8/2022,10:29,74,Epi,5,Yes,Unstratifield,9.01,297,3.43,430,7.93,0.9,4.47,23.71,7.38,7.55,15.74,2.24,4.82,0.71
+22188,June,E June,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,6/8/2022,6/8/2022,10:29,74,Bottom,71,Yes,Unstratifield,14.23,302,3.6,395,8.03,0.88,4.38,23.65,7.38,7.6,15.82,1.71,4.88,0.29
+22189,June,E June,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,6/8/2022,6/8/2022,10:29,74,Mid,38,Yes,Unstratifield,8.66,304,3.69,467,12.9,0.91,4.38,23.53,7.39,7.54,15.66,1.8,4.69,0.83
+22194,June,E June,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,6/8/2022,6/8/2022,9:08,48.7,Epi,5,No,Unstratified,7.82,304,3.65,420,8.01,0.87,4.36,23.75,7.48,7.57,15.91,1.87,4.26,0.47
+22195,June,E June,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,6/8/2022,6/8/2022,9:08,48.7,Mid,25,No,Unstratified,11.2,303,3.75,426,6.41,0.97,4.44,24.09,7.51,7.54,15.77,1.78,4.47,0.82
+22196,June,E June,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,6/8/2022,6/8/2022,9:08,48.7,Bottom,45,No,Unstratified,10.28,334,3.87,405,6.98,0.91,4.3,23.92,7.43,7.59,15.78,1.66,4.73,0.53
+22198,June,E June,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,6/8/2022,6/8/2022,10:47,84.1,Epi,5,No,Unstratified,9.72,332,3.78,433,6.49,0.92,4.25,23.83,7.43,7.53,15.75,1.72,4.73,0.44
+22199,June,E June,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,6/8/2022,6/8/2022,10:47,84.1,Mid,42,No,Unstratified,7.46,322,3.62,405,6.94,0.9,4.35,23.75,7.46,7.47,15.74,1.62,4.73,0.67
+22200,June,E June,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,6/8/2022,6/8/2022,10:47,84.1,Bottom,80,No,Unstratified,15.15,321,3.87,425,5.36,0.91,4.26,23.7,7.41,7.48,15.8,1.82,4.92,0.35
+22294,June,E June,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Epi,5,,,,,,409,5.74,,,,,,,,,1.46
+22295,June,E June,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Mid,12,,,,,,442,3.8,,,,,,,,,1.18
+22296,June,E June,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,6/8/2022,6/8/2022,,,Bottom,16,,,,,,424,5.84,,,,,,,,,0.75
+22190,June,E June,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,6/9/2022,6/9/2022,7:35,16,Epi,5,No,Unstratified,15.64,287,3.72,412,7.93,0.88,4.36,23.64,7.44,7.52,15.63,1.93,3.62,0.53
+22191,June,E June,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,6/9/2022,6/9/2022,7:35,16,Mid,10,No,Unstratified,13.38,287,3.15,417,7.8,0.89,4.4,23.62,7.43,7.6,15.8,1.86,3.72,0.53
+22192,June,E June,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,6/9/2022,6/9/2022,7:35,16,Bottom,15,No,Unstratified,14.3,292,3.6,437,9.29,0.89,4.32,23.8,7.47,7.56,15.81,1.85,3.77,0.42
+22142,June,E June,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,6/10/2022,6/10/2022,17:41,48.5,Epi,5,No,Stratified,10.9,258,1.69,381,7,0.81,4.47,22.38,6.67,7.77,13.46,2.07,4.11,0.58
+22143,June,E June,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,6/10/2022,6/10/2022,17:41,48.5,Mid,25,No,Stratified,7.58,259,1.98,402,6.31,0.83,4.44,22.06,6.58,7.6,13.43,2.01,4,0.65
+22144,June,E June,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,6/10/2022,6/10/2022,17:41,48.5,Bottom,45,No,Stratified,10.1,249,1.2,362,7.02,0.83,4.42,22.41,6.64,8.46,14.03,1.87,4.02,0.38
+22146,June,E June,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,6/10/2022,6/10/2022,14:58,86.7,Epi,5,Yes,Stratified,16.7,274,2.17,418,7.68,0.82,4.45,21.95,6.51,8.31,14.02,2.04,4.32,0.47
+22148,June,E June,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,6/10/2022,6/10/2022,14:58,86.7,Bottom,82,Yes,Stratified,11.8,270,2.26,391,5.89,0.84,4.48,22.2,6.61,7.85,13.97,2.1,4.52,0.38
+22149,June,E June,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,6/10/2022,6/10/2022,14:58,86.7,Mid,42,Yes,Stratified,11,269,2.25,383,5.01,0.82,4.44,22.2,6.6,8.22,14.08,2.08,4.22,1.14
+22138,June,E June,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,6/11/2022,6/11/2022,0:00,19.6,Epi,5,No,Unstratified,9.42,251.2,2.42,455,4.93,0.79,4.46,22.17,6.72,7.87,13.77,2.05,3.83,0.75
+22139,June,E June,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,6/11/2022,6/11/2022,0:00,19.6,Mid,12,No,Unstratified,14.6,257,1.76,391,7.01,0.85,4.41,22.25,6.64,7.71,13.72,1.92,3.81,0.6
+22140,June,E June,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,6/11/2022,6/11/2022,0:00,19.6,Bottom,18,No,Unstratified,9.65,252,1.87,366,5.05,0.86,4.42,22.11,6.67,7.75,14.06,2.09,4.09,0.75
+22134,June,E June,LEII,Lake Huron,Nottawasaga River 5,GB,Nearshore,CSMI,6/11/2022,6/11/2022,8:12,5.5,Epi,3,No,Unstratified,13.6,279.53,2.67,395,7.07,0.85,4.65,22.81,6.84,8.27,14.09,2.21,3.49,0.76
+22122,June,E June,LEII,Lake Huron,Parry Sound 18,GB,Midshore,CSMI,6/11/2022,6/11/2022,15:27,27.2,Epi,5,No,Stratified,13.4,230.33,2.28,455,6.94,0.84,4.34,20.65,6.25,5.64,11.85,2.27,3.96,0.47
+22123,June,E June,LEII,Lake Huron,Parry Sound 18,GB,Midshore,CSMI,6/11/2022,6/11/2022,15:27,27.2,Mid,15,No,Stratified,15.2,235.92,2.79,397,6.26,0.84,4.39,20.84,6.35,5.65,11.86,2.01,3.85,0.56
+22124,June,E June,LEII,Lake Huron,Parry Sound 18,GB,Midshore,CSMI,6/11/2022,6/11/2022,15:27,27.2,Bottom,25,No,Stratified,14.8,248.59,3.06,392,6.02,0.82,4.3,21.02,6.46,5.79,12.21,1.99,4.11,0.34
+22126,June,E June,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,6/11/2022,6/11/2022,13:48,50.9,Epi,5,No,Unstratified,11.8,244.49,2.59,370,5.27,0.83,4.33,21.27,6.55,5.82,12.26,2.09,4.45,0.39
+22127,June,E June,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,6/11/2022,6/11/2022,13:48,50.9,Mid,26,No,Unstratified,12.5,257.16,2.89,391,6.49,0.84,4.29,21.14,6.57,5.6,11.87,2.12,4.54,0.59
+22128,June,E June,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,6/11/2022,6/11/2022,13:48,50.9,Bottom,48,No,Unstratified,11.9,262.38,2.85,354,5.61,0.84,4.29,21.32,6.56,7.59,14,2.21,4.39,0.38
+22118,June,E June,LEII,Lake Huron,Parry Sound 5,GB,Nearshore,CSMI,6/11/2022,6/11/2022,16:23,11.4,Epi,5,No,Unstratified,11.6,202.01,2.42,387,6.65,0.79,4.45,19.7,6.01,6.87,14.07,2.3,3.6,0.44
+22130,June,E June,LEII,Lake Huron,Parry Sound 82,GB,Offshore,CSMI,6/12/2022,6/12/2022,9:28,77.8,Epi,5,No,Unstratified,14,275.05,4.04,368,5.31,0.84,4.35,21.68,6.55,7.59,14,2.08,4.19,0.51
+22131,June,E June,LEII,Lake Huron,Parry Sound 82,GB,Offshore,CSMI,6/12/2022,6/12/2022,9:28,77.8,Mid,40,No,Unstratified,12.9,271.7,2.93,364,5.15,0.79,4.41,21.68,6.54,7.76,14.08,1.86,4.58,0.71
+22132,June,E June,LEII,Lake Huron,Parry Sound 82,GB,Offshore,CSMI,6/12/2022,6/12/2022,9:28,77.8,Bottom,74,No,Unstratified,18.1,297.79,3.22,370,4.55,0.83,4.41,21.66,6.54,7.8,14.09,2.11,4.37,0.36
+22114,June,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Epi,5,No,Stratified,21.1,257.16,2.54,390,6.85,0.85,4.33,21.1,6.39,6.99,14.32,1.97,4.34,0.37
+22115,June,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Mid,40,No,Stratified,17.2,261.64,2.76,430,4.92,0.83,4.34,21.19,6.53,6.62,13.49,2.12,4.47,0.99
+22116,June,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Bottom,76,No,Stratified,11.6,219.52,2.49,390,4.83,0.81,4.3,21.17,6.53,7.1,14.52,2.13,4.37,0.65
+22106,June,L June,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,6/15/2022,6/15/2022,11:21,11.3,Epi,5,No,Unstratified,13.7,221.76,2.94,366,5.67,0.74,4.06,18.72,5.79,6.7,13.98,2.84,4.86,1.03
+22107,June,L June,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,6/15/2022,6/15/2022,11:21,11.3,Mid,7,No,Unstratified,16,227.72,2.96,358,6.27,0.73,4.04,18.6,5.79,6.86,12.09,2.79,4.86,0.89
+22108,June,L June,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,6/15/2022,6/15/2022,11:21,11.3,Bottom,9,No,Unstratified,15.4,261.26,3.46,367,6.72,0.75,4.11,19.13,5.79,6.71,13.83,2.59,4.6,0.76
+22110,June,L June,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,6/15/2022,6/15/2022,9:43,43,Epi,5,No,Unstratified,19.4,239.28,3.18,385,5.64,0.79,4.19,19.49,5.93,6.91,14.26,2.55,4.49,0.75
+22111,June,L June,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,6/15/2022,6/15/2022,9:43,43,Mid,23,No,Unstratified,17,250.83,3.29,374,5,0.8,4.3,20.74,0.02,6.35,13.28,2.07,4.17,0.7
+22112,June,L June,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,6/15/2022,6/15/2022,9:43,43,Bottom,42,No,Unstratified,14.7,258.66,2.92,392,7.01,0.84,4.34,21.45,6.55,6.65,13.75,2.13,4.37,0.33
+22306,June,L June,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,6/16/2022,6/16/2022,,,Epi,5,,,,,,606,4.55,,,,,,,,,1.55
+22308,June,L June,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,6/16/2022,6/16/2022,,,Mid,8,,,,,,598,3.98,,,,,,,,,1.73
+22309,June,L June,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,6/16/2022,6/16/2022,,,Bottom,9.5,,,,,,624,6.77,,,,,,,,,2.2
+22094,June,L June,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,6/16/2022,6/16/2022,17:57,20.5,Epi,5,No,Unstratified,9.94,229.96,3.62,348,9.77,0.69,3.85,17.29,5.27,6.03,12.86,2.76,5.61,1.81
+22095,June,L June,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,6/16/2022,6/16/2022,17:57,20.5,Mid,12,No,Unstratified,9.31,225.86,3.47,340,7,0.73,3.72,17.58,5.36,5.99,12.84,2.48,5.29,1.49
+22096,June,L June,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,6/16/2022,6/16/2022,17:57,20.5,Bottom,18,No,Unstratified,13.3,239.28,3.88,394,8.4,0.7,3.9,17.4,5.27,6.07,12.81,2.74,6.03,0.93
+22098,June,L June,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,6/18/2022,6/18/2022,10:00,46.5,Epi,5,No,Stratified,9.68,253.81,3.47,357,7.41,0.75,3.84,18.26,5.5,6.12,13.14,2.81,5.63,1.13
+22099,June,L June,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,6/18/2022,6/18/2022,10:00,46.5,Mid,25,No,Stratified,14.3,251.95,3.77,443,8.04,0.73,3.92,18.32,5.54,6.06,13.09,2.57,5.54,0.98
+22100,June,L June,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,6/18/2022,6/18/2022,10:00,46.5,Bottom,45,No,Stratified,15.2,266.85,4.09,382,7.91,0.8,3.84,18.97,5.84,6.21,13.43,2.2,5.59,0.48
+22090,June,L June,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,6/18/2022,6/18/2022,7:43,30,Epi,5,No,Unstratified,13.7,196.79,4.16,374,7.31,0.7,4.04,14.94,4.37,5.98,12.74,3.88,6.98,1.58
+22091,June,L June,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,6/18/2022,6/18/2022,7:43,30,Mid,15,No,Unstratified,27.3,226.98,3.82,415,7.94,0.69,3.98,16.23,4.85,6.12,13.03,3.22,6.57,1.06
+22093,June,L June,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,6/18/2022,6/18/2022,7:43,30,Bottom,26,No,Unstratified,21.7,253.06,4.39,383,6.12,0.72,4.17,16.49,4.97,6.5,12.74,3.18,6.42,1.04
+22230,June,L June,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,6/18/2022,6/18/2022,13:50,48,Epi,5,No,Stratified,10.9,268,2.65,454,6.41,0.73,3.51,18.63,5.59,5.88,12.54,2.31,5.37,1.59
+22231,June,L June,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,6/18/2022,6/18/2022,13:50,48,Mid,25,No,Stratified,10.9,270,2.21,393,6.25,0.74,3.5,18.67,5.59,5.69,12.12,2.57,5.26,1.42
+22232,June,L June,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,6/18/2022,6/18/2022,13:50,48,Bottom,46,No,Stratified,10.9,287,1.89,397,5.72,0.57,3.96,20.6,6.33,5.69,12.12,1.98,5.29,0.37
+22222,June,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/18/2022,6/18/2022,16:51,20,Epi,5,No,Unstratified,10.5,270,2.19,413,6.51,0.77,3.49,18.54,5.62,5.46,11.35,2.4,5.33,1.37
+22223,June,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/18/2022,6/18/2022,16:51,20,Mid,11,No,Unstratified,11.6,272,2.09,456,6.4,0.78,3.53,18.96,5.73,5.59,11.72,2.21,5.41,0.98
+22224,June,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/18/2022,6/18/2022,16:51,20,Bottom,18,No,Unstratified,10.3,273,1.85,381,6.29,0.75,3.46,19.1,5.79,5.6,11.72,2.08,5.26,0.96
+22226,June,L June,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,6/18/2022,6/18/2022,15:30,45,Epi,5,No,Unstratified,12.9,263,2.34,396,6.1,0.74,3.27,17.37,5.07,5,10.43,2.38,5.16,1.38
+22227,June,L June,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,6/18/2022,6/18/2022,15:30,45,Mid,25,No,Unstratified,12.2,272,1.91,405,6.05,0.73,3.39,18.11,5.33,5.28,10.93,2.19,5.26,0.87
+22228,June,L June,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,6/18/2022,6/18/2022,15:30,45,Bottom,45,No,Unstratified,14.5,280,2.13,407,6.31,0.75,3.55,19.33,5.82,5.45,11.45,2.16,5.46,0.6
+22206,June,L June,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,6/19/2022,6/19/2022,12:20,19.6,Epi,5,No,Unstratified,14.16,283,3.28,403,6.2,0.81,3.85,21.84,6.72,6.87,14.04,1.85,4.47,0.54
+22207,June,L June,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,6/19/2022,6/19/2022,12:20,19.6,Mid,11,No,Unstratified,14.23,301,3.61,413,5.32,0.85,4.06,22.2,6.82,6.72,14.38,1.92,4.82,0.48
+22208,June,L June,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,6/19/2022,6/19/2022,12:20,19.6,Bottom,17,No,Unstratified,15.71,298,3.86,427,6.14,0.83,4.1,22.36,6.82,7.23,14.67,1.89,4.64,0.49
+22210,June,L June,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,6/19/2022,6/19/2022,13:50,43,Epi,5,No,Unstratified,5.42,284,3.76,457,5.72,0.8,3.81,21.12,6.39,6.31,13.48,2.04,4.41,1.01
+22211,June,L June,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,6/19/2022,6/19/2022,13:50,43,Mid,24,No,Unstratified,9.87,303,2.27,410,6,0.84,4.04,21.92,6.76,6.65,14.18,1.78,4.79,1.21
+22212,June,L June,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,6/19/2022,6/19/2022,13:50,43,Bottom,44,No,Unstratified,11.3,310,2.32,443,6.41,0.84,4.17,22.5,6.92,6.91,14.62,1.69,5.03,0.68
+22214,June,L June,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,6/19/2022,6/19/2022,14:56,76,Epi,5,Yes,Stratified,3.26,300,2.45,429,7.25,0.84,3.88,21.49,6.65,6.48,13.81,1.78,4.73,0.99
+22216,June,L June,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,6/19/2022,6/19/2022,14:56,76,Bottom,72,Yes,Stratified,12.3,313,2.28,448,6.29,0.9,4.17,22.63,7.1,7,14.76,1.8,5.11,0.25
+22217,June,L June,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,6/19/2022,6/19/2022,14:56,76,Mid,22,Yes,Stratified,8.64,303,2.26,459,7.1,0.85,4.06,22.08,6.89,6.6,13.62,1.69,4.67,1.21
+22318,June,L June,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Epi,5,,,,,,487,4.29,,,,,,,,,0.77
+22319,June,L June,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Mid,10,,,,,,588,3.96,,,,,,,,,0.74
+22320,June,L June,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Bottom,15,,,,,,517,3.35,,,,,,,,,0.59
+22314,June,L June,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Epi,5,,,,,,502,3.5,,,,,,,,,0.86
+22315,June,L June,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Bottom,10,,,,,,491,4,,,,,,,,,1.02
+22310,June,L June,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Epi,5,,,,,,678,8.32,,,,,,,,,0.99
+22313,June,L June,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,6/19/2022,6/19/2022,,,Bottom,9,,,,,,617,6.28,,,,,,,,,3.44
+22218,June,L June,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,6/19/2022,6/19/2022,7:35,5.6,Epi,5,No,Unstratified,10.8,267,2.12,403,7.72,0.74,3.38,18.5,5.53,5.41,11.25,2.2,5.14,0.84
+22322,June,L June,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,6/20/2022,6/20/2022,,,Epi,5,,,,,,528,4.48,,,,,,,,,0.38
+22323,June,L June,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,6/20/2022,6/20/2022,,,Mid,21,,,,,,540,3.54,,,,,,,,,0.42
+22324,June,L June,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,6/20/2022,6/20/2022,,,Bottom,45,,,,,,532,3.59,,,,,,,,,0.26
+22326,June,L June,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,6/20/2022,6/20/2022,,,Epi,5,,,,,,413,4.31,,,,,,,,,0.33
+22328,June,L June,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,6/20/2022,6/20/2022,,,Bottom,61,,,,,,441,3.63,,,,,,,,,0.84
+22329,June,L June,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,6/20/2022,6/20/2022,,,Mid,35,,,,,,454,2.31,,,,,,,,,0.95
+22330,July,E July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/9/2022,7/9/2022,,,Epi,5,,,,,,522,7.49,,,,,,,,,5.12
+22331,July,E July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/9/2022,7/9/2022,,,Bottom,8,,,,,,506,6.35,,,,,,,,,4.64
+22272,July,E July,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,7/9/2022,7/9/2022,9:10,49,Epi,5,No,Stratified,,,,407,3.54,,,,,,,,,1.07
+22273,July,E July,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,7/9/2022,7/9/2022,9:10,49,Mid,19.6,No,Stratified,,,,394,6.12,,,,,,,,,0.87
+22274,July,E July,LEII,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI,7/9/2022,7/9/2022,9:10,49,Bottom,45,No,Stratified,,,,414,4.79,,,,,,,,,0.53
+22264,July,E July,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,7/9/2022,7/9/2022,12:45,19,Epi,5,No,Unstratified,,,,360,4.06,,,,,,,,,1.06
+22265,July,E July,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,7/9/2022,7/9/2022,12:45,19,Mid,8,No,Unstratified,,,,364,5.45,,,,,,,,,1.26
+22266,July,E July,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,7/9/2022,7/9/2022,12:45,19,Bottom,16.7,No,Unstratified,,,,389,5.28,,,,,,,,,1.06
+22268,July,E July,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,7/9/2022,7/9/2022,10:58,46,Epi,5,No,Stratified,,,,519,7.36,,,,,,,,,1.35
+22269,July,E July,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,7/9/2022,7/9/2022,10:58,46,Mid,18,No,Stratified,,,,405,3.92,,,,,,,,,1.17
+22270,July,E July,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,7/9/2022,7/9/2022,10:58,46,Bottom,41,No,Stratified,,,,452,4.36,,,,,,,,,0.38
+22252,July,E July,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,7/10/2022,7/10/2022,8:55,19.7,Epi,5,No,Unstratified,,,,400,4.94,,,,,,,,,0.61
+22253,July,E July,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,7/10/2022,7/10/2022,8:55,19.7,Mid,11.2,No,Unstratified,,,,400,4.98,,,,,,,,,0.61
+22254,July,E July,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,7/10/2022,7/10/2022,8:55,19.7,Bottom,17.6,No,Unstratified,,,,376,5.39,,,,,,,,,0.72
+22256,July,E July,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,7/10/2022,7/10/2022,10:00,46.8,Epi,4.9,No,Stratified,,,,391,4.53,,,,,,,,,0.64
+22257,July,E July,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,7/10/2022,7/10/2022,10:00,46.8,Mid,24.7,No,Stratified,,,,380,4.04,,,,,,,,,0.62
+22258,July,E July,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,7/10/2022,7/10/2022,10:00,46.8,Bottom,44.5,No,Stratified,,,,412,5.14,,,,,,,,,0.37
+22260,July,E July,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,7/10/2022,7/10/2022,11:28,78,Epi,5,Yes,Stratified,,,,419,7.17,,,,,,,,,0.53
+22262,July,E July,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,7/10/2022,7/10/2022,11:28,78,Bottom,74.4,Yes,Stratified,,,,434,3.31,,,,,,,,,0.18
+22263,July,E July,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,7/10/2022,7/10/2022,11:28,78,Mid,31.2,Yes,Stratified,,,,424,3.78,,,,,,,,,1.25
+22334,July,E July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Epi,5,,,,,,491,1.99,,,,,,,,,0.85
+22335,July,E July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Mid,10,,,,,,567,5.18,,,,,,,,,0.78
+22336,July,E July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Bottom,15,,,,,,592,3.43,,,,,,,,,0.83
+22338,July,E July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Epi,5,,,,,,628,3.99,,,,,,,,,0.68
+22339,July,E July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Mid,17,,,,,,559,5.36,,,,,,,,,0.63
+22340,July,E July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Bottom,45,,,,,,471,4.86,,,,,,,,,0.81
+22342,July,E July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Epi,5,,,,,,438,3.36,,,,,,,,,0.38
+22343,July,E July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Mid,23,,,,,,458,1.92,,,,,,,,,0.7
+22344,July,E July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/10/2022,7/10/2022,,,Bottom,61,,,,,,492,3.09,,,,,,,,,1.02
+22354,July,L July,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,7/15/2022,,,Epi,5,,,,,,460,2.3,,,,,,,,,1.29
+22355,July,L July,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,7/15/2022,,,Mid,8,,,,,,473,5.53,,,,,,,,,1.48
+22356,July,L July,USGS,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,7/15/2022,,,Bottom,11,,,,,,487,4,,,,,,,,,1.53
+22350,July,L July,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,7/15/2022,,,Epi,5,,,,,,498,4.68,,,,,,,,,2.24
+22352,July,L July,USGS,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI -USGS biweekly sampling,7/15/2022,7/15/2022,,,Bottom,7,,,,,,516,3.05,,,,,,,,,1.55
+22346,July,L July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/16/2022,7/16/2022,,,Epi,5,,,,,,468,6.17,,,,,,,,,5.2
+22348,July,L July,USGS,Lake Huron,Saginaw Bay 10,SB,Nearshore,CSMI -USGS biweekly sampling,7/16/2022,7/16/2022,,,Bottom,8,,,,,,450,5.57,,,,,,,,,1.37
+22358,July,L July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Epi,5,,,,,,430,3.37,,,,,,,,,0.68
+22359,July,L July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Mid,15,,,,,,504,2.72,,,,,,,,,0.92
+22360,July,L July,USGS,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Bottom,16,,,,,,508,4.11,,,,,,,,,0.92
+22362,July,L July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Epi,5,,,,,,447,3.74,,,,,,,,,0.7
+22363,July,L July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Mid,20,,,,,,476,3.19,,,,,,,,,0.86
+22364,July,L July,USGS,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Bottom,44,,,,,,465,1.62,,,,,,,,,0.76
+22366,July,L July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Epi,5,,,,,,485,3.08,,,,,,,,,0.55
+22367,July,L July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Mid,14,,,,,,468,2.22,,,,,,,,,0.9
+22368,July,L July,USGS,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI -USGS biweekly sampling,7/17/2022,7/17/2022,,,Bottom,61,,,,,,460,1.42,,,,,,,,,0.71
+22382,July,L July,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Epi,5,,,,,,445,2.86,,,,,,,,,0.83
+22383,July,L July,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Mid,12,,,,,,405,3.92,,,,,,,,,1.27
+22384,July,L July,USGS,Lake Huron,Thessallon River 18,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Bottom,16,,,,,,432,4.77,,,,,,,,,1.36
+22386,July,L July,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Epi,5,,,,,,427,3.44,,,,,,,,,1.12
+22388,July,L July,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Mid,44,,,,,,440,2.01,,,,,,,,,0.28
+22389,July,L July,USGS,Lake Huron,Thessallon River 46,NC,Midshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Bottom,24,,,,,,421,3.31,,,,,,,,,1.94
+22390,July,L July,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Epi,5,,,,,,409,1.61,,,,,,,,,0.87
+22391,July,L July,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Mid,20,,,,,,426,2.28,,,,,,,,,1.41
+22392,July,L July,USGS,Lake Huron,Thessallon River 46 Off,NC,Offshore,CSMI -USGS biweekly sampling,7/20/2022,7/20/2022,,,Bottom,44,,,,,,443,3.59,,,,,,,,,0.34
+22370,July,L July,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Epi,5,,,,,,457,3.3,,,,,,,,,0.54
+22371,July,L July,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Mid,6,,,,,,399,2.85,,,,,,,,,0.48
+22372,July,L July,USGS,Lake Huron,Boot Island 18,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Bottom,16,,,,,,455,3.62,,,,,,,,,0.68
+22374,July,L July,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Epi,5,,,,,,428,1.61,,,,,,,,,0.61
+22376,July,L July,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Bottom,44,,,,,,469,3.64,,,,,,,,,0.33
+22377,July,L July,USGS,Lake Huron,Boot Island 46,NMB,Midshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Mid,24,,,,,,429,0.56,,,,,,,,,1.34
+22378,July,L July,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Epi,5,,,,,,394,2.11,,,,,,,,,0.45
+22379,July,L July,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Mid,16,,,,,,432,3.45,,,,,,,,,1.14
+22380,July,L July,USGS,Lake Huron,Boot Island 73,NMB,Offshore,CSMI -USGS biweekly sampling,7/22/2022,7/22/2022,,,Bottom,71,,,,,,449,2.07,,,,,,,,,0.39
+22154A,Aug,Aug,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,8/2/2022,8/2/2022,14:30,15.4,Epi,5,No,Unstratified,10.6,155,2.72,393,7.59,1.14,6.63,25.98,8.46,11.87,16.03,2.91,3.94,3.36
+22155A,Aug,Aug,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,8/2/2022,8/2/2022,14:30,15.4,Mid,9,No,Unstratified,18.9,203,3.2,451,7.71,1.06,5.78,25.93,8.06,10.13,15.77,2.68,4.17,3.8
+22156A,Aug,Aug,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,8/2/2022,8/2/2022,14:30,15.4,Bottom,13,No,Unstratified,38.8,239,3.2,523,8.95,0.94,5.18,25.44,7.78,9.04,15.48,2.41,4.45,6
+22150A,Aug,Aug,LEII,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,8/2/2022,8/2/2022,15:50,11.2,Epi,5,No,Unstratified,42,317,2.72,531,17.1,1.55,10.85,27.65,10.45,19.63,17.54,4.7,5.89,14.72
+22152A,Aug,Aug,LEII,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,8/2/2022,8/2/2022,15:50,11.2,Bottom,9,No,Unstratified,35.9,38.7,4.21,518,17.6,1.35,8.94,27.2,9.8,16.34,16.94,4.27,5.61,14.52
+22162A,Aug,Aug,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,8/4/2022,8/4/2022,12:05,19.1,Epi,5,No,Stratified,21.3,270,3.44,399,3.34,0.94,4.75,24.7,7.55,8.35,15.19,2.17,4.43,1.3
+22163A,Aug,Aug,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,8/4/2022,8/4/2022,12:05,19.1,Mid,9.5,No,Stratified,34.3,284,3.48,415,5.3,0.9,4.56,23.35,7.36,8.05,15.25,2.28,4.58,0.94
+22164A,Aug,Aug,LEII,Lake Huron,Harbor Beach 18,SMB,Midshore,CSMI,8/4/2022,8/4/2022,12:05,19.1,Bottom,17.3,No,Stratified,32,294,3.47,417,4.63,0.94,4.51,23.97,7.51,8.08,15.3,2.1,4.69,0.6
+22166A,Aug,Aug,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,8/4/2022,8/4/2022,14:25,47.5,Epi,5,No,Stratified,16.4,264,2.77,401,2.8,0.95,4.88,24.03,7.75,8.8,15.46,2.27,4.24,1.65
+22167A,Aug,Aug,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,8/4/2022,8/4/2022,14:25,47.5,Mid,17,No,Stratified,14.3,307,3.1,414,5.41,0.89,4.45,23.58,7.51,8.08,15.3,2.12,4.58,0.98
+22168A,Aug,Aug,LEII,Lake Huron,Harbor Beach 46,SMB,Midshore,CSMI,8/4/2022,8/4/2022,14:25,47.5,Bottom,45.5,No,Stratified,19.6,329,3.42,413,3.35,0.92,4.59,24.04,7.61,8.36,15.51,2.03,5.31,0.56
+22158A,Aug,Aug,LEII,Lake Huron,Harbor Beach 5,SMB,Nearshore,CSMI,8/4/2022,8/4/2022,17:30,5.2,Epi,1.6,No,Unstratified,25.4,245,3.1,418,4.2,0.94,4.78,24.64,7.5,8.46,15.29,2.26,4.17,2.24
+22170A,Aug,Aug,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,8/4/2022,8/4/2022,15:00,63.2,Epi,5,No,Stratified,18.2,299,2.74,448,4.35,0.93,4.69,23.93,7.61,8.65,15.51,2.15,4.07,0.8
+22171A,Aug,Aug,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,8/4/2022,8/4/2022,15:00,63.2,Mid,14,No,Stratified,11.9,306,2.92,417,6.54,0.88,4.4,23.34,7.33,8.05,15.21,2.16,5.03,0.91
+22172A,Aug,Aug,LEII,Lake Huron,Harbor Beach 63,SMB,Offshore,CSMI,8/4/2022,8/4/2022,15:00,63.2,Bottom,61.1,No,Stratified,16.1,311,3.56,431,4.53,0.93,4.43,24.42,7.48,8,15.28,2.05,5.01,0.52
+22178A,Aug,Aug,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,8/5/2022,8/5/2022,17:20,19.9,Epi,5,No,Unstratified,15.8,311,3.15,435,2.6,0.97,4.53,24.05,7.53,7.67,15.13,2.12,4.49,0.64
+22179A,Aug,Aug,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,8/5/2022,8/5/2022,17:20,19.9,Mid,11.5,No,Unstratified,20.8,301,2.92,425,3.71,0.92,4.46,23.88,7.48,7.62,15.26,2.04,3.98,0.65
+22180A,Aug,Aug,LEII,Lake Huron,Maitland River 18,SMB,Midshore,CSMI,8/5/2022,8/5/2022,17:20,19.9,Bottom,17.9,No,Unstratified,29.2,265,3.33,414,4.54,0.88,4.35,24.05,7.49,7.62,15.21,1.94,3.98,0.59
+22182A,Aug,Aug,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,8/5/2022,8/5/2022,16:30,46,Epi,5,No,Stratified,16.4,309,3.6,415,5.92,0.9,4.54,23.75,7.54,7.48,15.11,2.06,3.92,1.05
+22183A,Aug,Aug,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,8/5/2022,8/5/2022,16:30,46,Mid,17,No,Stratified,13.7,303,2.96,411,5.03,1,4.53,23.6,7.55,7.41,14.95,2.06,4.19,0.96
+22184A,Aug,Aug,LEII,Lake Huron,Maitland River 46,SMB,Midshore,CSMI,8/5/2022,8/5/2022,16:30,46,Bottom,44,No,Stratified,26.3,313,4.09,428,5.29,0.89,4.42,23.54,7.47,7.32,15.01,2.03,5.14,0.42
+22186A,Aug,Aug,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,8/5/2022,8/5/2022,14:40,72.9,Epi,5,Yes,Stratified,28.7,296,2.6,414,4.96,0.96,4.51,23.35,7.48,7.51,14.99,2.15,4.37,0.59
+22188A,Aug,Aug,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,8/5/2022,8/5/2022,14:40,72.9,Bottom,71,Yes,Stratified,33.5,321,3.74,424,4.47,0.93,4.41,23.18,7.39,7.32,15,1.96,5.61,0.2
+22189A,Aug,Aug,LEII,Lake Huron,Maitland River 73,SMB,Offshore,CSMI,8/5/2022,8/5/2022,14:40,72.9,Mid,40,Yes,Stratified,45.6,324,2.06,423,2.98,0.87,4.34,23.47,7.39,7.36,15.1,1.93,5.22,0.53
+22174A,Aug,Aug,LEII,Lake Huron,Maitland River 5,SMB,Nearshore,CSMI,8/6/2022,8/6/2022,8:08,9.8,Epi,5,No,Unstratified,40.5,310,2.88,477,6.02,0.94,5.14,25.91,8.19,9.05,17.48,2.2,4.17,0.94
+22190A,Aug,Aug,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,8/6/2022,8/6/2022,17:18,17,Epi,5,No,Unstratified,19.3,337,2.45,424,7.17,0.92,4.57,24.35,7.78,7.62,15.67,1.98,4.04,0.57
+22191A,Aug,Aug,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,8/6/2022,8/6/2022,17:18,17,Mid,10,No,Unstratified,26,371,2.06,450,6.3,0.94,4.56,24.68,7.76,7.63,15.77,2.3,4.15,0.48
+22192A,Aug,Aug,LEII,Lake Huron,Saugeen River 18,NMB,Midshore,CSMI,8/6/2022,8/6/2022,17:18,17,Bottom,15,No,Unstratified,29.2,345,1.95,408,5.5,0.93,4.63,24.15,7.62,7.65,15.33,2.07,4.22,0.43
+22194A,Aug,Aug,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,8/6/2022,8/6/2022,16:09,48,Epi,5,No,Stratified,18.4,364,2.11,403,8.14,0.92,4.53,23.91,7.58,7.44,14.85,2.1,4.24,0.49
+22195A,Aug,Aug,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,8/6/2022,8/6/2022,16:09,48,Mid,24,No,Stratified,17.5,332,2.13,415,5.77,0.87,4.37,23.75,7.52,7.28,14.92,2.15,3.79,0.93
+22196A,Aug,Aug,LEII,Lake Huron,Saugeen River 46,NMB,Midshore,CSMI,8/6/2022,8/6/2022,16:09,48,Bottom,46,No,Stratified,13.6,350,2.49,412,8.45,0.87,4.36,23.98,7.54,7.25,14.88,1.97,5.07,0.63
+22198A,Aug,Aug,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,8/6/2022,8/6/2022,14:17,82.3,Epi,5,Yes,Stratified,24.9,319,1.5,423,7.66,0.92,4.6,24.24,7.7,7.74,15.45,2.11,4.26,0.49
+22200A,Aug,Aug,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,8/6/2022,8/6/2022,14:17,82.3,Bottom,80.5,Yes,Stratified,33.7,329,2.5,413,7.69,0.94,4.41,23.83,7.48,7.33,14.99,2.13,5.35,0.16
+22201A,Aug,Aug,LEII,Lake Huron,Saugeen River 82,NMB,Offshore,CSMI,8/6/2022,8/6/2022,14:17,82.3,Mid,46,Yes,Stratified,18.8,295,1.96,391,4.09,0.93,4.55,23.99,7.67,7.08,14.28,2.19,4.04,1.02
+22234A,Aug,Aug,LEII,Lake Huron,Saugeen River 5,NMB,Nearshore,CSMI,8/7/2022,8/7/2022,7:15,10.4,Epi,5,No,Unstratified,29.6,295,3.41,399,3.44,0.97,4.61,24.68,7.71,7.8,15.73,2.33,4.71,0.43
+22138A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,8/7/2022,8/8/2022,16:45,19.7,Epi,5,No,Unstratified,19.3,268,2.71,375,4.34,0.93,4.84,22.53,6.7,8.8,13.42,2.34,3.15,0.84
+22139A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,8/7/2022,8/8/2022,16:45,19.7,Mid,11.4,No,Unstratified,17.3,238,2.45,399,4.21,0.84,4.77,22.27,6.64,8.36,13.04,2.35,3.49,1.03
+22140A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 18,GB,Midshore,CSMI,8/7/2022,8/8/2022,16:45,19.7,Bottom,17.8,No,Unstratified,17.1,253,2.68,420,6.66,0.8,4.51,22.76,6.65,8,13.25,2.26,3.87,1.8
+22142A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,8/7/2022,8/8/2022,15:50,48,Epi,5,Yes,Stratified,20.4,312,2.89,382,6.13,0.8,4.53,22.14,6.55,8.3,13.26,2.36,3.15,0.74
+22144A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,8/7/2022,8/8/2022,15:50,48,Bottom,46,Yes,Stratified,34.2,335,3.13,435,4.98,0.8,4.46,22.56,6.76,7.92,13.27,2.01,4.64,0.51
+22145A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 46,GB,Midshore,CSMI,8/7/2022,8/8/2022,15:50,48,Mid,23.5,Yes,Stratified,17.3,306,2.74,368,5,0.8,4.4,22.03,6.65,7.81,13.23,2.16,3.55,1.32
+22146A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,8/7/2022,8/8/2022,13:45,84,Epi,5,Yes,Stratified,23.1,266,2.88,373,6.89,0.84,4.4,21.68,6.42,7.64,12.92,2.3,4.09,0.62
+22148A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,8/7/2022,8/8/2022,13:45,84,Bottom,82,Yes,Stratified,25.5,380,2.83,392,6.54,0.87,4.54,22.76,6.67,7.95,13.35,2.04,4.58,0.21
+22149A,Aug,Aug,LEII,Lake Huron,Nottawasaga River 82,GB,Offshore,CSMI,8/7/2022,8/8/2022,13:45,84,Mid,39,Yes,Stratified,30.9,324,3.09,374,5.31,0.98,4.51,22.59,6.62,7.99,13.35,2.27,4.13,0.9
+22126A,Aug,Aug,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,8/9/2022,8/9/2022,13:55,50,Epi,5,Yes,Stratified,16.6,292,3.1,369,4.61,0.83,4.23,21.24,6.4,7.55,12.73,,3.96,0.82
+22128A,Aug,Aug,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,8/9/2022,8/9/2022,13:55,50,Bottom,48,Yes,Stratified,28.7,300,3.9,369,3.98,0.85,4.37,21.75,6.52,7.87,13.02,2.28,4.32,0.3
+22129A,Aug,Aug,LEII,Lake Huron,Parry Sound 46,GB,Midshore,CSMI,8/9/2022,8/9/2022,13:55,50,Mid,31,Yes,Stratified,23,295,2.82,383,5.84,0.86,4.49,22.05,6.58,7.96,13.01,2.17,4.15,0.61
+22106A,Aug,Aug,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,8/12/2022,8/12/2022,12:40,11.7,Epi,5,No,Unstratified,19.5,219,2.58,338,5.26,0.82,4.24,21.42,6.33,7.27,12.49,2.45,3.68,0.82
+22108A,Aug,Aug,LEII,Lake Huron,French River 18,GB,Midshore,CSMI,8/12/2022,8/12/2022,12:40,11.7,Bottom,9,No,Unstratified,17.8,216,2.57,340,5.52,0.84,4.21,21.51,6.32,7.41,12.66,2.35,3.17,0.81
+22110A,Aug,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,8/12/2022,11:30,42.7,Epi,5,Yes,Stratified,17.4,230,2.45,336,4.08,0.89,4.11,20.77,6.18,7.32,12.61,2.32,3.68,0.59
+22112A,Aug,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,8/12/2022,11:30,42.7,Bottom,40,Yes,Stratified,27.3,338,2.87,359,3.54,0.86,4.3,21.75,6.52,7.53,12.98,2.27,4.47,0.53
+22113A,Aug,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,8/12/2022,11:30,42.7,Mid,26,Yes,Stratified,24.5,334,3.68,371,5.04,0.85,4.26,21.46,6.41,7.55,12.89,2.34,4,1.09
+22102A,Aug,Aug,LEII,Lake Huron,French River 5,GB,Nearshore,CSMI,8/12/2022,8/12/2022,13:34,13,Epi,5,No,Stratified,16.3,164,2.54,301,5.06,0.93,4.04,19.23,5.67,6.75,11.33,2.93,2.74,1.44
+22114A,Aug,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,8/12/2022,9:15,78.6,Epi,5,Yes,Stratified,65.9,359,2.5,371,6.1,0.86,4.32,22.72,6.88,7.71,13.62,2.37,3.62,0.52
+22116A,Aug,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,8/12/2022,9:15,78.6,Bottom,76,Yes,Stratified,55,382,2.9,370,3.99,0.87,4.25,22.14,6.66,7.67,13.37,2.26,4.32,0.34
+22117A,Aug,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,8/12/2022,9:15,78.6,Mid,36,Yes,Stratified,76.2,357,2.97,400,5.97,0.84,4.22,22.15,6.69,7.68,13.31,2.35,4.43,1
+22094A,Aug,Aug,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,8/13/2022,8/13/2022,14:15,20.3,Epi,5,No,Stratified,14.8,214,3.11,331,5.6,0.7,3.76,18.37,5.46,5.76,11.55,2.64,5.2,2
+22096A,Aug,Aug,LEII,Lake Huron,Spanish River 18,NC,Midshore,CSMI,8/13/2022,8/13/2022,14:15,20.3,Bottom,18.5,No,Stratified,21.1,232,3.22,330,6.5,0.76,3.81,18.72,5.64,5.88,11.78,2.64,5.29,
+22098A,Aug,Aug,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,8/13/2022,8/13/2022,13:05,46.2,Epi,5,No,Stratified,12.8,202,2.93,340,6.27,0.84,3.68,18.37,5.46,5.79,11.57,2.71,4.62,2.12
+22099A,Aug,Aug,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,8/13/2022,8/13/2022,13:05,46.2,Mid,19,No,Stratified,29,287,4.23,408,5.6,0.86,3.89,20.16,5.92,6.16,12.29,2.39,5.63,0.71
+22100A,Aug,Aug,LEII,Lake Huron,Spanish River 46,NC,Midshore,CSMI,8/13/2022,8/13/2022,13:05,46.2,Bottom,44,No,Stratified,35.7,348,3.62,420,4.65,0.83,4.1,22.43,6.74,6.86,13.38,2.04,5.65,0.44
+22090A,Aug,Aug,LEII,Lake Huron,Spanish River 5,NC,Nearshore,CSMI,8/13/2022,8/13/2022,15:00,26,Epi,5,No,Stratified,12.4,196,3.87,329,6.76,0.72,3.85,17.95,5.32,6.12,11.85,2.77,5.11,2.44
+22206A,Aug,Aug,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,8/14/2022,8/14/2022,15:10,17.8,Epi,5,No,Unstratified,15,281,2.95,365,6.84,0.75,3.72,20.79,6.28,5.93,12.21,2.06,4.49,0.56
+22208A,Aug,Aug,LEII,Lake Huron,Boot Island 18,NMB,Midshore,CSMI,8/14/2022,8/14/2022,15:10,17.8,Bottom,15.5,No,Unstratified,25.5,278,2.15,390,7.24,0.79,3.72,20.98,6.41,5.98,12.4,2.09,4.32,0.63
+22210A,Aug,Aug,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,8/14/2022,8/14/2022,16:10,45,Epi,5,No,Stratified,19.1,276,2.09,386,7.17,0.82,3.75,20.95,6.42,5.84,12.03,2.02,4.41,0.84
+22211A,Aug,Aug,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,8/14/2022,8/14/2022,16:10,45,Mid,18,No,Stratified,15.6,288,2.4,398,8.41,0.81,3.78,21.02,6.35,6.05,12.59,2.13,5.03,0.85
+22212A,Aug,Aug,LEII,Lake Huron,Boot Island 46,NMB,Midshore,CSMI,8/14/2022,8/14/2022,16:10,45,Bottom,42.5,No,Stratified,16.1,306,2.26,442,8.85,0.86,4.1,22.34,6.99,6.74,13.89,1.95,5.37,0.51
+22214A,Aug,Aug,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,8/14/2022,8/14/2022,17:00,75.9,Epi,5,Yes,Stratified,9.09,279,2.51,371,7.99,1,3.42,19.7,5.85,5.27,11.13,2.09,4.47,0.94
+22216A,Aug,Aug,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,8/14/2022,8/14/2022,17:00,75.9,Bottom,73,Yes,Stratified,19.5,329,2.43,411,7.75,0.9,4.18,23.1,7.24,7.07,14.54,1.81,5.8,0.29
+22217A,Aug,Aug,LEII,Lake Huron,Boot Island 73,NMB,Offshore,CSMI,8/14/2022,8/14/2022,17:00,75.9,Mid,41,Yes,Stratified,14.2,322,3.29,406,7.96,0.94,4.13,22.58,7.07,6.89,14.11,1.87,5.8,1.96
+22222A,Aug,Aug,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,8/14/2022,8/14/2022,10:15,18.9,Epi,5,No,Unstratified,15.4,268,2.84,383,6.67,0.77,3.4,19.19,5.49,5.24,10.89,2.67,5.07,1.09
+22224A,Aug,Aug,LEII,Lake Huron,Thessalon River 18,NC,Midshore,CSMI,8/14/2022,8/14/2022,10:15,18.9,Bottom,16.9,No,Unstratified,14.3,277,2.63,405,8.01,0.84,3.66,20.09,5.9,5.4,11.4,2.07,5.59,0.74
+22226A,Aug,Aug,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,8/14/2022,8/14/2022,9:03,43.8,Epi,5,No,Stratified,14.3,251,3.45,364,5.46,0.76,3.41,18.64,5.4,4.93,10.62,2.23,4.79,1.24
+22227A,Aug,Aug,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,8/14/2022,8/14/2022,9:03,43.8,Mid,17,No,Stratified,18.3,311,3.97,389,7.75,0.9,4.04,22.35,6.74,6.33,13.14,1.89,5.76,0.52
+22228A,Aug,Aug,LEII,Lake Huron,Thessalon River 46,NC,Midshore,CSMI,8/14/2022,8/14/2022,9:03,43.8,Bottom,41,No,Stratified,18.4,288,2.71,383,9.45,0.87,3.79,21.14,6.24,5.85,12.26,2.14,5.22,0.74
+22230A,Aug,Aug,LEII,Lake Huron,Thessalon River 46 Offshore,NC,Offshore,CSMI,8/14/2022,8/14/2022,8:10,47.6,Epi,5,No,Stratified,24.1,252,3.32,376,10.9,0.79,3.4,18.77,5.38,5.06,10.73,2.39,4.54,1.08
+22231A,Aug,Aug,LEII,Lake Huron,Thessalon River 46 Offshore,NC,Offshore,CSMI,8/14/2022,8/14/2022,8:10,47.6,Mid,17,No,Stratified,35.9,264,4.02,383,10.6,0.81,3.49,19.13,5.57,5.69,11.37,2.35,4.75,1.24
+22232A,Aug,Aug,LEII,Lake Huron,Thessalon River 46 Offshore,NC,Offshore,CSMI,8/14/2022,8/14/2022,8:10,47.6,Bottom,45,No,Stratified,39,310,3.38,395,9.26,1.09,4.16,22.54,6.84,6.69,13.75,2.08,5.26,0.5
+22218A,Aug,Aug,LEII,Lake Huron,Thessalon River 5,NC,Nearshore,CSMI,8/14/2022,8/14/2022,10:51,8.5,Epi,5,No,Unstratified,8.62,267,2.12,374,8.45,0.68,2.82,17.17,4.63,4.01,8.64,2.21,4.84,1.32
