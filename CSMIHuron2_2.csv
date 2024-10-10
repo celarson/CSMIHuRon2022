@@ -1,4 +1,4 @@
-﻿STIS,Month,MonthPeriod,Ship,Lake,Site,Area,DFS,Research Project,Unified Date,Collection Date,TimeEST, SiteDepthm,Depth,Separatedepthsm,DCL,StratifiedUnstratified,NH4ugNL ,NOxugNL,SRPugPL,TNugNL,TPugPL,KmgL,NamgL,CamgL,MgmgL,ClmgL,SO4mgL,DOCmgCL,SimgSiO2L,chlaugL
+﻿STIS,Month,MonthPeriod,Ship,Lake,Site,Area,DFS,Research Project,UnifiedDate,Collection Date,TimeEST, SiteDepthm,Depth,Separatedepthsm,DCL,StratifiedUnstratified,NH4ugNL ,NOxugNL,SRPugPL,TNugNL,TPugPL,KmgL,NamgL,CamgL,MgmgL,ClmgL,SO4mgL,DOCmgCL,SimgSiO2L,chlaugL
 22154,June,E June,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,6/6/2022,6/6/2022,15:26,15.9,Epi,5,No,Stratified,9.53,323,1.81,460,8.33,0.92,4.75,24.56,7.83,8.69,16.27,1.96,4.04,0.92
 22156,June,E June,LEII,Lake Huron,Saginaw Bay 13,SB,Nearshore,CSMI,6/6/2022,6/6/2022,16:26,15.9,Bottom,13,No,Stratified,9.64,317,2.11,413,7.27,0.89,4.74,24.32,7.7,8.31,16.38,2.29,4.77,0.5
 22150,June,E June,LE II,Lake Huron,Saginaw Bay 9,SB,Nearshore,CSMI,6/6/2022,6/6/2022,9:58,10.8,Epi,5,No,Stratified,12.3,410,0.8,550,9.73,1.05,6.01,27.24,8.61,11.05,17.39,2.63,2.82,1.35
