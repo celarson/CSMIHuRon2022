@@ -1,4 +1,4 @@
-SiteID,Site,UnifiedDate,Month Period,DFS,Month,Area,MeterEnd,MeterMCoe,Volume
+SiteID,Site,UnifiedDate,MonthPeriod,DFS,Month,Area,MeterEnd,MeterMCoe,Volume
 Ztx153-22154,Saginaw Bay 13,6/6/2022,E June,Nearshore,June,SB,440,11.737484,2.304647647
 Ztx64-22154,Saginaw Bay 13,6/6/2022,E June,Nearshore,June,SB,85,13.27615,2.606763755
 Ztx153-22150,Saginaw Bay 9,6/6/2022,E June,Nearshore,June,SB,260,6.935786,1.361837246
