@@ -78,3 +78,10 @@ cors<-cor(HuronCSMIWide[,7:ncol(HuronCSMIWide)])
 
 #Visualizations
 #Make dataframe for faceted dreissena and swf density graph
+
+#Time-series line graphs
+BythoPrey<-subset(Zoopcount, Species == c("Leptodiaptomusminutus", "Leptodiaptomussicilis", "Daphniaspp", "Daphniaparvula", "Daphniaretrocurva", "Leptodiaptomusashlandi", "Daphnialongiremis", "Leptodorakindti", "Daphniagaleatamendotae", "Diaphanosomaspp", "Bythotrepheslongimanus"), select = SiteID:Density)
+BythoPrey2<-Zoopcount %>% filter(Species == c("Leptodiaptomusminutus", "Leptodiaptomussicilis", "Daphniaspp", "Daphniaparvula", "Daphniaretrocurva", "Leptodiaptomusashlandi", "Daphnialongiremis", "Leptodorakindti", "Daphniagaleatamendotae", "Diaphanosomaspp", "Bythotrepheslongimanus"))
+nrow(Zoopcount)
+table(Zoopcount$Species)
+unique(Zoopcount$Species)
