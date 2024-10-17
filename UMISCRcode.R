@@ -8,6 +8,7 @@ library(tidyverse)
 library(reshape2)
 library(lubridate)
 library(readr)
+library(gridExtra)
 
 #Upload datasets
 
@@ -106,6 +107,10 @@ Daphnia<-BythoPreyMEANSD2 %>% filter(Genus %in% "Daphnia")
 Diaphanosoma<-BythoPreyMEANSD2 %>% filter(Genus %in% "Diaphanosoma")
 Leptodiaptomus<-BythoPreyMEANSD2 %>% filter(Genus %in% "Leptodiaptomus")
 Leptodora<-BythoPreyMEANSD2 %>% filter(Genus %in% "Leptodora")
+DaphniaSB<-BythoPreyMEANSD2 %>% filter(Area %in% "SB")
+DaphniaSB<-DaphniaSB %>% filter(Genus %in% "Daphnia")
+DaphniaALL<-BythoPreyMEANSD2 %>% filter(Area %in% c("NC", "GB", "NMB", "SMB"))
+DaphniaALL<-DaphniaALL %>% filter(Genus %in% "Daphnia")
 
 #factor regions
 Bytho$Area<-factor(Bytho$Area, c("NC", "SB", "GB", "SMB", "NMB"))
@@ -118,17 +123,20 @@ Leptodiaptomus$Area<-factor(Leptodiaptomus$Area, c("NC", "SB", "GB", "SMB", "NMB
 Leptodiaptomus$Month<-factor(Leptodiaptomus$Month, c("June", "July", "Aug"))
 Leptodora$Area<-factor(Leptodora$Area, c("NC", "SB", "GB", "SMB", "NMB"))
 Leptodora$Month<-factor(Leptodora$Month, c("June", "July", "Aug"))
+DaphniaSB$Month<-factor(DaphniaSB$Month, c("June", "July", "Aug"))
+DaphniaALL$Month<-factor(DaphniaALL$Month, c("June", "July", "Aug"))
+DaphniaALL$Area<-factor(DaphniaALL$Area, c("NC", "GB", "SMB", "NMB"))
 
-#Box and Whisker graph, bytho and prey
-
-ggplot(Bytho, aes(x=Month, y=mean, group=Month))+
-  geom_boxplot()+geom_boxplot()+
-  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+#Line graph, bytho and prey
+ggplot(Bytho, aes(x=Month, y=mean, group=Area)) +
+  geom_line(aes(color=Area))+
+  geom_point(aes(color=Area))+
+  geom_errorbar(aes(ymin=mean-std, ymax=mean+std, color=Area))+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
-    facet_grid(.~Area)
+  facet_grid(.~Area)
 
 ggplot(Daphnia, aes(x=Month, y=mean, group=Area)) +
   geom_line(aes(color=Area))+
@@ -138,7 +146,40 @@ ggplot(Daphnia, aes(x=Month, y=mean, group=Area)) +
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
-  facet_grid(.~Area, scales = "free")
+    facet_grid(.~Area)
+
+ggplot(DaphniaSB, aes(x=Month, y=mean, group=Area)) +
+  geom_line(aes(color=Area))+
+  geom_point(aes(color=Area))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  scale_color_manual(values = "violetred3")
+  
+ggplot(DaphniaALL, aes(x=Month, y=mean, group=Area)) +
+  geom_line(aes(color=Area))+
+  geom_point(aes(color=Area))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  labs(y=expression(paste(italic("Daphnia"), "(individuals/m^3)")))+
+  theme(legend.position = "none")
+
+ggplot(Daphnia, aes(x=Month, y=mean, group=Area)) +
+  geom_line(aes(color=Area))+
+  geom_point(aes(color=Area))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  
+  
+
+DaphFig<-grid.arrange(DALL, DSB, ncol=2)
+
+DaphFig+
 
 ggplot(Diaphanosoma, aes(x=Month, y=mean, group=Area)) +
   geom_line(aes(color=Area))+
@@ -150,20 +191,99 @@ ggplot(Diaphanosoma, aes(x=Month, y=mean, group=Area)) +
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area, scales = "free")
 
-ggplot(Leptodiaptomus, aes(x=Month, y=Density, group=Area)) +
+ggplot(Leptodiaptomus, aes(x=Month, y=mean, group=Area)) +
   geom_line(aes(color=Area))+
   geom_point(aes(color=Area))+
+  geom_errorbar(aes(ymin=mean-std, ymax=mean+std, color=Area))+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area, scales = "free")
 
-ggplot(Leptodora, aes(x=Month, y=Density, group=Area)) +
+ggplot(Leptodora, aes(x=Month, y=mean, group=Area)) +
   geom_line(aes(color=Area))+
   geom_point(aes(color=Area))+
+  geom_errorbar(aes(ymin=mean-std, ymax=mean+std, color=Area))+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area, scales = "free")
+
+######box and whisker plots
+
+#subset for bw
+BWBytho <- BythoPrey22 %>% filter(Genus %in% "Bythotrephes longimanus")
+BWDaphnia <- BythoPrey22 %>% filter(Genus %in% "Daphnia")
+
+#Factor
+BWBytho$Month<-factor(BWBytho$Month, c("June", "July", "Aug"))
+BWBytho$Area<-factor(BWBytho$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+BWDaphnia$Month<-factor(BWDaphnia$Month, c("June", "July", "Aug"))
+BWDaphnia$Area<-factor(BWDaphnia$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+#BWs
+ggplot(BWBytho, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  labs(y=expression(paste(italic("Bythotrephes cederstromii "), "(individuals/m^3)")))
+
+ggplot(BWDaphnia, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  scale_y_log10()
+ 
+ggplot(BWDaphnia, aes(x=Month, y=Density, fill = Month))+
+   geom_boxplot()+
+   scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+         legend.title=element_text(size=14),legend.text = element_text(size=14))+
+   facet_grid(.~Area)
+
+#subset out SB to use in own graph?
+SBPrey<-BythoPrey22%>%filter(Area %in% "SB")
+SBDaphPrey<-SBPrey%>%filter(Genus %in% "Daphnia")
+SBDaphPreyRemoveO<-SBDaphPrey%>%filter(Species %in% c("Daphniagaleatamendotae", "Daphniaretrocurva"))
+ALLR<-BythoPrey22%>%filter(Area %in% c("NC", "GB", "NMB", "SMB"))
+ALLRDaph<-ALLR%>%filter(Genus %in% "Daphnia")
+
+#factor
+SBDaphPreyRemoveO$Month<-factor(SBDaphPreyRemoveO$Month, c("June", "July", "Aug"))
+
+#BW for just SB, removed 0 valued daphnia to help graph
+ggplot(SBDaphPreyRemoveO, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme_classic()
+
+ggplot(SBDaphPrey, aes(x=Month, y=Density, fill=Month))+
+  geom_boxplot()+
+  geom_jitter()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme_classic()+
+  scale_y_log10()
+  
+
+#Bw all regions for daphnia
+ggplot(ALLRDaph, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)
+
+#Bw remove 0 daphnia
