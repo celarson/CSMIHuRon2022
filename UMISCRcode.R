@@ -286,4 +286,31 @@ ggplot(ALLRDaph, aes(x=Month, y=Density, fill = Month))+
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)
 
-#Bw remove 0 daphnia
+#Dreisnnid
+DreisnnidAgg<-aggregate(`Density64` ~ Area + Month, data = Dresinnid64count, FUN = mean)
+
+ggplot(Dresinnid64count, aes(x=Month, y=Density64, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)
+
+#remove dresinnid64 outlier -83
+Dresinnidout<-Dresinnid64count[-83,]
+
+Dresinnidout$Area<-factor(Dresinnidout$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+
+ggplot(Dresinnidout, aes(x=Month, y=Density64, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  labs(y=expression(paste(italic("Dreissnid"), "veliger ", "(individuals/m^3)")))
+
+DreisnnidAgg2<-aggregate(`Density64` ~ Month + Area, data = Dresinnidout, FUN = mean)

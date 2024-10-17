@@ -141,9 +141,11 @@ ggplot(Bytho153count, aes(x=Month, y=Density, fill = Month))+
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)+
-  labs(y=expression(paste(italic("Bythotrephes longimanus"), "Density (count/m^3)")))
+  labs(y=expression(paste(italic("Bythotrephes longimanus"), "(individuals/m^3)")))
 
-ggplot(Dresinnid64count, aes(x=Month, y=Density, fill = Month))+
+
+
+ggplot(Dresinnid64count, aes(x=Month, y=Density64, fill = Month))+
   geom_boxplot()+
   scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
@@ -152,7 +154,7 @@ ggplot(Dresinnid64count, aes(x=Month, y=Density, fill = Month))+
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)+
   scale_y_log10()+
-  labs(y=expression(paste(italic("Dreissenid"), "veliger Density (count/m^3)")))
+  labs(y=expression(paste(italic("Dreissenid"), "veliger (individauls/m^3)")))
 
 ggplot(BythoDresinnidcount, aes(x=Month, y=Density, fill = Month))+
   geom_boxplot()+
@@ -172,7 +174,7 @@ ggplot(Bytho153count, aes(x=DFS, y=Density, fill = DFS))+
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)+
-  labs(y=expression(paste(italic("Bythotrephes longimanus"), "Density (count/m^3)")))
+  labs(y=expression(paste(italic("Bythotrephes longimanus"), "(individauls/m^3)")))
 
 bythodfs<-aggregate(`Density` ~ DFS + Area, data = Bytho153count, FUN = mean)
 
