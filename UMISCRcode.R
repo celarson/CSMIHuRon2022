@@ -222,7 +222,8 @@ BWBytho$Month<-factor(BWBytho$Month, c("June", "July", "Aug"))
 BWBytho$Area<-factor(BWBytho$Area, c("NC", "SB", "GB", "SMB", "NMB"))
 BWDaphnia$Month<-factor(BWDaphnia$Month, c("June", "July", "Aug"))
 BWDaphnia$Area<-factor(BWDaphnia$Area, c("NC", "SB", "GB", "SMB", "NMB"))
-#BWs
+BWBytho$DFS<-factor(BWBytho$DFS, c("Nearshore", "Midshore", "Offshore"))
+#######BWs
 ggplot(BWBytho, aes(x=Month, y=Density, fill = Month))+
   geom_boxplot()+
   scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
@@ -232,6 +233,29 @@ ggplot(BWBytho, aes(x=Month, y=Density, fill = Month))+
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(.~Area)+
   labs(y=expression(paste(italic("Bythotrephes cederstromii "), "(individuals/m^3)")))
+#Subset to Remove SB from Bytho
+BWBythoNOSB<-BWBytho %>% filter(Area %in% c("NC", "GB", "NMB", "SMB"))
+
+ggplot(BWBythoNOSB, aes(x=Month, y=Density, fill = DFS))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  labs(y=expression(paste(italic("Bythotrephes cederstromii "), "(individuals/m^3)")))
+
+ggplot(BWBythoNOSB, aes(x=DFS, y=Density, fill = DFS))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(.~Area)+
+  labs(y=expression(paste(italic("Bythotrephes cederstromii "), "(individuals/m^3)")))
+
 
 ggplot(BWDaphnia, aes(x=Month, y=Density, fill = Month))+
   geom_boxplot()+
