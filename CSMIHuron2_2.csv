@@ -55,9 +55,9 @@
 22112A,Aug,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,8/12/2022,11:30,42.7,Bottom,40,Yes,Stratified,27.3,338,2.87,359,3.54,0.86,4.3,21.75,6.52,7.53,12.98,2.27,4.47,0.53
 22113A,Aug,Aug,LEII,Lake Huron,French River 46,GB,Midshore,CSMI,8/12/2022,8/12/2022,11:30,42.7,Mid,26,Yes,Stratified,24.5,334,3.68,371,5.04,0.85,4.26,21.46,6.41,7.55,12.89,2.34,4,1.09
 22102A,Aug,Aug,LEII,Lake Huron,French River 5,GB,Nearshore,CSMI,8/12/2022,8/12/2022,13:34,13,Epi,5,No,Stratified,16.3,164,2.54,301,5.06,0.93,4.04,19.23,5.67,6.75,11.33,2.93,2.74,1.44
-22114,June,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Epi,5,No,Stratified,21.1,257.16,2.54,390,6.85,0.85,4.33,21.1,6.39,6.99,14.32,1.97,4.34,0.37
-22115,June,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Mid,40,No,Stratified,17.2,261.64,2.76,430,4.92,0.83,4.34,21.19,6.53,6.62,13.49,2.12,4.47,0.99
-22116,June,L June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Bottom,76,No,Stratified,11.6,219.52,2.49,390,4.83,0.81,4.3,21.17,6.53,7.1,14.52,2.13,4.37,0.65
+22114,June,E June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Epi,5,No,Stratified,21.1,257.16,2.54,390,6.85,0.85,4.33,21.1,6.39,6.99,14.32,1.97,4.34,0.37
+22115,June,E June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Mid,40,No,Stratified,17.2,261.64,2.76,430,4.92,0.83,4.34,21.19,6.53,6.62,13.49,2.12,4.47,0.99
+22116,June,E June,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,6/14/2022,6/14/2022,14:07,80,Bottom,76,No,Stratified,11.6,219.52,2.49,390,4.83,0.81,4.3,21.17,6.53,7.1,14.52,2.13,4.37,0.65
 22114A,Aug,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,8/12/2022,9:15,78.6,Epi,5,Yes,Stratified,65.9,359,2.5,371,6.1,0.86,4.32,22.72,6.88,7.71,13.62,2.37,3.62,0.52
 22116A,Aug,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,8/12/2022,9:15,78.6,Bottom,76,Yes,Stratified,55,382,2.9,370,3.99,0.87,4.25,22.14,6.66,7.67,13.37,2.26,4.32,0.34
 22117A,Aug,Aug,LEII,Lake Huron,French River 82,GB,Offshore,CSMI,8/12/2022,8/12/2022,9:15,78.6,Mid,36,Yes,Stratified,76.2,357,2.97,400,5.97,0.84,4.22,22.15,6.69,7.68,13.31,2.35,4.43,1
