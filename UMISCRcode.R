@@ -24,6 +24,8 @@ CalibrationMeta <- read_csv("CalibrationMeta.csv")
 
 #water chemistry
 WaterChemistry<- read_csv("CSMIHuron2_2.csv")
+#Delete Thessalon River 18 6/19/2022, because there were samples taken on 6/18 that correspond with zooplankton
+WaterChemistrynjt<-subset(WaterChemistry, STIS!="22218")
 
 #Cleaning datasets
 
@@ -67,24 +69,22 @@ HuronCSMIWidezoop<-merge(Zoop64denswide, Zoop153denswide,
                      by=c("Site","UnifiedDate","DFS","Month","Area",
                           "MonthPeriod"),all=T)
 
-setdiff(paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate),
-        paste((subset(WaterChemistry, Depth=="Epi"))$Site,
-              (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate))
-#Parry Sound 18 8/9/2022 only collected for 153
-#Thessalon River 5 6/19/2022 only zooplankton, no water chemistry
-setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,
-          (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate),
-          paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate))
-#Thessalon River 18 6/19/2022
+setdiff(paste((subset(WaterChemistrynjt, Depth=="Epi"))$Site,(subset(WaterChemistrynjt, Depth=="Epi"))$Month,
+              (subset(WaterChemistrynjt, Depth=="Epi"))$UnifiedDate,(subset(WaterChemistrynjt, Depth=="Epi"))$DFS,
+              (subset(WaterChemistrynjt, Depth=="Epi"))$MonthPeriod,(subset(WaterChemistrynjt, Depth=="Epi"))$Area),
+        paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$Month,HuronCSMIWidezoop$UnifiedDate,HuronCSMIWidezoop$DFS,
+              HuronCSMIWidezoop$MonthPeriod,HuronCSMIWidezoop$Area))
+#No differences
+setdiff(paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$Month,HuronCSMIWidezoop$UnifiedDate,HuronCSMIWidezoop$DFS,
+              HuronCSMIWidezoop$MonthPeriod,HuronCSMIWidezoop$Area),
+        paste((subset(WaterChemistrynjt, Depth=="Epi"))$Site,(subset(WaterChemistrynjt, Depth=="Epi"))$Month,
+              (subset(WaterChemistrynjt, Depth=="Epi"))$UnifiedDate,(subset(WaterChemistrynjt, Depth=="Epi"))$DFS,
+              (subset(WaterChemistrynjt, Depth=="Epi"))$MonthPeriod,(subset(WaterChemistrynjt, Depth=="Epi"))$Area))
+# "Parry Sound 18 Aug 8/9/2022 Midshore Aug GB" only collected for 153
+#"Thessalon River 5 June 6/19/2022 Nearshore L June NC" only collected for zooplankton
 
-setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$Month),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$Month))
-setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$MonthPeriod),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$MonthPeriod))
-setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$DFS),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$DFS))
-setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$Area),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$Area))
-#No differences.
-
-HuronCSMIWide<-merge(HuronCSMIWidezoop, subset(WaterChemistry, Depth=="Epi"), 
-                         by=c("Site","UnifiedDate","DFS","Area","MonthPeriod","Month"))
+HuronCSMIWide<-data.frame(merge(HuronCSMIWidezoop, subset(WaterChemistrynjt, Depth=="Epi"), 
+                         by=c("Site","UnifiedDate","DFS","Area","MonthPeriod","Month"),all=T))
 
 
 #Analysis
@@ -92,11 +92,40 @@ HuronCSMIWide<-merge(HuronCSMIWidezoop, subset(WaterChemistry, Depth=="Epi"),
 #Cor - include all numerical variables
 names(HuronCSMIWide)
 summary(HuronCSMIWide)
-NHuronCSMIWide<-as.numeric(unlist(HuronCSMIWide[,c(8:51,53:91,103:116)]))
-cors<-rcorr((as.numeric(HuronCSMIWide[,c(8:51,53:91,103:116)])))
+str(HuronCSMIWide)
+HuronCSMIWidenum<-select_if(HuronCSMIWide, is.numeric)
+setdiff(names(HuronCSMIWide),names(HuronCSMIWidenum))
+str(HuronCSMIWidenum)
+cors<-rcorr(as.matrix(HuronCSMIWidenum),type="spearman")
+#spiny water flea correlated to Conochilusunicornis (r=0.80)
+
+#Create a facetted plot with bythotrephes, dreissena veligers, and Conochilus unicornis
 
 #Visualizations
 #Make dataframe for faceted dreissena and swf density graph
+#Create log transformed dreissena 
+HuronCSMIWide$log10Dreissena<-log10(HuronCSMIWide$Density64.DreissenidVeligers)
+CSMIHuronGraph<-melt(HuronCSMIWide, id.vars=c("Site", "UnifiedDate","Area","Month"),
+                     measure.vars=c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis",
+                                    "log10Dreissena"),variable.name="Species",value.name="Density")
+#Graph using same methods as Noah, but with facet for species
+#####################################
+#still need to order months and rename the facet labels
+#and potentially change the order of species, depending on how the poster is ordered.
+#############################################
+
+ggplot(CSMIHuronGraph, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
+        axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(Species~Area, scales="free_y")
+
+###################################################
+#########################################################
+
 
 #######Time-series line graphs
 #Uploading Genus key to cut down on how many panels - binned species into genus
