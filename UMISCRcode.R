@@ -74,6 +74,11 @@ setdiff(paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate),
 setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,
           (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate,
           paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate)))
+
+setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$Month),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$Month))
+setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$MonthPeriod),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$MonthPeriod))
+setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$DFS),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$DFS))
+setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$Area),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$Area))
 #explanation
 
 HuronCSMIWide<-merge(HuronCSMIWidezoop, subset(WaterChemistry, Depth=="Epi"), 
@@ -83,7 +88,10 @@ HuronCSMIWide<-merge(HuronCSMIWidezoop, subset(WaterChemistry, Depth=="Epi"),
 #Analysis
 
 #Cor - include all numerical variables
-cors<-rcorr(as.numeric(HuronCSMIWide[,c(8:51,53:91,103:116)]))
+names(HuronCSMIWide)
+summary(HuronCSMIWide)
+NHuronCSMIWide<-as.numeric(unlist(HuronCSMIWide[,c(8:51,53:91,103:116)]))
+cors<-rcorr((as.numeric(HuronCSMIWide[,c(8:51,53:91,103:116)])))
 
 #Visualizations
 #Make dataframe for faceted dreissena and swf density graph
