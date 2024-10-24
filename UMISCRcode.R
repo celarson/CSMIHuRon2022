@@ -97,6 +97,9 @@ HuronCSMIWidenum<-select_if(HuronCSMIWide, is.numeric)
 setdiff(names(HuronCSMIWide),names(HuronCSMIWidenum))
 str(HuronCSMIWidenum)
 cors<-rcorr(as.matrix(HuronCSMIWidenum),type="spearman")
+corsdf=data.frame(cors$r)
+write.csv(corsdf,file='C: /Users/ngrode/Profile/Desktop/corrmat')
+view(cors[["r"]])
 #spiny water flea correlated to Conochilusunicornis (r=0.80)
 
 #Create a facetted plot with bythotrephes, dreissena veligers, and Conochilus unicornis
