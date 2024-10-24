@@ -70,16 +70,18 @@ HuronCSMIWidezoop<-merge(Zoop64denswide, Zoop153denswide,
 setdiff(paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate),
         paste((subset(WaterChemistry, Depth=="Epi"))$Site,
               (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate))
-#diff
+#Parry Sound 18 8/9/2022 only collected for 153
+#Thessalon River 5 6/19/2022 only zooplankton, no water chemistry
 setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,
-          (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate,
-          paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate)))
+          (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate),
+          paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate))
+#Thessalon River 18 6/19/2022
 
 setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$Month),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$Month))
 setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$MonthPeriod),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$MonthPeriod))
 setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$DFS),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$DFS))
 setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,(subset(WaterChemistry, Depth=="Epi"))$Area),paste(HuronCSMIWidezoop$Site, HuronCSMIWidezoop$Area))
-#explanation
+#No differences.
 
 HuronCSMIWide<-merge(HuronCSMIWidezoop, subset(WaterChemistry, Depth=="Epi"), 
                          by=c("Site","UnifiedDate","DFS","Area","MonthPeriod","Month"))
