@@ -9,6 +9,7 @@ library(reshape2)
 library(lubridate)
 library(readr)
 library(gridExtra)
+library(Hmisc)
 
 #Upload datasets
 
@@ -46,13 +47,13 @@ Zoopcount$Density<-Zoopcount$Count/Zoopcount$Volume
 
 #go back to wide using density
 Zoop64denswide<-reshape(Zoopcount64Mer, 
-                        idvar = c ("SiteID","Site","UnifiedDate","DFS","Month","Area"), 
+                        idvar = c ("SiteID","Site","UnifiedDate","DFS","Month","Area","MonthPeriod"), 
                         timevar="Species",direction = "wide", 
                         drop=c("Count","MeterEnd","MeterMCoe","Volume"))
 
 #go back to wide using density 153 net
 Zoop153denswide<-reshape(Zoopcount153Mer, 
-                        idvar = c ("SiteID","Site","UnifiedDate","DFS","Month","Area"), 
+                        idvar = c ("SiteID","Site","UnifiedDate","DFS","Month","Area","MonthPeriod"), 
                         timevar="Species",direction = "wide", 
                         drop=c("Count","MeterEnd","MeterMCoe","Volume"))
 
@@ -63,20 +64,26 @@ setdiff(paste(Zoop153denswide$Site,Zoop153denswide$UnifiedDate),
 
 #merge to make one large dataset with 64 net, 153 net, and water chemistry
 HuronCSMIWidezoop<-merge(Zoop64denswide, Zoop153denswide, 
-                     by=c("Site","UnifiedDate","DFS","Month","Area"),all=T)
+                     by=c("Site","UnifiedDate","DFS","Month","Area",
+                          "MonthPeriod"),all=T)
 
 setdiff(paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate),
         paste((subset(WaterChemistry, Depth=="Epi"))$Site,
               (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate))
+#diff
+setdiff(paste((subset(WaterChemistry, Depth=="Epi"))$Site,
+          (subset(WaterChemistry, Depth=="Epi"))$UnifiedDate,
+          paste(HuronCSMIWidezoop$Site,HuronCSMIWidezoop$UnifiedDate)))
+#explanation
 
 HuronCSMIWide<-merge(HuronCSMIWidezoop, subset(WaterChemistry, Depth=="Epi"), 
-                         by=c("Site","UnifiedDate","DFS","Area"))
+                         by=c("Site","UnifiedDate","DFS","Area","MonthPeriod","Month"))
 
 
 #Analysis
 
 #Cor - include all numerical variables
-cors<-cor(HuronCSMIWide[,7:ncol(HuronCSMIWide)])
+cors<-rcorr(as.numeric(HuronCSMIWide[,c(8:51,53:91,103:116)]))
 
 #Visualizations
 #Make dataframe for faceted dreissena and swf density graph
