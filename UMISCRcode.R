@@ -100,6 +100,10 @@ cors<-rcorr(as.matrix(HuronCSMIWidenum),type="spearman")
 corsdf=data.frame(cors$r)
 write.csv(corsdf,file='C: /Users/ngrode/Profile/Desktop/corrmat')
 view(cors[["r"]])
+write.csv(corsdf, "corsdata.csv")
+write.csv(cors, "corsdata2")
+#Bytho - Conochilusunicornis 0.795290099
+#
 #spiny water flea correlated to Conochilusunicornis (r=0.80)
 
 #Create a facetted plot with bythotrephes, dreissena veligers, and Conochilus unicornis
@@ -111,11 +115,26 @@ HuronCSMIWide$log10Dreissena<-log10(HuronCSMIWide$Density64.DreissenidVeligers)
 CSMIHuronGraph<-melt(HuronCSMIWide, id.vars=c("Site", "UnifiedDate","Area","Month"),
                      measure.vars=c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis",
                                     "log10Dreissena"),variable.name="Species",value.name="Density")
+
+CSMIHuronGraphbythunicor<-melt(HuronCSMIWide, id.vars=c("Site", "UnifiedDate","Area","Month"),
+                     measure.vars=c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis"),variable.name="Species",value.name="Density")
+
 #Graph using same methods as Noah, but with facet for species
 #####################################
 #still need to order months and rename the facet labels
 #and potentially change the order of species, depending on how the poster is ordered.
 #############################################
+
+CSMIHuronGraph$Month<-factor(CSMIHuronGraph$Month, c("June", "July", "Aug"))
+CSMIHuronGraph$Area<-factor(CSMIHuronGraph$Area, c("NC", "SB", "GB", "SMB", "NMB"))
+CSMIHuronGraph$Species<-factor(CSMIHuronGraph$Species, c("log10Dreissena","Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis
+"))
+
+specieslab<-c("Bythotrephes cederstromii", "Conochilus unicornis", "Dreissenid veligers")
+names(specieslab)<-c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis", "log10Dreissena")
+
+specie2<-c("Bythotrephes cederströmii", "Conochilus unicornis")
+names(specie2)<-c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis")
 
 ggplot(CSMIHuronGraph, aes(x=Month, y=Density, fill = Month))+
   geom_boxplot()+
@@ -124,7 +143,36 @@ ggplot(CSMIHuronGraph, aes(x=Month, y=Density, fill = Month))+
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
-  facet_grid(Species~Area, scales="free_y")
+  facet_grid(Species~Area, labeller = labeller(Species=specieslab), scales="free_y")
+
+CSMIHuronGraphbythunicor$Area<-factor(CSMIHuronGraphbythunicor$Area, c("NC", "SB", "GB", "NMB", "SMB"))
+CSMIHuronGraphbythunicor$Month<-factor(CSMIHuronGraphbythunicor$Month, c("June", "July", "Aug"))
+
+ggplot(CSMIHuronGraphbythunicor, aes(x=Month, y=Density, fill = Month))+
+  geom_boxplot()+
+  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+        axis.title.x=element_text(size=16),axis.title.y=element_text(size=12),
+        axis.text.x=element_text(size=11),axis.text.y = element_text(size=14),
+        legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  facet_grid(Species~Area, labeller = labeller(Species=specie2), scales="free_y")+
+  theme(strip.text.x = element_text(size = 10, face = "bold"), strip.text.y = element_text(size = 9, face="italic"))+
+  xlab(NULL)+
+  ylab(expression(paste("Volumetric Density (#/m"^"3",")")))
+
+
+
+ggplot(HuronCSMIWidezoop, aes(x=Density153.Bythotrepheslongimanus, y=Density64.Conochilusunicornis))+
+  geom_point()+
+  theme_classic()+
+  scale_x_continuous(expand = c(0,0))+
+  scale_y_continuous(expand = c(0,0))+
+  coord_cartesian(expand = 0)+
+  theme(axis.title.x = element_text(size = 10, face = "italic"), axis.title.y = element_text(size = 10, face = "italic"))+
+  xlab(expression(paste(italic("Bythotrephes cederströmii")," Volumetric Density (#/m"^"3",")")))+
+  ylab(expression(paste(italic("Conochilus unicornis"),
+       "Volumetric Density (#/m"^"3",")")))
+
 
 ###################################################
 #########################################################
@@ -383,7 +431,10 @@ ggplot(Dresinnidout, aes(x=Month, y=Density64, fill = Month))+
         axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),
         axis.text.x=element_text(size=10),axis.text.y = element_text(size=14),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
+  theme(strip.text.x = element_text(size = 10, face = "bold"))+
   facet_grid(.~Area)+
-  labs(y=expression(paste(italic("Dreissnid"), "veliger ", "(individuals/m^3)")))
+  ylab(expression(paste(italic("Dreissenid"),
+                        " Veligers Volumetric Density (#/m"^"3",")")))+
+  xlab(NULL)
 
 DreisnnidAgg2<-aggregate(`Density64` ~ Month + Area, data = Dresinnidout, FUN = mean)
