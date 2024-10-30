@@ -133,7 +133,7 @@ CSMIHuronGraph$Species<-factor(CSMIHuronGraph$Species, c("log10Dreissena","Densi
 specieslab<-c("Bythotrephes cederstromii", "Conochilus unicornis", "Dreissenid veligers")
 names(specieslab)<-c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis", "log10Dreissena")
 
-specie2<-c("Bythotrephes cederströmii", "Conochilus unicornis")
+specie2<-c("Spiny Water Flea", "Conochilus unicornis")
 names(specie2)<-c("Density153.Bythotrepheslongimanus", "Density64.Conochilusunicornis")
 
 ggplot(CSMIHuronGraph, aes(x=Month, y=Density, fill = Month))+
@@ -169,7 +169,7 @@ ggplot(HuronCSMIWidezoop, aes(x=Density153.Bythotrepheslongimanus, y=Density64.C
   scale_y_continuous(expand = c(0,0))+
   coord_cartesian(expand = 0)+
   theme(axis.title.x = element_text(size = 10, face = "italic"), axis.title.y = element_text(size = 10, face = "italic"))+
-  xlab(expression(paste(italic("Bythotrephes cederströmii")," Volumetric Density (#/m"^"3",")")))+
+  xlab(expression(paste("Spiny Water Flea Volumetric Density (#/m"^"3",")")))+
   ylab(expression(paste(italic("Conochilus unicornis"),
        "Volumetric Density (#/m"^"3",")")))
 
