@@ -10,6 +10,7 @@ library(lubridate)
 library(readr)
 library(gridExtra)
 library(Hmisc)
+library(RColorBrewer)
 
 #Upload datasets
 
@@ -150,13 +151,13 @@ CSMIHuronGraphbythunicor$Month<-factor(CSMIHuronGraphbythunicor$Month, c("June",
 
 ggplot(CSMIHuronGraphbythunicor, aes(x=Month, y=Density, fill = Month))+
   geom_boxplot()+
-  scale_fill_manual(values=c("lightgreen","springgreen3","darkgreen"))+
+  scale_fill_brewer(palette= "Dark2")+
   theme(panel.background = element_rect(fill = "white", colour = "grey50"),
         axis.title.x=element_text(size=16),axis.title.y=element_text(size=20),
         axis.text.x=element_text(size=18),axis.text.y = element_text(size=18),
         legend.title=element_text(size=14),legend.text = element_text(size=14))+
   facet_grid(Species~Area, labeller = labeller(Species=specie2), scales="free_y")+
-  theme(strip.text.x = element_text(size = 20, face = "bold"), strip.text.y = element_text(size = 20, face="italic"))+
+  theme(strip.text.x = element_text(size = 20, face = "bold"), strip.text.y.left = element_text(size = 20), strip.text.y.right = element_text(size = 20, face="italic"))+
   xlab(NULL)+
   ylab(expression(paste("Volumetric Density (#/m"^"3",")")))
 
