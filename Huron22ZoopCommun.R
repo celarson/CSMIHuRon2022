@@ -34,7 +34,7 @@ View(yearmeta2)
 Date <- read_csv("Date20222017.csv")
 
 #merge datasets
-WQALL <- merge(C2217, yearmeta2, by = "STIS")
+WQALL <- merge(CSMIHuron2217epi, yearmeta2, by = "STIS")
 WQALL<-merge(WQALL, Date, by = "STIS")
 
 WQepianalysis<-merge(CSMIHuron2217epi, yearmeta2, by = "STIS")
@@ -982,7 +982,7 @@ WQepianalysis2<-subset(WQepianalysis2, Depth == 'Epi' )
 WQepianalysis2<-select(WQepianalysis2, select=-c(Depth, SO4, SO4_log, Ca, Mg,
                                                  K, K_log, Na, Na_log))
 
-WQepianalysis2<-select(WQepianalysis2, select=-c(NH4, TP, TN, SRP, DOC, chla, Cl))
+WQepianalysis2<-subset(WQepianalysis2, select=-c(NH4, TP, TN, SRP, DOC, chla, Cl))
 
 writexl::write_xlsx(zoopcomb2, "Zoopcomb.xlsx")
 ZoopcombforWQ <- read_excel("Zoopcomb.xlsx")
