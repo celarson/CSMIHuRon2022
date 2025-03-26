@@ -1770,7 +1770,7 @@ ggplot(Zoo153DenM2, aes(x=Month, y=Group, size = `Average Density (Count/m^3)`, 
   scale_y_discrete(limits=rev)
 
 #153 count area
-Zoo153countarea <- read_csv("~/CSMI/Zoo153countarea.csv")
+Zoo153countarea <- read_csv("Zoo153countarea.csv")
 View(Zoo153countarea)
 
 zoo153countarea2<-Zoo153countarea
@@ -1786,8 +1786,21 @@ ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3
 ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_continuous(guide="legend", type="viridis", limits=c(500, 6500), breaks = seq(500, 65000, by=1500))+
-  scale_size_continuous(limits = c(500, 6500), breaks = seq(500,6500, by = 1500))+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(1, 7000), breaks = seq(1, 7000, by=1000))+
+  scale_size_continuous(limits = c(1, 7000), breaks = seq(1,7000, by = 1000))+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
+  geom_point()+
+  theme_bw()+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(.0, 6500), breaks = seq(.0, 65000, by=1500))+
+  scale_y_discrete(limits=rev)+
+  xlab("Region")
+
+ggplot(zoo153countarea2, aes(x=Area, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
+  geom_point()+
+  theme_bw()+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
@@ -1833,17 +1846,17 @@ ggplot(bythoagg, aes(x=Area, y=Species, size = `Density`, color = `Density`))+
 
 #153 biomass area
 
-Zoo153biomassArea <- read_csv("~/CSMI/Zoo153biomassArea.csv")
+Zoo153biomassArea <- read_csv("Zoo153biomassArea.csv")
 View(Zoo153biomassArea)
 
 z153bioarea2<-Zoo153biomassArea
 z153bioarea2$Area<-factor(z153bioarea2$Area,c("NC", "SB", "GB", "SMB", "NMB"))
 
-ggplot(Zoo153biomassArea, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`, color = `Biomass (ug/m^3)`))+
+ggplot(z153bioarea2, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`, color = `Biomass (ug/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_continuous(guide="legend", type="viridis", limits=c(10, 12010), breaks = seq(10, 12010, by=3000))+
-  scale_size_continuous(limits = c(10, 12010), breaks = seq(10,12010, by = 3000))+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(0, 12000), breaks = seq(0, 12000, by=1500))+
+  scale_size_continuous(limits = c(0, 12000), breaks = seq(0,12000, by = 1500))+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
@@ -1863,7 +1876,7 @@ ggplot(z153bioarea2, aes(x=Area, y=Group, size = `Biomass (ug/m^3)`)) +
 
 #64 biomass area
 
-Zoo64bioarea <- read_csv("~/CSMI/Zoo64bioarea.csv")
+Zoo64bioarea <- read_csv("Zoo64bioarea.csv")
 View(Zoo64bioarea)
 
 zoo64bioarea2<-Zoo64bioarea
@@ -1871,14 +1884,14 @@ zoo64bioarea2$Area<-factor(zoo64bioarea2$Area, c("NC", "SB", "GB", "SMB", "NMB")
 
 ggplot(zoo64bioarea2, aes(x=Area, y=Group, size = `Average Biomass (ug/m^3)`, color = `Average Biomass (ug/m^3)`))+
   geom_point()+
-  theme_bw()+scale_color_continuous(guide="legend", type="viridis", limits=c(500, 5000), breaks = seq(500, 5000, by=1000))+
-  scale_size_continuous(limits = c(500, 5000), breaks = seq(500,5000, by = 1000))+
+  theme_bw()+scale_color_continuous(guide="legend", type="viridis", limits=c(500, 5500), breaks = seq(500, 5500, by=750))+
+  scale_size_continuous(limits = c(500, 5500), breaks = seq(500,5500, by = 750))+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
 #64 count area
 
-Zoo64countarea <- read_csv("~/CSMI/Zoo64countarea.csv")
+Zoo64countarea <- read_csv("Zoo64countarea.csv")
 View(Zoo64countarea)
 
 zoo64counarea2<-Zoo64countarea
@@ -1887,8 +1900,8 @@ zoo64counarea2$Month<-factor(zoo64counarea2$Month, c("NC", "SB", "GB", "SMB", "N
 ggplot(zoo64counarea2, aes(x=Month, y=Group, size = `Average Density (Count/m^3)`, color = `Average Density (Count/m^3)`))+
   geom_point()+
   theme_bw()+
-  scale_color_continuous(guide="legend", type="viridis", limits=c(5000, 78000), breaks = seq(5000, 78000, by=18000))+
-  scale_size_continuous(limits = c(5000, 78000), breaks = seq(5000,78000, by = 18000))+
+  scale_color_continuous(guide="legend", type="viridis", limits=c(5000, 78000), breaks = seq(5000, 78000, by=10000))+
+  scale_size_continuous(limits = c(5000, 78000), breaks = seq(5000,78000, by = 10000))+
   scale_y_discrete(limits=rev)+
   xlab("Region")
 
