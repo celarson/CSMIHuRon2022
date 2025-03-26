@@ -10,6 +10,10 @@ library(reshape2)
 library(lubridate)
 library(readxl)
 library(data.table)
+library(leaps)
+library(olsrr)
+library(MASS)
+library(fossil)
 
 #################################################import datasets and data manipulation
 
@@ -47,6 +51,7 @@ WQepianalysis$Julian<-yday(WQepianalysis$Date)
 
 #subset epi values
 WQepianalysis2<- subset(WQepianalysis, Depth == "Epi")
+
 ######zooplankton
 
 ###2017 Zoop
@@ -427,6 +432,7 @@ ggplot(zoopscorescomb2, aes(x=NMDS1, y=NMDS2))+
   geom_point(aes(NMDS1, NMDS2, colour = factor(Year)))+
   coord_fixed()+
   stat_ellipse(aes(color=Year))+
+  scale_color_manual(values = c("lightgreen", "darkgreen"))+
   theme_classic()+
   theme(panel.background = element_rect(fill = NA, colour = "black", size = 1, linetype = "solid"))+
   labs(colour = "Year")
@@ -870,6 +876,10 @@ shapiro.test(WQepianalysis2$TP)
 #p=1.21e-10
 
 #Log transfrom
+WQepianalysis$Cl<-as.numeric(WQepianalysis$Cl)
+
+WQepianalysis2<-WQepianalysis
+
 WQepianalysis2$Cl_log<-log(WQepianalysis2$Cl)
 WQepianalysis2$NH4_log<-log(WQepianalysis2$NH4)
 WQepianalysis2$SO4_log<-log(WQepianalysis2$SO4)
@@ -963,3 +973,91 @@ corsWQcat<-rcorr(as.matrix(WQALLcor), type="spearman")
 #write CSV
 write.csv(corsdf, "corsdata2WQ.csv")
 write.csv(corsdfp, "corsdata2WQp.csv")
+
+
+#variable reduction based on biological relevance and correlation
+#remove SO4_log, Ca_log, Mg_log, K_log and Na_log
+WQepianalysis2<-subset(WQepianalysis2, Depth == 'Epi' )
+
+WQepianalysis2<-select(WQepianalysis2, select=-c(Depth, SO4, SO4_log, Ca, Mg,
+                                                 K, K_log, Na, Na_log))
+
+WQepianalysis2<-select(WQepianalysis2, select=-c(NH4, TP, TN, SRP, DOC, chla, Cl))
+
+writexl::write_xlsx(zoopcomb2, "Zoopcomb.xlsx")
+ZoopcombforWQ <- read_excel("Zoopcomb.xlsx")
+
+writexl::write_xlsx(WQepianalysis2, "WQepianalysis2.xlsx")
+WQepianalysis3 <- read_excel("WQepianalysis2.xlsx")
+WQepianalysistest<-WQepianalysis3
+ZoopcombforWQtest<-ZoopcombforWQ
+
+WQZOOP<-right_join(WQepianalysis3, ZoopcombforWQ, by = "STIS")
+
+WQZOOP<-subset(WQZOOP, select=-c(SiSiO2, StationCode, UnifiedDate, Date, Year.y, DFS.y, Month.y, Area.y, Julian.y))
+names(WQZOOP)[names(WQZOOP)=='Month.x']<-'Month'
+names(WQZOOP)[names(WQZOOP)=='DFS.x']<-'DFS'
+names(WQZOOP)[names(WQZOOP)=='Area.x']<-'Area'
+names(WQZOOP)[names(WQZOOP)=='Year.x']<-'Year'
+names(WQZOOP)[names(WQZOOP)=='Julian.x']<-'Julian'
+
+#####linear regressions test with species richness and variables
+#create dataset with richness and WQ
+
+Zooprich2<-Zooprich
+writexl::write_xlsx(Zooprich2, "Zooprich2.xlsx")
+Zooprich2 <- read_excel("Zooprich2.xlsx")
+
+RichWQ<-merge(Zooprich2, WQepianalysis3, by = "STIS")
+
+#linear regression
+
+bestfit<-regsubsets(Richness ~ NOx + Cl_log + NH4_log + TP_log + TN_log + SRP_log + chla_log + DOC_log, data = RichWQ)
+summary(bestfit)
+
+NOX.mod<-lm(Richness ~ NOx, data = RichWQ)
+summary(NOX.mod)
+#p<0.05
+
+CL_log.mod<-lm(Richness ~ Cl_log, data = RichWQ)
+summary(CL_log.mod)
+#p>0.05
+
+Fullmodel.mod<-lm(Richness ~ NOx + NH4_log + TP_log + TN_log + SRP_log + chla_log, data = RichWQ)
+summary(Fullinteractions.mod)
+
+all.model = ols_step_all_possible(Fullmodel.mod)
+all.model
+
+stepAIC(Fullmodel.mod, direction = "both")
+stepAIC(Fullmodel.mod, direction = "backward")
+
+
+ggplot(RichWQ, aes(Richness, chla_log))+
+  geom_point()+
+  geom_smooth(method = 'lm')
+
+ggplot(RichWQ, aes(Richness, NH4_log))+
+  geom_point()+
+  geom_smooth(method = 'lm')
+
+#Permanova with WQ data
+WQKey<-subset(WQZOOP, select = c("STIS","NOx","DFS","Month","Area", "Year","Julian",
+                                   "Cl_log", "NH4_log", "TP_log", "TN_log", "SRP_log", "chla_log",
+                                   "DOC_log", "Site", "MonthPeriod", "CruiseSeason"))
+
+WQMat<-subset(WQZOOP, select = -c(STIS,NOx,DFS,Month,Area,Year,Julian,
+                                  Cl_log, NH4_log, TP_log, TN_log, SRP_log, chla_log,
+                                  DOC_log, Site, MonthPeriod, CruiseSeason))
+WQKey$DFS<-as.factor(WQKey$DFS)
+WQKey$CruiseSeason<-as.factor(WQKey$CruiseSeason)
+WQKey$Area<-as.factor(WQKey$Area)
+WQKey$Year<-as.factor(WQKey$Year)
+
+WQMat<-as.matrix(WQMat)
+WQMatnona<-WQMat
+WQMatnona[is.na(WQMatnona)]<-0
+rowSums(WQMatnona)
+
+adonis2(WQMat2nona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2, data = WQKey2, permutations = 999, method = "bray", na.rm = TRUE)
+
