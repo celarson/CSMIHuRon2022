@@ -19,10 +19,47 @@ library(fossil)
 WQepianalysis2 <- read_excel("WQepianalysis2.xlsx")
 ZoopcombforWQ <- read_excel("Zoopcomb.xlsx")
 
+WQepianalysis3 <- WQepianalysis2
+
+
+WQZOOP<-right_join(WQepianalysis3, ZoopcombforWQ, by = "STIS")
+
+WQZOOP<-subset(WQZOOP, select=-c(SiSiO2, StationCode, UnifiedDate, Date, Year.y, DFS.y, Month.y, Area.y, Julian.y))
+names(WQZOOP)[names(WQZOOP)=='Month.x']<-'Month'
+names(WQZOOP)[names(WQZOOP)=='DFS.x']<-'DFS'
+names(WQZOOP)[names(WQZOOP)=='Area.x']<-'Area'
+names(WQZOOP)[names(WQZOOP)=='Year.x']<-'Year'
+names(WQZOOP)[names(WQZOOP)=='Julian.x']<-'Julian'
+
+WQZOOP<-WQZOOP[-c(200),]
+
+
+#Permanova with WQ data
+WQKey<-subset(WQZOOP, select = c("STIS","NOx","DFS","Month","Area", "Year","Julian",
+                                 "Cl_log", "NH4_log", "TP_log", "TN_log", "SRP_log", "chla_log",
+                                 "DOC_log", "Site", "MonthPeriod", "CruiseSeason"))
+
+WQMat<-subset(WQZOOP, select = -c(STIS,NOx,DFS,Month,Area,Year,Julian,
+                                  Cl_log, NH4_log, TP_log, TN_log, SRP_log, chla_log,
+                                  DOC_log, Site, MonthPeriod, CruiseSeason))
+WQKey$DFS<-as.factor(WQKey$DFS)
+WQKey$CruiseSeason<-as.factor(WQKey$CruiseSeason)
+WQKey$Area<-as.factor(WQKey$Area)
+WQKey$Year<-as.factor(WQKey$Year)
+
+WQMatnona<-WQMat
+WQMatnona[is.na(WQMatnona)]<-0
+rowSums(WQMatnona)
+
+adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2,
+        data = WQKey, permutations = 999, method = "bray", na.action=na.omit, by="terms")
+
+summary(WQKey)
+
 ############################################################Checking magnitude of species counts between 2017 and 2022
 
 #subset unifieddate and julian out
-zoopcombmagnitude<-subset(zoopcomb, select = -c(UnifiedDate, Julian))
+zoopcombmagnitude<-subset(ZoopcombforWQ, select = -c(UnifiedDate, Julian))
 zoopcomblong<-melt(zoopcombmagnitude, value.name = "Density",
                      variable.name = "Species")
 
@@ -35,7 +72,7 @@ ggplot(zoopcombmagnitude, aes(x=Year, y=Bythotrepheslongimanus, fill = Year))+
 ######set up datasets to run vegan
 
 #create key 1. comb 2. 2022 3. 2017
-ZoopKey<-subset(zoopcomb, select = c("SiteID","Site","UnifiedDate","CruiseSeason","Year", "MonthPeriod", "DFS", "Month", "Area", "Julian"))
+ZoopKey<-subset(ZoopcombforWQ, select = c("SiteID","Site","UnifiedDate","CruiseSeason","Year", "MonthPeriod", "DFS", "Month", "Area", "Julian"))
 ZoopKey22<-subset(zoop22comb, select = c("SiteID","Site","UnifiedDate","CruiseSeason","Year", "MonthPeriod", "DFS", "Month", "Area", "Julian"))
 ZoopKey17<-subset(zoop17comb, select = c("SiteID","Site","UnifiedDate","CruiseSeason","Year", "MonthPeriod", "DFS", "Month", "Area", "Julian"))
 ZoopKeycomb2<-subset(zoopcomb2, select = c("SiteID","Site","UnifiedDate","CruiseSeason","Year", "MonthPeriod", "DFS", "Month", "Area", "Julian"))
