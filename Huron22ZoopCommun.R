@@ -759,6 +759,8 @@ rowSums(WQMatnona)
 
 adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2, data = WQKey, permutations = 999, method = "bray", na.rm = TRUE)
 
+summary(WQKey$NOx)
+
 ######################################
 #################### Data manipulation 
 #import dataset of WQ data
