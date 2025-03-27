@@ -51,7 +51,7 @@ WQMatnona<-WQMat
 WQMatnona[is.na(WQMatnona)]<-0
 rowSums(WQMatnona)
 
-adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2,
+adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year),
         data = WQKey, permutations = 999, method = "bray", na.action=na.omit, by="terms")
 
 summary(WQKey)
