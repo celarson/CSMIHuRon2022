@@ -34,7 +34,7 @@ View(yearmeta2)
 Date <- read_csv("Date20222017.csv")
 
 #merge datasets
-WQALL <- merge(CSMIHuron2217epi, yearmeta2, by = "STIS")
+WQALL <- merge(C2217, yearmeta2, by = "STIS")
 WQALL<-merge(WQALL, Date, by = "STIS")
 
 WQepianalysis<-merge(CSMIHuron2217epi, yearmeta2, by = "STIS")
@@ -54,7 +54,7 @@ WQepianalysis2<- subset(WQepianalysis, Depth == "Epi")
 
 ######zooplankton
 
-###2017 Zoop
+###########2017 Zoop Do NOT run this code!/Use it
 
 #import 2017 dataset
 Zoop2017_2 <- read_csv("Zoop2017_2.csv")
@@ -65,7 +65,7 @@ Zoop2017dataset$MeterEnd<-Zoop2017dataset$FLOW_END-Zoop2017dataset$FLOW_START
 #Calculate volume
 Zoop2017dataset$Volume<-Zoop2017dataset$MeterEnd*Zoop2017dataset$DISTANCE_PARM*0.19634954
 
-#write out so you can delete non-zooplankton rows and edit datasheet - see metadata sheet for edit notes
+#write out so you can delete non-zooplankton rows and edit datasheet - see metadata sheet for edit notes and add STIS numbers
 writexl::write_xlsx(Zoop2017dataset, "Zoop2017dataset.xlsx")
 
 #import 2017 zoop to reshape and melt with calibration meta 2017
@@ -90,6 +90,9 @@ zoopdensity2017wide<-reshape(zoopdensity2017_2,
 
 #write out just to look at it quick
 writexl::write_xlsx(zoopdensity2017_3, "Zoopdensitywide2017.xlsx")
+
+##############################################Run this code for zoop2017
+Zoopdensitywide2017 <- read_excel("Zoopdensitywide2017.xlsx")
 
 ###2022 zoop
 
@@ -135,8 +138,6 @@ Zoopdensity2022wide<-reshape(Zoopcount,
 writexl::write_xlsx(Zoopdensitywide, "Zoop2022densitywide.xlsx")
 
 #####Make taxonomic rankings match between 2017 and 2022
-
-Zoop2022new <- read_excel("Zoop2022_315364.xlsx")
 
 #merge columns in 2022
 #Ascomorpha ovalis and Ascomorpha eucaudis -> Ascomorpha
@@ -979,7 +980,7 @@ write.csv(corsdfp, "corsdata2WQp.csv")
 #remove SO4_log, Ca_log, Mg_log, K_log and Na_log
 WQepianalysis2<-subset(WQepianalysis2, Depth == 'Epi' )
 
-WQepianalysis2<-select(WQepianalysis2, select=-c(Depth, SO4, SO4_log, Ca, Mg,
+WQepianalysis2<-subset(WQepianalysis2, select=-c(Depth, SO4, SO4_log, Ca, Mg,
                                                  K, K_log, Na, Na_log))
 
 WQepianalysis2<-subset(WQepianalysis2, select=-c(NH4, TP, TN, SRP, DOC, chla, Cl))
@@ -987,10 +988,7 @@ WQepianalysis2<-subset(WQepianalysis2, select=-c(NH4, TP, TN, SRP, DOC, chla, Cl
 writexl::write_xlsx(zoopcomb2, "Zoopcomb.xlsx")
 ZoopcombforWQ <- read_excel("Zoopcomb.xlsx")
 
-writexl::write_xlsx(WQepianalysis2, "WQepianalysis2.xlsx")
-WQepianalysis3 <- read_excel("WQepianalysis2.xlsx")
-WQepianalysistest<-WQepianalysis3
-ZoopcombforWQtest<-ZoopcombforWQ
+WQepianalysis3 <- WQepianalysis2
 
 WQZOOP<-right_join(WQepianalysis3, ZoopcombforWQ, by = "STIS")
 
@@ -1059,5 +1057,5 @@ WQMatnona<-WQMat
 WQMatnona[is.na(WQMatnona)]<-0
 rowSums(WQMatnona)
 
-adonis2(WQMat2nona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2, data = WQKey2, permutations = 999, method = "bray", na.rm = TRUE)
+adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2, data = WQKey, permutations = 999, method = "bray", na.rm = TRUE)
 
