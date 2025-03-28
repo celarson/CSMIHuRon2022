@@ -14,8 +14,37 @@ library(leaps)
 library(olsrr)
 library(MASS)
 library(fossil)
+library(indicspecies)
 
+####Indicator species analysis
 
+Zoopforindicator<-ZoopcombforWQ
+Zoopforindicator<-Zoopforindicator[-c(200),]
+
+Zoopforindicator<-subset(Zoopforindicator, select = -c(STIS, Site, UnifiedDate, Year, 
+                                                       MonthPeriod, CruiseSeason, DFS, Month, Area, Julian))
+
+Zoopforindicator[is.na(Zoopforindicator)]<-0
+#use WQKey for metadata
+
+DFS<-WQKey$DFS
+Cruise<-WQKey$CruiseSeason
+Area<-WQKey$Area
+
+indval.dfs<-multipatt(Zoopforindicator, DFS,
+                  control = how(nperm = 999))
+
+indval.cruis<-multipatt(Zoopforindicator, Cruise,
+                        control = how(nperm = 999))
+
+indval.area<-multipatt(Zoopforindicator, Area,
+                       control = how(nperm = 999))
+
+summary(indval.dfs)
+summary(indval.cruis)
+summary(indval.area)
+
+####Permanova WQ and categorical with zooplankton
 WQepianalysis2 <- read_excel("WQepianalysis2.xlsx")
 ZoopcombforWQ <- read_excel("Zoopcomb.xlsx")
 
@@ -52,6 +81,9 @@ WQMatnona[is.na(WQMatnona)]<-0
 rowSums(WQMatnona)
 
 adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year),
+        data = WQKey, permutations = 999, method = "bray", na.action=na.omit, by="terms")
+
+adonis2(WQMatnona ~ (NOx + NH4_log +TP_log + SRP_log + chla_log + DFS + CruiseSeason + Area + Year)^2,
         data = WQKey, permutations = 999, method = "bray", na.action=na.omit, by="terms")
 
 summary(WQKey)
